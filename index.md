@@ -3,6 +3,8 @@ title: Home
 layout: about
 
 about_me: |
+  <strong style="color: red;">The website is currently under construction</strong>
+
   Welcome to my website! I’m Tanvir Hossain, a PhD researcher in Electrical Engineering at the University of Kansas. Here, I share my journey—from my early days at Ahsanullah University of Science and Technology (AUST), where I earned my Bachelor’s degree in Electrical and Electronic Engineering, to my current research and teaching experiences.
 
   **My Vision**  
@@ -20,6 +22,6 @@ about_me: |
   Thank you for joining me on this journey. If you have any questions or wish to collaborate, feel free to reach out. Let’s learn, explore, and innovate together!
 
 about_me_img: "/imgs/me/Tanv1.jpg"
-about_me_img_caption: |
-  (photo credit: Your Name)
+# about_me_img_caption: |
+#   (photo credit: Your Name)
 ---
