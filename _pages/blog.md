@@ -19,7 +19,7 @@ permalink: /blog/
   <a href="https://devolab.org/author/lalejini/">[all devolab posts]</a>
 </ul>
 
-<!-- ## <a href="#mentees_collaborators">🔗</a> mentees & collaborators
+## <a href="#mentees_collaborators">🔗</a> mentees & collaborators
 <ul class="posts">
   {% for post in site.data.mentees_collaborators_posts %}
     <li>
@@ -33,4 +33,4 @@ permalink: /blog/
       {% endif %}
     </li>
   {% endfor %}
-</ul> -->
+</ul>

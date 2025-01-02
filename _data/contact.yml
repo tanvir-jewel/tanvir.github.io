@@ -1,8 +1,9 @@
 # This data file contains contact information.
 
-twitter/ X:
+twitter:
   link: https://x.com/tanvirjewel71
   username: "@tanvirjewel71"
+
 
 github:
   link: https://github.com/tanvir-jewel
