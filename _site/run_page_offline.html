@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333025-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125333025-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link in our stylesheets -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>
+    
+      How to Run Your GitHub Pages Site Offline | Tanvir Hossain
+    
+  </title>
+</head>
+  <body>
+    <!-- The one consistent feature of page headers will be the nav bar. -->
+<!-- Define the site's nav bar w/Bootstrap's navbar component -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"> 
+      Tanvir Hossain 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <h1 id="how-to-run-your-github-pages-site-offline">How to Run Your GitHub Pages Site Offline</h1>
+
+<p>This guide explains how to run your GitHub Pages site offline on your local machine using Jekyll. Follow these steps to edit and preview your site in real-time.</p>
+
+<hr />
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ol>
+  <li><strong>Install Ruby</strong>:
+    <ul>
+      <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Download and install Ruby</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Install Jekyll and Bundler Gems</strong>:
+Open a terminal and run:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Clone Your GitHub Pages Repository</strong>:
+Replace <code class="language-plaintext highlighter-rouge">your-username</code> and <code class="language-plaintext highlighter-rouge">your-repository-name</code> with your details:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/your-username/your-repository-name.git
+<span class="nb">cd </span>your-repository-name
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="steps-to-run-your-site-offline">Steps to Run Your Site Offline</h2>
+
+<h3 id="1-install-dependencies">1. Install Dependencies</h3>
+<p>Run the following command in your repository directory to install the required gems:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="2-serve-the-site-locally">2. Serve the Site Locally</h3>
+<p>To start a local server for your site, use the command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<h3 id="3-access-the-local-site">3. Access the Local Site</h3>
+<p>After running the above command, Jekyll will provide a local address, typically:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://127.0.0.1:4000
+</code></pre></div></div>
+<p>Open this URL in your browser to preview your site.</p>
+
+<h3 id="4-monitor-changes-in-real-time">4. Monitor Changes in Real-Time</h3>
+<p>Jekyll automatically detects changes in your files and rebuilds the site. Simply refresh your browser to see the updates.</p>
+
+<hr />
+
+<h2 id="optional-stop-the-server">Optional: Stop the Server</h2>
+<p>To stop the local server, press <code class="language-plaintext highlighter-rouge">Ctrl+C</code> in the terminal where the server is running.</p>
+
+<hr />
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<ol>
+  <li><strong>Error: “Command not found: bundle”</strong>
+    <ul>
+      <li>Ensure Ruby and Bundler are installed correctly. Run:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Port Already in Use</strong>:
+    <ul>
+      <li>If the default port (<code class="language-plaintext highlighter-rouge">4000</code>) is in use, specify a different port:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--port</span> 5000
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Changes Not Showing</strong>:
+    <ul>
+      <li>If changes aren’t visible, clear your browser cache or restart the server.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<p>Your GitHub Pages site is now running offline. You can edit and preview your changes seamlessly!</p>
+
+
+    <hr> <!-- Separate footer from rest of page with horizontal line. -->
+
+<footer>
+    <div class="container"> <!-- Footer is contained in Bootstrap container. -->
+
+        <!-- Email and social media on one side, address on the other. -->
+        <div class="row">
+
+            <div class="col-auto pr-0">
+                <ul class="fa-ul">
+                    <li class="text-secondary">Tanvir Hossain (he/him)</li>
+                    <li class="text-secondary">PhD Researcher in Electrical Engineering</li>
+                    <li class="text-secondary">Graduate Research Assistant</li>
+                    <li class="text-secondary">University of Kansas</li>
+                    <li><a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://linkedin.com/in/tanvir-hossain71">LinkedIn</a></li>
+                    <!-- <li><a href="https://sites.google.com/site/tanvirjewel71">Personal Website</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Give email and social media contact info. -->
+            <div class="col-auto pr-0" id="contact-me">
+                <ul class="fa-ul">
+                    <li class="text-secondary"><i class="fas fa-envelope"></i> tanvir@ku.edu</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/tanvir-jewel">tanvir-jewel</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://x.com/tanvirjewel71">@tanvirjewel71</a></li>
+                </ul>
+            </div>
+
+            <!-- Give physical work/office address. -->
+            <div class="col">
+                <ul class="fa-ul">
+                    <li class="text-secondary">
+                      <i class="fas fa-map-marker-alt"></i> 
+                      2335 Irving Hill Rd <br />
+Lawrence, KS 66047, USA
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === Site information ===  -->
+        <div class="row justify-content-center">
+            <a href="https://github.com/amlalejini/amlalejini.github.io"><img src="https://img.shields.io/github/last-commit/tanvir-jewel/tanvir.github.io.svg?label=last%20update"/></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <i class="fas fa-copyright"></i>
+                <small class="text-muted">
+                    Tanvir Hossain 2025.
+                    Powered by <a href="https://github.com/">GitHub</a>,
+                    <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://getbootstrap.com/">Bootstrap</a>,
+                    and <a href="https://fontawesome.com/">Font Awesome</a>.
+                    <a href="https://github.com/amlalejini/amlalejini.github.io">Source</a>.
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

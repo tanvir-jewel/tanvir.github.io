@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333025-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125333025-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link in our stylesheets -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>
+    
+      Guide to adding citable supplemental material to any paper | Tanvir Hossain
+    
+  </title>
+</head>
+  <body>
+    <!-- The one consistent feature of page headers will be the nav bar. -->
+<!-- Define the site's nav bar w/Bootstrap's navbar component -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"> 
+      Tanvir Hossain 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-sm">
+
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div class="row">
+          <header class="post-header pt-5">
+            <h1 class="post-title" itemprop="name headline">Guide to adding citable supplemental material to any paper</h1>
+            
+            <p class="post-meta">
+              <time datetime="2020-04-02T00:00:00-05:00" itemprop="datePublished">Apr 2, 2020</time>
+              
+              
+            </p>
+          </header>
+        </div>
+
+        
+          <div class="row pb-1">
+            <div class="col px-0">
+              <div class="card border-left-0 border-right-0 rounded-0">
+                <div class="card-body">
+                  <h4 class = "card-title">
+                    contents
+                  </h4>
+                  <ul>
+  <li><a href="#why-spend-actual-time-writing-supplemental-material">Why spend actual time writing supplemental material?</a></li>
+  <li><a href="#adding-supplemental-material-to-anything">Adding supplemental material to anything</a></li>
+  <li><a href="#writing-good-supplemental-material">Writing good supplemental material</a></li>
+</ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="row pt-4">
+          <div class="col px-0">
+            <div class="post-content" itemprop="articleBody">
+              <p>Adding supplemental material to any paper is as easy as:</p>
+
+<ol>
+  <li>making a <a href="https://github.com/">GitHub</a> repository packed with supplemental goodness</li>
+  <li>using <a href="https://zenodo.org/">Zenodo</a> to assign your repository a citable DOI</li>
+  <li>citing your DOI-minted repository in your article</li>
+  <li>minimal effort bonus: use GitHub pages to turn your supplemental material into a website</li>
+</ol>
+
+<p>An academic publication’s supplemental material is that ill-defined thing you throw all of the extra content that could not be jammed into your original submission. E.g., extra analyses, dope videos, all  of your raw data files, source code, <em>et cetera</em>. For computational researchers, including (or pointing to) the source code used to conduct our experiments is a critical step toward ensuring reproducibility.</p>
+
+<p>During my time as a graduate student, I’ve learned that through the combined powers of public GitHub repositories and Zenodo, I can include as much supplemental material as I’d like with any publication,  regardless of the publication’s venue. In fact, any academic publication that leans on software for experiments and/or data analyses has no excuse for not having quality supplemental material. The practices of copy-and-pasting source code into PDFs (yes, this is a real thing that I have encountered) must end!</p>
+      <h2 id="why-spend-actual-time-writing-supplemental-material">
+        
+        
+          <a href="#why-spend-actual-time-writing-supplemental-material" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Why spend actual time writing supplemental material?
+        
+        
+      </h2>
+
+<p>Supplemental material is an opportunity to present all of those exploratory experiments, analyses, and visualizations that didn’t make it into the final manuscript.
+This gives you a chance to shout “hey, look at all this work that went into the making of this work”.
+Furthermore, supplemental material affords a platform for communicating the mountain of exploratory and negative results that your final results are built atop.</p>
+
+<p>Most importantly, supplemental material should assist your methods section, helping others (or future you) to reproduce and extend your work.
+Often the space alloted to a paper’s methods section cannot accommodate a full ‘how to’ guide for reproducing your work.
+Supplemental material, however, can have all the space you need!
+You can include all of your (hopefully commented) source code and provide step-by-step guides to compiling and running your experiments.</p>
+    
+      <h2 id="adding-supplemental-material-to-anything">
+        
+        
+          <a href="#adding-supplemental-material-to-anything" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Adding supplemental material to anything
+        
+        
+      </h2>
+
+<p>I typically use two services to make my supplemental material happen:</p>
+
+<ol>
+  <li><a href="https://github.com/">GitHub</a></li>
+  <li><a href="https://zenodo.org/">Zenodo</a></li>
+</ol>
+
+<p>You’ll need an account on both services. Accounts are free, though, so no worries there.</p>
+    
+      <h3 id="setup-a-github-repository-to-house-your-supplemental-material">
+        
+        
+          <a href="#setup-a-github-repository-to-house-your-supplemental-material" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Setup a GitHub repository to house your supplemental material
+        
+        
+      </h3>
+
+<p>I typically manage all of my projects start-to-finish on GitHub. Version control is a wonderful thing, especially for collaborative projects.</p>
+
+<p>There’s a huge community that uses GitHub, so it’s not hard to google for solid tutorials. <a href="guides.github.com">GitHub’s own guides</a> are often a solid place to start for the basics. See also <a href="https://mmore500.com/waves/enrichment/week1.html">this starter guide</a> on using git or <a href="https://mmore500.com/waves/blog/extra-git.html">this more advanced guide</a> from a software development workshop run by the digital evolution lab during summer 2020.</p>
+    
+      <h3 id="make-your-github-repository-citable">
+        
+        
+          <a href="#make-your-github-repository-citable" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Make your GitHub repository citable
+        
+        
+      </h3>
+
+<p>I’ll outsource this step to GitHub’s very nice guide for making your repository citable with Zenodo: <a href="https://guides.github.com/activities/citable-code/">https://guides.github.com/activities/citable-code/</a>. You’ll need a Zenodo account for this bit.</p>
+    
+      <h3 id="cite-your-repository">
+        
+        
+          <a href="#cite-your-repository" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Cite your repository
+        
+        
+      </h3>
+
+<p>Zenodo makes this part easy. Just navigate to the Zenodo’s record page for your repository and look for the ‘Cite as’ box, or even more conveniently, the Export links to download the citation in your preferred format.</p>
+
+<p><img src="/imgs/blog/zenodo-citation-example.png" alt="zenodo-citation" style="width: 100%; max-width: 250px; margin-left: auto; margin-right: auto; display: block;" /></p>
+
+<!-- [**Figure Zenodo citation.**](#fig-zc){:id="fig-zc}
+*Getting a citation from Zenodo* -->
+<div class="row justify-content-center pb-4">
+  <a href="#fig-zc" id="fig-zc">Figure Zenodo citation:</a>&nbsp;
+  <div class="text-secondary"><em>Getting a citation from Zenodo</em></div>
+</div>
+
+<p>Add the reference to your paper’s reference list and cite away!</p>
+
+<p>Make sure that the actual DOI for your repository appears in your reference; otherwise, it may be hard for anyone interested to actually find your repository.</p>
+    
+      <h3 id="bonus-make-your-supplemental-material-web-accessible">
+        
+        
+          <a href="#bonus-make-your-supplemental-material-web-accessible" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Bonus: make your supplemental material web-accessible
+        
+        
+      </h3>
+
+<p>I’m a big advocate for using GitHub pages to generate and host static websites with absolutely minimal effort (and at no cost). Making a website for a repository is actually as easy as toggling a switch in your repository’s settings. This is also a fantastic way to create and maintain personal web-sites (e.g., <a href="http://mmore500.com/">http://mmore500.com/</a>,  <a href="https://alackles.github.io/">https://alackles.github.io/</a>).</p>
+
+<p>Again, I’ll outsource the how-to to one of GitHub’s own guides: <a href="https://guides.github.com/features/pages/">https://guides.github.com/features/pages/</a>.</p>
+
+<p>Under the hood, GitHub uses <a href="https://jekyllrb.com/">Jekyll</a> to turn your repository’s content into a
+ static site. You can go as wild or as tame as you’d like on the website generated.</p>
+
+<p>Once GitHub pages is flipped on, you can do things like…</p>
+
+<ul>
+  <li>Convert your data into nice, annotated HTML pages that you can link folks to.</li>
+  <li>I do the vast majority of my data and statistical analyses using R. Using <a href="https://rmarkdown.rstudio.com/articles_intro.html">R markdown</a>, it’s easy to embed analyses in a markdown document that can be compiled into a nifty HTML page.
+    <ul>
+      <li>E.g., <a href="https://github.com/amlalejini/ALife-2020--SignalGP-Genetic-Regulation/blob/master/experiments/alife-2020/analysis/repeated-signal-task-analysis.Rmd">source file</a>, <a href="https://lalejini.com/ALife-2020--SignalGP-Genetic-Regulation/experiments/alife-2020/analysis/repeated-signal-task-analysis.html">resulting html file</a></li>
+    </ul>
+  </li>
+  <li>Converting from other common data analysis setups (e.g., Jupyter notebooks) to web pages is also not difficult. Just google around for how to convert your analysis setup of choice!</li>
+  <li>You can also write cool JavaScript (or C++ compiled into JavaScript via <a href="https://emscripten.org/">Emscripten</a>) web applications and embed them into your web-accessible supplemental material.
+    <ul>
+      <li>E.g., fitness landscape visualizations by <a href="emilyldolson.com/">Emily Dolson</a>: <a href="https://emilydolson.github.io/fitness_landscape_visualizations/">https://emilydolson.github.io/fitness_landscape_visualizations/</a></li>
+    </ul>
+  </li>
+</ul>
+    
+      <h2 id="writing-good-supplemental-material">
+        
+        
+          <a href="#writing-good-supplemental-material" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Writing good supplemental material
+        
+        
+      </h2>
+
+<p><img src="/imgs/blog/supplemental-spiderman.jpg" alt="sup-spiderman" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;" /></p>
+
+<p>Bad supplemental material doesn’t go far in improving your work’s reproducibility. Please please please do not code copy and paste code directly into a pdf.</p>
+
+<p>If your source code is incomprehensible or you do not give gentle guidance on how to re-run an experiment, no one (including future you) is likely to spend the requisite time to resuscitate, replicate, and extend your project.</p>
+
+<p>Just tossing code and analysis scripts into a citable GitHub repository does not make for good supplemental material. (though it is still better than pasting into a pdf)</p>
+
+<p>Here are a few guidelines that I aspire to follow when I make supplemental material:</p>
+
+<ul>
+  <li>Provide a brief, high-level overview of the project (motivations, experiments, findings).
+    <ul>
+      <li>Pictures, pictures, pictures! Use all of those cartoons/diagrams you had to cut from your paper!</li>
+    </ul>
+  </li>
+  <li>Add a step-by-step guide to re-rerunning your experiments.
+    <ul>
+      <li>List all of your external dependencies, and if possible, link to the exact commit of any other repositories someone needs to download to run your software.</li>
+      <li>Bonus points for packaging everything up into a Docker or Singularity container.</li>
+      <li>To check the quality of your guide, you can follow it yourself on a fresh virtual machine.</li>
+    </ul>
+  </li>
+  <li>Provide a brief organizational guide for your repository.
+    <ul>
+      <li>Where is your experiment code? Where are your analysis scripts? <em>et cetera</em></li>
+      <li>You can write README files for relevant directories in a repository, which will render nicely on GitHub when someone clicks into the directory.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If you’ve done a cool thing with your supplemental material or have experiences to share, let me know!</p>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <hr> <!-- Separate footer from rest of page with horizontal line. -->
+
+<footer>
+    <div class="container"> <!-- Footer is contained in Bootstrap container. -->
+
+        <!-- Email and social media on one side, address on the other. -->
+        <div class="row">
+
+            <div class="col-auto pr-0">
+                <ul class="fa-ul">
+                    <li class="text-secondary">Tanvir Hossain (he/him)</li>
+                    <li class="text-secondary">PhD Researcher in Electrical Engineering</li>
+                    <li class="text-secondary">Graduate Research Assistant</li>
+                    <li class="text-secondary">University of Kansas</li>
+                    <li><a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://linkedin.com/in/tanvir-hossain71">LinkedIn</a></li>
+                    <!-- <li><a href="https://sites.google.com/site/tanvirjewel71">Personal Website</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Give email and social media contact info. -->
+            <div class="col-auto pr-0" id="contact-me">
+                <ul class="fa-ul">
+                    <li class="text-secondary"><i class="fas fa-envelope"></i> tanvir@ku.edu</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/tanvir-jewel">tanvir-jewel</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://x.com/tanvirjewel71">@tanvirjewel71</a></li>
+                </ul>
+            </div>
+
+            <!-- Give physical work/office address. -->
+            <div class="col">
+                <ul class="fa-ul">
+                    <li class="text-secondary">
+                      <i class="fas fa-map-marker-alt"></i> 
+                      2335 Irving Hill Rd <br />
+Lawrence, KS 66047, USA
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === Site information ===  -->
+        <div class="row justify-content-center">
+            <a href="https://github.com/amlalejini/amlalejini.github.io"><img src="https://img.shields.io/github/last-commit/tanvir-jewel/tanvir.github.io.svg?label=last%20update"/></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <i class="fas fa-copyright"></i>
+                <small class="text-muted">
+                    Tanvir Hossain 2025.
+                    Powered by <a href="https://github.com/">GitHub</a>,
+                    <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://getbootstrap.com/">Bootstrap</a>,
+                    and <a href="https://fontawesome.com/">Font Awesome</a>.
+                    <a href="https://github.com/amlalejini/amlalejini.github.io">Source</a>.
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

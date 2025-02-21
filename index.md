@@ -5,21 +5,22 @@ layout: about
 about_me: |
   <strong style="color: red;">The website is currently under construction</strong>
 
-  Welcome to my website! I’m Tanvir Hossain, a PhD researcher in Electrical Engineering at the University of Kansas. Here, I share my journey—from my early days at Ahsanullah University of Science and Technology (AUST), where I earned my Bachelor’s degree in Electrical and Electronic Engineering, to my current research and teaching experiences.
+  Welcome to my website! I’m Tanvir Hossain, a PhD researcher in Electrical Engineering at the University of Kansas. This is my portfolio, where I document my research, academic journey, and teaching experiences—from my early days at Ahsanullah University of Science and Technology (AUST) to my current work in microelectronics and hardware security.
 
   **My Vision**  
-  I aspire to transform this platform into a hub for hardware enthusiasts, providing curated resources on microelectronics, circuit design, and hardware security. Along with technical insights, I plan to include blog posts that explore philosophical perspectives—because I believe that engineering isn’t just about circuits and code; it’s also about curiosity, creativity, and the human experience.
+  This platform serves as a dedicated space for my research activities in microelectronics, circuit design, and hardware security. I aim to share insights from my academic work, including research findings, project developments, and technical discussions. Occasionally, I will also explore philosophical perspectives and broader academic themes through blog posts.
 
   **Research & Interests**  
-  - **Hardware Security**: My primary focus is on detecting and mitigating hardware Trojans to safeguard the integrity of microelectronic systems.  
-  - **Cryptographic Hardware & Microprocessor Design**: I’m passionate about designing secure integrated circuits and exploring cutting-edge approaches to protect them from evolving threats.  
-  - **Community & Accessibility**: I firmly believe knowledge should be accessible to all and aim to foster a supportive environment for continuous learning.
+  - **Hardware Security**: My research focuses on detecting and mitigating vulnerabilities in commercial off-the-shelf (COTS) ICs. I develop techniques using formal verification and side-channel analysis to enhance the security of microelectronic systems.  
+  - **Secure Hardware Design**: I work on designing robust and attack-resilient integrated circuits, employing cutting-edge cryptographic and architectural strategies to defend against evolving threats.  
+  - **Engineering Education**: I am committed to making knowledge accessible. I design gamified learning modules to simplify computer hardware concepts for high school and early undergraduate students, fostering a more interactive and engaging learning experience.
 
   **What to Expect**  
   - **Curated Learning Resources**: Tutorials, guides, and recommended readings related to microelectronics and hardware security.  
   - **Blog Posts**: Technical deep dives and philosophical musings—offering a holistic view of what it means to be a researcher, teacher, and lifelong learner.
 
-  Thank you for joining me on this journey. If you have any questions or wish to collaborate, feel free to reach out. Let’s learn, explore, and innovate together!
+  Thank you for visiting! Feel free to reach out if you have any questions or are interested in collaborating.
+
 
 about_me_img: "/imgs/me/Tanv1.jpg"
 # about_me_img_caption: |

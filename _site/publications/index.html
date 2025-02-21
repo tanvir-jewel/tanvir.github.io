@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333025-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125333025-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link in our stylesheets -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>
+    
+      Publications | Tanvir Hossain
+    
+  </title>
+</head>
+  <body>
+    <!-- The one consistent feature of page headers will be the nav bar. -->
+<!-- Define the site's nav bar w/Bootstrap's navbar component -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"> 
+      Tanvir Hossain 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Page header -->
+<div class="jumbotron jumbotron-fluid py-4">
+  <div class="container">
+    <h1 class="display-4">Publications</h1>
+    <div class="lead">
+      <p>My publications can also be found on my <a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&amp;hl=en">Google Scholar page</a>.</p>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- Publication page content -->
+<div class="container">
+
+  <!-- This first row will contain a bit of explanatory text about how this page
+       is organized and a table w/icon explanations. -->
+  <div class="row">
+    <!-- Context blurb -->
+    <div class="col">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Context</h5>
+          <div class="card-text">
+            <p>Because my work often spans multiple disciplines, I publish in a variety of 
+venues with different norms and conventions. 
+In addition to each publication’s citation information, which will include links
+to a pdf version when possible, I have attached an assortment of informative icons
+(idea credit: <a href="http://emilyldolson.com/">Emily Dolson</a>).
+The <a href="#iconography-table">iconography table</a> gives each icon and their meaning.
+Icons to the left of a publication’s citation information specify the
+venue where the work was published.
+Icons below a publication’s citation information specify other information.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Icon definitions table -->
+    <div class="col">
+      <div class="card" id="iconography-table">
+        <div class="card-body">
+          <h5 class="card-title">Iconography</h5>
+          <table class="table table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Icon</th>
+                <th scope="col">Publication venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><i class="fas fa-book-open"></i></th>
+                <td>Journal publication</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-chalkboard-teacher"></i></th>
+                <td>Conference publication</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-tools"></i></th>
+                <td>Workshop publication</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-book"></i></th>
+                <td>Book section/chapter</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-pencil-alt"></i></th>
+                <td>Preprint</td>
+              </tr>
+            </tbody>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Icon</th>
+                <th scope="col">Other information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><i class="fas fa-file-pdf"></i></th>
+                <td>Link to download pdf version of publication</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-quote-right"></i></th>
+                <td>Link to BibTex citation</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fab fa-github"></i></th>
+                <td>Link to an associated GitHub repository</td>
+              </tr>
+              <tr>
+                <th scope="row"><i class="fas fa-images"></i></th>
+                <td>Link to an associated poster or slide deck</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This next enumerates all publications listed in publications.yml by category. -->
+  <div class="row">
+    <div class="col">
+      
+<!-- First, we'll loop over the types of publications, creating a header for each
+      and listing out all publications that are of that type. -->
+
+  <!-- Filter the list of publications down to just those that are of this type. -->
+  
+  
+   <!-- If none exist, move along without making a header for this type. -->
+  <!-- If we're here, some number of publications of this type exist. Give a header. -->
+  <!-- The below nonsense lets me give an include argument to specify the heading level for
+        publication category headings. -->
+  <h2>
+    Pre-publication
+  </h2>
+    
+    <ul class="fa-ul"> <!-- We'll use font awesome's unordered list (where fa icons are easily used as bullets) to list publications. -->
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-pencil-alt"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Matthew Andres Moreno, Jose Guadalupe Hernandez, and Emily Dolson (2023).
+Phylogeny-informed fitness evaluation.
+arXiv. <a href="https://doi.org/10.48550/arXiv.2306.03970">arXiv:2306.03970</a>.
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#lalejini_phylogeny_informed_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="lalejini_phylogeny_informed_2023" tabindex="-1" role="dialog" aria-labelledby="lalejini_phylogeny_informed_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="lalejini_phylogeny_informed_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{lalejini_phylogeny_informed_2023,
+  title={Phylogeny-informed fitness estimation},
+  author={Alexander Lalejini and Matthew Andres Moreno and Jose Guadalupe Hernandez and Emily Dolson},
+  year={2023},
+  eprint={2306.03970},
+  archivePrefix={arXiv},
+  primaryClass={cs.NE}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-pencil-alt"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Bhaskar Kumawat, <b>Alexander Lalejini</b>, Monica Acosta, and Luis Zaman. (2023).
+Fluctuating environments promote evolvability by shaping adaptive variation accessible to populations.
+bioRxiv. <a href="https://doi.org/10.1101/2023.01.04.520634">https://doi.org/10.1101/2023.01.04.520634</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#kumawat_fluctuating_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="kumawat_fluctuating_2023" tabindex="-1" role="dialog" aria-labelledby="kumawat_fluctuating_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="kumawat_fluctuating_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article {kumawat_fluctuating_2023,
+  author = {Kumawat, Bhaskar and Lalejini, Alexander and Acosta, Monica and Zaman, Luis},
+  title = {Fluctuating environments promote evolvability by shaping adaptive variation accessible to populations},
+  elocation-id = {2023.01.04.520634},
+  year = {2023},
+  doi = {10.1101/2023.01.04.520634},
+  publisher = {Cold Spring Harbor Laboratory},
+  URL = {https://www.biorxiv.org/content/early/2023/01/04/2023.01.04.520634},
+  eprint = {https://www.biorxiv.org/content/early/2023/01/04/2023.01.04.520634.full.pdf},
+  journal = {bioRxiv}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-pencil-alt"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Ryan Boldi, Martin Briesch, Dominik Sobania, <b>Alexander Lalejini</b>, Thomas Helmuth, Franz Rothlauf, Charles Ofria, and Lee Spector (2023).
+Informed Down-Sampled Lexicase Selection: Identifying productive training cases for efficient problem solving
+arXiv. <a href="https://doi.org/10.48550/arXiv.2301.01488">https://doi.org/10.48550/arXiv.2301.01488</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#boldi_informed_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="boldi_informed_2023" tabindex="-1" role="dialog" aria-labelledby="boldi_informed_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="boldi_informed_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{bold_informed_2023,
+  doi = {10.48550/ARXIV.2301.01488},
+  url = {https://arxiv.org/abs/2301.01488},
+  author = {Boldi, Ryan and Briesch, Martin and Sobania, Dominik and Lalejini, Alexander and Helmuth, Thomas and Rothlauf, Franz and Ofria, Charles and Spector, Lee},
+  keywords = {Neural and Evolutionary Computing (cs.NE), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Informed Down-Sampled Lexicase Selection: Identifying productive training cases for efficient problem solving},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-pencil-alt"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, Charles Ofria (2022).
+A suite of diagnostic metrics for characterizing selection schemes.
+arXiv. <a href="https://doi.org/10.48550/arXiv.2204.13839">https://doi.org/10.48550/arXiv.2204.13839</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#hernandez_diagnostics_2022"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/jgh9094/Selection-Scheme-Diagnotics-Part-I"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="hernandez_diagnostics_2022" tabindex="-1" role="dialog" aria-labelledby="hernandez_diagnostics_2022-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="hernandez_diagnostics_2022-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{https://doi.org/10.48550/arxiv.2204.13839,
+  doi = {10.48550/ARXIV.2204.13839},
+  url = {https://arxiv.org/abs/2204.13839},
+  author = {Hernandez, Jose Guadalupe and Lalejini, Alexander and Ofria, Charles},
+  title = {A suite of diagnostic metrics for characterizing selection schemes},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-pencil-alt"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Matthew Andres Moreno, Santiago Rodriguez Papa, <b>Alexander Lalejini</b>, and Charles Ofria (2021).
+SignalGP-Lite: Event-driven Genetic Programming Library for Large-Scale Artificial Life Applications.
+arXiv. <a href="https://doi.org/10.48550/arXiv.2108.00382">https://doi.org/10.48550/arXiv.2108.00382</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#moreno_sgplite_2021"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/mmore500/signalgp-lite"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="moreno_sgplite_2021" tabindex="-1" role="dialog" aria-labelledby="moreno_sgplite_2021-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="moreno_sgplite_2021-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  misc{moreno_sgplite_2021,
+    doi = {10.48550/ARXIV.2108.00382},
+    url = {https://arxiv.org/abs/2108.00382},
+    author = {Moreno, Matthew Andres and Papa, Santiago Rodriguez and Lalejini, Alexander and Ofria, Charles},
+    keywords = {Neural and Evolutionary Computing (cs.NE), FOS: Computer and information sciences, FOS: Computer and information sciences},
+    title = {SignalGP-Lite: Event Driven Genetic Programming Library for Large-Scale Artificial Life Applications},
+    publisher = {arXiv},
+    year = {2021},
+    copyright = {arXiv.org perpetual, non-exclusive license}
+  }
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+    </ul>
+
+  <!-- Filter the list of publications down to just those that are of this type. -->
+  
+  
+   <!-- If none exist, move along without making a header for this type. -->
+  <!-- If we're here, some number of publications of this type exist. Give a header. -->
+  <!-- The below nonsense lets me give an include argument to specify the heading level for
+        publication category headings. -->
+  <h2>
+    Peer-reviewed papers
+  </h2>
+    
+    <ul class="fa-ul"> <!-- We'll use font awesome's unordered list (where fa icons are easily used as bullets) to list publications. -->
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Matthew Andres Moreno, <b>Alexander Lalejini</b>, and Charles Ofria (2023).
+Matchmaker, Matchmaker, Make Me a Match: Geometric, Variational, and Evolutionary Implications of Criteria for Tag Affinity
+Genetic Programming and Evolvable Machines 24, 4. <a href="https://doi.org/10.1007/s10710-023-09448-0">https://doi.org/10.1007/s10710-023-09448-0</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#moreno2023matchmaker"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/mmore500/tag-olympics"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="moreno2023matchmaker" tabindex="-1" role="dialog" aria-labelledby="moreno2023matchmaker-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="moreno2023matchmaker-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{moreno2023matchmaker,
+  title = {Matchmaker, matchmaker, make me a match: geometric, variational, and evolutionary implications of criteria for tag affinity},
+  volume = {24},
+  issn = {1389-2576, 1573-7632},
+  shorttitle = {Matchmaker, matchmaker, make me a match},
+  url = {https://link.springer.com/10.1007/s10710-023-09448-0},
+  doi = {10.1007/s10710-023-09448-0},
+  language = {en},
+  number = {1},
+  urldate = {2023-04-14},
+  journal = {Genetic Programming and Evolvable Machines},
+  author = {Moreno, Matthew Andres and Lalejini, Alexander and Ofria, Charles},
+  month = jun,
+  year = {2023},
+  pages = {4}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Ryan Boldi, Ashley Bao, Martin Briesch, Thomas Helmuth, Dominik Sobania, Lee Spector, and <b>Alexander Lalejini</b>. (2023).
+The Problem Solving Benefits of Down-sampling Vary by Selection Scheme.
+In Proceedings of the Companion Conference on Genetic and Evolutionary Computation (GECCO ‘23 Companion).
+Association for Computing Machinery, New York, NY, USA, 527–530.
+<a href="https://doi.org/10.1145/3583133.3590713">https://doi.org/10.1145/3583133.3590713</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#boldi_problem_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="boldi_problem_2023" tabindex="-1" role="dialog" aria-labelledby="boldi_problem_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="boldi_problem_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{boldi_problem_2023,
+  author = {Boldi, Ryan and Bao, Ashley and Briesch, Martin and Helmuth, Thomas and Sobania, Dominik and Spector, Lee and Lalejini, Alexander},
+  title = {The Problem Solving Benefits of Down-Sampling Vary by Selection Scheme},
+  year = {2023},
+  isbn = {9798400701207},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3583133.3590713},
+  doi = {10.1145/3583133.3590713},
+  abstract = {Genetic programming systems often use large training sets to evaluate candidate solutions, which can be computationally expensive. Down-sampling training sets has long been used to decrease the computational cost of evaluation in a wide range of application domains. Indeed, recent studies have shown that both random and informed down-sampling can substantially improve problem-solving success for GP systems that use lexicase parent selection. We use the PushGP framework to experimentally test whether these down-sampling techniques can also improve problem-solving success in the context of two other commonly used selection methods, fitness-proportionate and tournament selection, across eight GP problems (four program synthesis and four symbolic regression). We verified that down-sampling can benefit the problem-solving success of both fitness-proportionate and tournament selection. However, the number of problems wherein down-sampling improved problem-solving success varied by selection scheme, suggesting that the impact of down-sampling depends both on the problem and choice of selection scheme. Surprisingly, we found that down-sampling was most consistently beneficial when combined with lexicase selection as compared to tournament and fitness-proportionate selection. Overall, our results suggest that down-sampling should be considered more often when solving test-based GP problems.},
+  booktitle = {Proceedings of the Companion Conference on Genetic and Evolutionary Computation},
+  pages = {527–530},
+  numpages = {4},
+  keywords = {genetic programming, regression, program synthesis, down-sampling, selection},
+  location = {Lisbon, Portugal},
+  series = {GECCO '23 Companion}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Ryan Boldi, <b>Alexander Lalejini</b>, Thomas Helmuth,and Lee Spector (2023).
+A Static Analysis of Informed Down-Samples.
+In Proceedings of the Companion Conference on Genetic and Evolutionary Computation (GECCO ‘23 Companion).
+Association for Computing Machinery, New York, NY, USA, 531–534.
+<a href="https://doi.org/10.1145/3583133.3590751">https://doi.org/10.1145/3583133.3590751</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#boldi_static_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="boldi_static_2023" tabindex="-1" role="dialog" aria-labelledby="boldi_static_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="boldi_static_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{boldi_static_2023,
+  address = {Lisbon Portugal},
+  title = {A {Static} {Analysis} of {Informed} {Down}-{Samples}},
+  copyright = {All rights reserved},
+  isbn = {9798400701207},
+  url = {https://dl.acm.org/doi/10.1145/3583133.3590751},
+  doi = {10.1145/3583133.3590751},
+  language = {en},
+  urldate = {2023-09-12},
+  booktitle = {Proceedings of the {Companion} {Conference} on {Genetic} and {Evolutionary} {Computation}},
+  publisher = {ACM},
+  author = {Boldi, Ryan and Lalejini, Alexander and Helmuth, Thomas and Spector, Lee},
+  month = jul,
+  year = {2023},
+  pages = {531--534}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-tools"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Shakiba Shahbandegan, Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, and Emily Dolson (2022).
+Untangling phylogenetic diversity’s role in evolutionary computation using a suite of diagnostic fitness landscapes.
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘22).
+Association for Computing Machinery, New York, NY, USA, 2322–2325.
+<a href="https://doi.org/10.1145/3520304.3534028">https://doi.org/10.1145/3520304.3534028</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> Awarded best student paper </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#10.1145/3520304.3534028"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1145/3520304.3534028" tabindex="-1" role="dialog" aria-labelledby="10.1145/3520304.3534028-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1145/3520304.3534028-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3520304.3534028,
+  author = {Shahbandegan, Shakiba and Hernandez, Jose Guadalupe and Lalejini, Alexander and Dolson, Emily},
+  title = {Untangling Phylogenetic Diversity's Role in Evolutionary Computation Using a Suite of Diagnostic Fitness Landscapes},
+  year = {2022},
+  isbn = {9781450392686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3520304.3534028},
+  doi = {10.1145/3520304.3534028},
+  abstract = {Diversity is associated with success in evolutionary algorithms. To date, diversity in evolutionary computation research has mostly been measured by counting the number of distinct candidate solutions in the population at a given time point. Here, we aim to investigate the value of phylogenetic diversity, which takes into account the evolutionary history of a population. To understand how informative phylogenetic diversity is, we run experiments on a set of diagnostic fitness landscapes under a range of different selection schemes. We find that phylogenetic diversity can be more predictive of future success than traditional diversity metrics under some conditions, particularly for fitness landscapes with a single, challenging-to-find global optimum. Our results suggest that phylogenetic diversity metrics should be more widely incorporated into research on diversity in evolutionary computation.},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages = {2322–2325},
+  numpages = {4},
+  keywords = {transfer entropy, phylogenetic diversity, causality analysis, diversity},
+  location = {Boston, Massachusetts},
+  series = {GECCO '22}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Emily Dolson, Anya E Vostinar, and Luis Zaman (2022).
+Artificial selection methods from evolutionary computing show promise for directed evolution of microbes
+eLife 11:e79665. <a href="https://doi.org/10.7554/eLife.79665">https://doi.org/10.7554/eLife.79665</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#lalejini_selection_2022"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/directed-digital-evolution"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="lalejini_selection_2022" tabindex="-1" role="dialog" aria-labelledby="lalejini_selection_2022-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="lalejini_selection_2022-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article {10.7554/eLife.79665,
+  article_type = {journal},
+  title = {Artificial selection methods from evolutionary computing show promise for directed evolution of microbes},
+  author = {Lalejini, Alexander and Dolson, Emily and Vostinar, Anya E and Zaman, Luis},
+  editor = {Ogbunugafor, C Brandon},
+  volume = 11,
+  year = 2022,
+  month = {aug},
+  pub_date = {2022-08-02},
+  pages = {e79665},
+  citation = {eLife 2022;11:e79665},
+  doi = {10.7554/eLife.79665},
+  url = {https://doi.org/10.7554/eLife.79665},
+  abstract = {Directed microbial evolution harnesses evolutionary processes in the laboratory to construct microorganisms with enhanced or novel functional traits. Attempting to direct evolutionary processes for applied goals is fundamental to evolutionary computation, which harnesses the principles of Darwinian evolution as a general purpose search engine for solutions to challenging computational problems. Despite their overlapping approaches, artificial selection methods from evolutionary computing are not commonly applied to living systems in the laboratory. In this work, we ask if parent selection algorithms-procedures for choosing promising progenitors-from evolutionary computation might be useful for directing the evolution of microbial populations when selecting for multiple functional traits. To do so, we introduce an agent-based model of directed microbial evolution, which we used to evaluate how well three selection algorithms from evolutionary computing (tournament selection, lexicase selection, and non-dominated elite selection) performed relative to methods commonly used in the laboratory (elite and top-10\% selection). We found that multi-objective selection techniques from evolutionary computing (lexicase and non-dominated elite) generally outperformed the commonly used directed evolution approaches when selecting for multiple traits of interest. Our results motivate ongoing work transferring these multi-objective selection procedures into the laboratory and a continued evaluation of more sophisticated artificial selection methods.},
+  journal = {eLife},
+  issn = {2050-084X},
+  publisher = {eLife Sciences Publications, Ltd},
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Anya E. Vostinar, Katherine G. Skocelas, <b>Alexander Lalejini</b>, and Luis Zaman (2021).
+Symbiosis in Digital Evolution: Past, Present, and Future.
+Front. Ecol. Evol. 9:739047. doi: <a href="https://doi.org/10.3389/fevo.2021.739047">10.3389/fevo.2021.739047</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#vostinar_symbiosis_2021"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="vostinar_symbiosis_2021" tabindex="-1" role="dialog" aria-labelledby="vostinar_symbiosis_2021-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="vostinar_symbiosis_2021-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ARTICLE{vostinar_symbiosis_2021,
+  AUTHOR={Vostinar, Anya E. and Skocelas, Katherine G. and Lalejini, Alexander and Zaman, Luis},
+  TITLE={Symbiosis in Digital Evolution: Past, Present, and Future},
+  JOURNAL={Frontiers in Ecology and Evolution},
+  VOLUME={9},
+  PAGES={748},
+  YEAR={2021},
+  URL={https://www.frontiersin.org/article/10.3389/fevo.2021.739047},
+  DOI={10.3389/fevo.2021.739047},
+  ISSN={2296-701X},
+  ABSTRACT={Symbiosis, the living together of unlike organisms as symbionts, is ubiquitous in the natural world. Symbioses occur within and across all scales of life, from microbial to macro-faunal systems. Further, the interactions between symbionts are multimodal in both strength and type, can span from parasitic to mutualistic within one partnership, and persist over generations. Studying the ecological and evolutionary dynamics of symbiosis in natural or laboratory systems poses a wide range of challenges, including the long time scales at which symbioses evolve de novo, the limited capacity to experimentally control symbiotic interactions, the weak resolution at which we can quantify interactions, and the idiosyncrasies of current model systems. These issues are especially challenging when seeking to understand the ecological effects and evolutionary pressures on and of a symbiosis, such as how a symbiosis may shift between parasitic and mutualistic modes and how that shift impacts the dynamics of the partner population. In digital evolution, populations of computational organisms compete, mutate, and evolve in a virtual environment. Digital evolution features perfect data tracking and allows for experimental manipulations that are impractical or impossible in natural systems. Furthermore, modern computational power allows experimenters to observe thousands of generations of evolution in minutes (as opposed to several months or years), which greatly expands the range of possible studies. As such, digital evolution is poised to become a keystone technique in our methodological repertoire for studying the ecological and evolutionary dynamics of symbioses. Here, we review how digital evolution has been used to study symbiosis, and we propose a series of open questions that digital evolution is well-positioned to answer.}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Austin J. Ferguson, Nkrumah A. Grant, and Charles Ofria. (2021).
+Adaptive Phenotypic Plasticity Stabilizes Evolution in Fluctuating Environments.
+Front. Ecol. Evol. 9:715381. doi: <a href="https://doi.org/10.3389/fevo.2021.715381">10.3389/fevo.2021.715381</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> 2022 ISAL Award for Outstanding Student Publication </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#lalejini_adaptive_2021"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/evolutionary-consequences-of-plasticity"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="lalejini_adaptive_2021" tabindex="-1" role="dialog" aria-labelledby="lalejini_adaptive_2021-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="lalejini_adaptive_2021-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ARTICLE{lalejini_adaptive_2021,
+  AUTHOR={Lalejini, Alexander and Ferguson, Austin J. and Grant, Nkrumah A. and Ofria, Charles},
+  TITLE={Adaptive Phenotypic Plasticity Stabilizes Evolution in Fluctuating Environments},
+  JOURNAL={Frontiers in Ecology and Evolution},
+  VOLUME={9},
+  PAGES={550},
+  YEAR={2021},
+  URL={https://www.frontiersin.org/article/10.3389/fevo.2021.715381},
+  DOI={10.3389/fevo.2021.715381},
+  ISSN={2296-701X},
+  ABSTRACT={Fluctuating environmental conditions are ubiquitous in natural systems, and populations have evolved various strategies to cope with such fluctuations. The particular mechanisms that evolve profoundly influence subsequent evolutionary dynamics. One such mechanism is phenotypic plasticity, which is the ability of a single genotype to produce alternate phenotypes in an environmentally dependent context. Here, we use digital organisms (self-replicating computer programs) to investigate how adaptive phenotypic plasticity alters evolutionary dynamics and influences evolutionary outcomes in cyclically changing environments. Specifically, we examined the evolutionary histories of both plastic populations and non-plastic populations to ask: (1) Does adaptive plasticity promote or constrain evolutionary change? (2) Are plastic populations better able to evolve and then maintain novel traits? And (3), how does adaptive plasticity affect the potential for maladaptive alleles to accumulate in evolving genomes? We find that populations with adaptive phenotypic plasticity undergo less evolutionary change than non-plastic populations, which must rely on genetic variation from de novo mutations to continuously readapt to environmental fluctuations. Indeed, the non-plastic populations undergo more frequent selective sweeps and accumulate many more genetic changes. We find that the repeated selective sweeps in non-plastic populations drive the loss of beneficial traits and accumulation of maladaptive alleles, whereas phenotypic plasticity can stabilize populations against environmental fluctuations. This stabilization allows plastic populations to more easily retain novel adaptive traits than their non-plastic counterparts. In general, the evolution of adaptive phenotypic plasticity shifted evolutionary dynamics to be more similar to that of populations evolving in a static environment than to non-plastic populations evolving in an identical fluctuating environment. All natural environments subject populations to some form of change; our findings suggest that the stabilizing effect of phenotypic plasticity plays an important role in subsequent adaptive evolution.}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Matthew Andres Moreno, and Charles Ofria.
+Tag-based regulation of modules in genetic programming improves context-dependent problem solving.
+Genet Program Evolvable Mach (2021).
+<a href="https://doi.org/10.1007/s10710-021-09406-8">https://doi.org/10.1007/s10710-021-09406-8</a>
+
+            <br/>
+            
+             <a href="/pubs/lalejini-et-al-2021-tag-based-genetic-regulation.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#lalejini_tag-based_2021"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/Tag-based-Genetic-Regulation-for-LinearGP"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="lalejini_tag-based_2021" tabindex="-1" role="dialog" aria-labelledby="lalejini_tag-based_2021-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="lalejini_tag-based_2021-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">@article</span><span class="p">{</span><span class="nl">lalejini_tag-based_2021</span><span class="p">,</span>
+    <span class="na">title</span> <span class="p">=</span> <span class="s">{Tag-based regulation of modules in genetic programming improves context-dependent problem solving}</span><span class="p">,</span>
+    <span class="na">copyright</span> <span class="p">=</span> <span class="s">{All rights reserved}</span><span class="p">,</span>
+    <span class="na">issn</span> <span class="p">=</span> <span class="s">{1389-2576, 1573-7632}</span><span class="p">,</span>
+    <span class="na">url</span> <span class="p">=</span> <span class="s">{https://link.springer.com/10.1007/s10710-021-09406-8}</span><span class="p">,</span>
+    <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1007/s10710-021-09406-8}</span><span class="p">,</span>
+    <span class="na">language</span> <span class="p">=</span> <span class="s">{en}</span><span class="p">,</span>
+    <span class="na">urldate</span> <span class="p">=</span> <span class="s">{2021-07-10}</span><span class="p">,</span>
+    <span class="na">journal</span> <span class="p">=</span> <span class="s">{Genetic Programming and Evolvable Machines}</span><span class="p">,</span>
+    <span class="na">volume</span> <span class="p">=</span> <span class="s">{22}</span><span class="p">,</span>
+    <span class="na">number</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
+    <span class="na">pages</span> <span class="p">=</span> <span class="s">{325--355}</span><span class="p">,</span>
+    <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Moreno, Matthew Andres and Ofria, Charles}</span><span class="p">,</span>
+    <span class="na">month</span> <span class="p">=</span> <span class="nv">jul</span><span class="p">,</span>
+    <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book-open"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Emily Dolson, <b>Alexander Lalejini</b>, Steven Jorgensen, and Charles Ofria. (2020).
+<a href="https://doi.org/10.1162/artl_a_00313">Interpreting the Tape of Life: Ancestry-based metrics and visualizations</a>
+provide insights and intuition about evolutionary dynamics. Artificial Life.
+MIT Press. DOI: <a href="https://doi.org/10.1162/artl_a_00313">10.1162/artl_a_00313</a>
+
+            <br/>
+            
+             <a href="/pubs/Dolson_et_al_2020_Interpreting_the_Tape_of_Life.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#dolson-2020-interpreting-the-tape-of-life"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/emilydolson/interpreting_the_tape_of_life"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="dolson-2020-interpreting-the-tape-of-life" tabindex="-1" role="dialog" aria-labelledby="dolson-2020-interpreting-the-tape-of-life-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="dolson-2020-interpreting-the-tape-of-life-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{dolson-2020-interpreting-the-tape-of-life,
+  author = {Dolson, Emily and Lalejini, Alexander and Jorgensen, Steven and Ofria, Charles},
+  title = {Interpreting the Tape of Life: Ancestry-Based Analyses Provide Insights and Intuition about Evolutionary Dynamics},
+  journal = {Artificial Life},
+  volume = {26},
+  number = {1},
+  pages = {58-79},
+  year = {2020},
+  doi = {10.1162/artl\_a\_00313},
+  note ={PMID: 32027535},
+  URL = { https://doi.org/10.1162/artl_a_00313 },
+  eprint = { https://doi.org/10.1162/artl_a_00313 }
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Emily Dolson, Clifford Bohm, Austin J. Ferguson, David P. Parsons, Penelope Faulkner Rainford, Paul Richmond, and Charles Ofria (2019).
+<a href="https://www.mitpressjournals.org/doi/abs/10.1162/isal_a_00213">Data Standards for Artificial Life Software.</a>
+The 2019 Conference on Artificial Life, 507–514. <a href="https://doi.org/10.1162/isal_a_00213">https://doi.org/10.1162/isal_a_00213</a>
+
+            <br/>
+            
+             <a href="/pubs/Lalejini_et_al_2019_Data_Standards_For_Artificial_Life_Software.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2019-DataStandards"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/alife-data-standards/alife-data-standards"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/19fQMsfnYh154G5ZdcJfsjcap6MKjG57p-VncMsjwbQY/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2019-DataStandards" tabindex="-1" role="dialog" aria-labelledby="Lalejini2019-DataStandards-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2019-DataStandards-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">@article</span><span class="p">{</span><span class="nl">Lalejini2019-DataStandards</span><span class="p">,</span>
+    <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Dolson, Emily and Bohm, Clifford and Ferguson, Austin J. and Parsons, David P. and Rainford, Penelope Faulkner and Richmond, Paul and Ofria, Charles}</span><span class="p">,</span>
+    <span class="na">title</span> <span class="p">=</span> <span class="s">{Data Standards for Artificial Life Software}</span><span class="p">,</span>
+    <span class="na">journal</span> <span class="p">=</span> <span class="s">{The 2019 Conference on Artificial Life}</span><span class="p">,</span>
+    <span class="na">volume</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+    <span class="na">number</span> <span class="p">=</span> <span class="s">{31}</span><span class="p">,</span>
+    <span class="na">pages</span> <span class="p">=</span> <span class="s">{507-514}</span><span class="p">,</span>
+    <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+    <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1162/isal\_a\_00213}</span><span class="p">,</span>
+    <span class="na">URL</span> <span class="p">=</span> <span class="s">{ https://www.mitpressjournals.org/doi/abs/10.1162/isal_a_00213 }</span><span class="p">,</span>
+    <span class="na">eprint</span> <span class="p">=</span> <span class="s">{ https://www.mitpressjournals.org/doi/pdf/10.1162/isal_a_00213 }</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-tools"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, Emily Dolson, and Charles Ofria. (2019).
+<a href="https://dl.acm.org/citation.cfm?id=3326900">Random subsampling improves performance in lexicase selection.</a>
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘19), Manuel López-Ibáñez (Ed.).
+ACM, New York, NY, USA, 2028-2031. DOI: <a href="https://doi.org/10.1145/3319619.3326900">https://doi.org/10.1145/3319619.3326900</a>
+
+            <br/>
+            
+             <a href="/pubs/Hernandez_et_al_2019_Random_Subsampling_Improves_Performance_in_Lexicase_Selection.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Hernandez2019-SubsamplingLexicase"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GECCO-2019-cohort-lexicase"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1E4rjdK9v5MEKPKhKlosPb-M_ldYQP1Q_VEz2LLOOjdc/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Hernandez2019-SubsamplingLexicase" tabindex="-1" role="dialog" aria-labelledby="Hernandez2019-SubsamplingLexicase-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Hernandez2019-SubsamplingLexicase-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Hernandez2019-SubsamplingLexicase</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hernandez, Jose Guadalupe and Lalejini, Alexander and Dolson, Emily and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Random Subsampling Improves Performance in Lexicase Selection}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Genetic and Evolutionary Computation Conference Companion}</span><span class="p">,</span>
+  <span class="na">series</span> <span class="p">=</span> <span class="s">{GECCO '19}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-1-4503-6748-6}</span><span class="p">,</span>
+  <span class="na">location</span> <span class="p">=</span> <span class="s">{Prague, Czech Republic}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{2028--2031}</span><span class="p">,</span>
+  <span class="na">numpages</span> <span class="p">=</span> <span class="s">{4}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{http://doi.acm.org/10.1145/3319619.3326900}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3319619.3326900}</span><span class="p">,</span>
+  <span class="na">acmid</span> <span class="p">=</span> <span class="s">{3326900}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{ACM}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{cohort lexicase, cohorts, down-sampled lexicase, genetic programming, lexicase selection, parent selection, program synthesis}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-tools"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Clifford Bohm, <b>Alexander Lalejini</b>, Jory Schossau, and Charles Ofria. (2019).
+<a href="https://dl.acm.org/citation.cfm?id=3326825">MABE 2.0: an introduction to MABE and a road map for the future of MABE development.</a>
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘19), Manuel López-Ibáñez (Ed.).
+ACM, New York, NY, USA, 1349-1356. DOI: <a href="https://doi.org/10.1145/3319619.3326825">https://doi.org/10.1145/3319619.3326825</a>
+
+            <br/>
+            
+             <a href="/pubs/Bohm_et_al_2019_MABE2.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Bohm2019-MABE2"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Bohm2019-MABE2" tabindex="-1" role="dialog" aria-labelledby="Bohm2019-MABE2-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Bohm2019-MABE2-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Bohm2019-MABE2</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bohm, Clifford and Lalejini, Alexander and Schossau, Jory and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{MABE 2.0: An Introduction to MABE and a Road Map for the Future of MABE Development}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Genetic and Evolutionary Computation Conference Companion}</span><span class="p">,</span>
+  <span class="na">series</span> <span class="p">=</span> <span class="s">{GECCO '19}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-1-4503-6748-6}</span><span class="p">,</span>
+  <span class="na">location</span> <span class="p">=</span> <span class="s">{Prague, Czech Republic}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1349--1356}</span><span class="p">,</span>
+  <span class="na">numpages</span> <span class="p">=</span> <span class="s">{8}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{http://doi.acm.org/10.1145/3319619.3326825}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3319619.3326825}</span><span class="p">,</span>
+  <span class="na">acmid</span> <span class="p">=</span> <span class="s">{3326825}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{ACM}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{MABE, artificial life, empirical library, evolution, evolutionary computation, modular agent-based evolver, open source, software development}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b> and Charles Ofria. (2018).
+<a href="https://doi.org/10.1145/3205455.3205523">Evolving event-driven programs with SignalGP</a>.
+In Proceedings of the 2018 Genetic and Evolutionary Computation Conference (GECCO).
+pp. 1135-1142.  DOI: <a href="https://doi.org/10.1145/3205455.3205523">10.1145/3205455.3205523</a>. ACM.
+
+            <br/>
+            
+             <a href="/pubs/evolving-event-driven-programs-with-signalgp.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2018-GECCO"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GECCO-2018-Evolving-Event-driven-Programs-with-SignalGP"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1YKn9Hg7GNAsAEHNcHUKnWXq0HZD7k6zsM8irkIX-mlw/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2018-GECCO" tabindex="-1" role="dialog" aria-labelledby="Lalejini2018-GECCO-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2018-GECCO-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Lalejini2018-GECCO</span><span class="p">,</span>
+  <span class="na">abstract</span> <span class="p">=</span> <span class="s">{We present SignalGP, a new genetic programming (GP) technique designed to incorporate the event-driven programming paradigm into computational evolution's toolbox. Event-driven programming is a software design philosophy that simplifies the development of reactive programs by automatically triggering program modules (event-handlers) in response to external events, such as signals from the environment or messages from other programs. SignalGP incorporates these concepts by extending existing tag-based referencing techniques into an event-driven context. Both events and functions are labeled with evolvable tags; when an event occurs, the function with the closest matching tag is triggered. In this work, we apply SignalGP in the context of linear GP. We demonstrate the value of the event-driven paradigm using two distinct test problems (an environment coordination problem and a distributed leader election problem) by comparing SignalGP to variants that are otherwise identical, but must actively use sensors to process events or messages. In each of these problems, rapid interaction with the environment or other agents is critical for maximizing fitness. We also discuss ways in which SignalGP can be generalized beyond our linear GP implementation.}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, New York, USA}</span><span class="p">,</span>
+  <span class="na">archivePrefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
+  <span class="na">arxivId</span> <span class="p">=</span> <span class="s">{1804.05445}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Genetic and Evolutionary Computation Conference on - GECCO '18}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3205455.3205523}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{1804.05445}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{9781450356183}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{event-driven computation,event-driven programming,genetic programming,linear genetic programming,signalgp,tags}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1135--1142}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{ACM Press}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Evolving event-driven programs with SignalGP}}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{http://arxiv.org/abs/1804.05445{\%}0Ahttp://dx.doi.org/10.1145/3205455.3205523 http://dl.acm.org/citation.cfm?doid=3205455.3205523}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Emily Dolson, <b>Alexander Lalejini</b>, Steven Jorgensen, and Charles Ofria. (2018).
+<a href="https://doi.org/10.1162/isal_a_00020">Quantifying the tape of life: Ancestry-based metrics provide insights and intuition
+about evolutionary dynamics.</a>
+In Proceedings of the 2018 Conference on Artificial Life (ALIFE).
+Edited by Takashi Ikegami, Nathaniel Virgo, Olaf Witkowski, Mizuki Oka, Reiji Suzuki, and Hiroyuki Iizuka.
+pp. 75-82. DOI: <a href="https://doi.org/10.1162/isal_a_00020">10.1162/isal_a_00020</a>. MIT Press.
+
+            <br/>
+            
+              <span class="badge badge-primary"> International Society for Artificial Life Outstanding Student Publication Award </span>
+            
+             <a href="/pubs/quantifying-the-tape-of-life.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Dolson2018-ALIFE"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/stevenjson/ALife2018-Lineage"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1dV044J3JzfLrdgfwWS_4Bq8-3UHOqvQQgmqEZEkrcCc/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Dolson2018-ALIFE" tabindex="-1" role="dialog" aria-labelledby="Dolson2018-ALIFE-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Dolson2018-ALIFE-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Dolson2018-ALIFE</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Cambridge, MA}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dolson, Emily and Lalejini, Alexander and Jorgensen, Steven and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{The 2018 Conference on Artificial Life}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1162/isal_a_00020}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{75--82}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{MIT Press}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Quantifying the Tape of Life: Ancestry-based Metrics Provide Insights and Intuition about Evolutionary Dynamics}}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.mitpressjournals.org/doi/abs/10.1162/isal{\_}a{\_}00020}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Michael J. Wiser, and Charles Ofria. (2017).
+<a href="https://doi.org/10.7551/ecal_a_045">Gene duplications drive the evolution of complex traits and regulation</a>.
+In Proceedings of the 14th European Conference on Artificial Life (ECAL) 2017.
+Edited by Carole Knibbe, Guillaume Beslon, David Parsons, Dusan Misevic,
+Jonathan Rouzaud-Cornabas, Nicolas Bredèche, Salima Hassas, Olivier Simonin,
+and Hédi Soula. Vol 14. pp. 257-264.
+DOI: <a href="https://doi.org/10.7551/ecal_a_045">10.7551/ecal_a_045</a>. MIT Press.
+
+            <br/>
+            
+             <a href="/pubs/gene-duplications-drive-the-evolution-of-complex-traits-and-regulation.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2017-ECAL"><i class="fas fa-quote-right"></i></a>
+            
+            
+            <a href="https://docs.google.com/presentation/d/1by_lcyOZ2872BoSard0-b9LsejGxly9lxOobDiU0zy8/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2017-ECAL" tabindex="-1" role="dialog" aria-labelledby="Lalejini2017-ECAL-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2017-ECAL-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Lalejini2017-ECAL</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Cambridge, MA}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Wiser, Michael J. and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 14th European Conference on Artificial Life ECAL 2017}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.7551/ecal_a_045}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-0-262-34633-7}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="s">{sep}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{September}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{257--264}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{MIT Press}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Gene duplications drive the evolution of complex traits and regulation}}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.mitpressjournals.org/doi/abs/10.1162/isal{\_}a{\_}045}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2017}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b> and Charles Ofria. (2016). <a href="https://doi.org/10.7551/978-0-262-33936-0-ch063">The evolutionary origins of
+phenotypic plasticity</a>.
+In Artificial Life XV: Proceedings of the Fifteenth
+International Conference on the Synthesis and Simulation of Living Systems (ALIFE).
+Edited by Carlos Gershenson, Tom Froese, Jesus M. Siqueiros, Wendy Aguilar,
+Eduardo J. Izquierdo and Hiroki Sayama. Vol 14. pp. 372-379.
+DOI: <a href="https://doi.org/10.7551/978-0-262-33936-0-ch063">10.7551/978-0-262-33936-0-ch063</a>. MIT Press.
+
+            <br/>
+            
+              <span class="badge badge-primary"> best student paper </span>
+            
+             <a href="/pubs/the-evolutionary-origins-of-phenotypic-plasticity.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2016-ALIFE"><i class="fas fa-quote-right"></i></a>
+            
+            
+            <a href="https://docs.google.com/presentation/d/12AzO1cYUaEgHHlo6TdKaVV-UKG_hTCtN7vDz6waleLY/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2016-ALIFE" tabindex="-1" role="dialog" aria-labelledby="Lalejini2016-ALIFE-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2016-ALIFE-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Lalejini2016-ALIFE</span><span class="p">,</span>
+  <span class="na">abstract</span> <span class="p">=</span> <span class="s">{Many effective and innovative survival mechanisms used by natural organisms rely on the capacity for phenotypic plasticity; that is, the ability of a genotype to alter how it is expressed based on the current environmental conditions. Understanding the evolution of phenotypic plasticity is an important step towards understanding the origins of many types of biological complexity, as well as to meeting challenges in evolutionary computation where dynamic solutions are required. Here, we leverage the Avida Digital Evolution Platform to experimentally explore the selective pressures and evolutionary pathways that lead to phenotypic plasticity. We present evolved lineages wherein unconditional traits tend to evolve first; next, imprecise forms of phenotypic plasticity often ap-pear before optimal forms finally evolve. We visualize the phenotypic states traversed by evolved lineages across environments with differing rates of mutations and environmental change. We see that under all conditions, populations can fail to evolve phenotypic plasticity, instead relying on mutation-based solutions.}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Cambridge, MA}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Artificial Life Conference 2016}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.7551/978-0-262-33936-0-ch063}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-0-262-33936-0}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{372--379}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{MIT Press}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{The Evolutionary Origins of Phenotypic Plasticity}}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.mitpressjournals.org/doi/abs/10.1162/978-0-262-33936-0-ch063}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2016}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Christopher R. Hudson, <b>Alexander Lalejini</b>, Brandon Odom, Daniel W. Carruth, Cindy L. Bethel,
+Phillip J. Durst, and Christopher Goodin. (2015).
+ANVEL-ROS: The integration of the robot operating system with a high-fidelity simulator.
+In Proceedings of the 2015 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS).
+p. 378.
+
+            <br/>
+            
+             <a href="/pubs/ANVEL-ROS-integration.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Hudson2015-GVSETS"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Hudson2015-GVSETS" tabindex="-1" role="dialog" aria-labelledby="Hudson2015-GVSETS-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Hudson2015-GVSETS-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Hudson2015-GVSETS</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hudson, Christopher R and Lalejini, Alexander and Odom, Brandon and Carruth, Daniel W and Bethel, Cindy L and Durst, Phillip J and Goodin, Christopher}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2015 Ground Vehicle Systems Engineering and Technology Symposium}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Anvel-ROS: the Integration of the Robot Operating System With a High-Fidelity Simulator}}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2015}</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-tools"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Dexter Duckworth, Richard Sween, Cindy L. Bethel, and Daniel W. Carruth. (2014).
+<a href="https://doi.org/10.1109/ARSO.2014.7020971">Evaluation of supervisory control interfaces for mobile robot integration with tactical teams</a>.
+In Proceedings of 2014 IEEE Workshop on Advanced Robotics and Its Social Impacts (ARSO).
+pp 1-6.
+DOI: <a href="https://doi.org/10.1109/ARSO.2014.7020971">10.1109/ARSO.2014.7020971</a>. IEEE.
+
+            <br/>
+            
+             <a href="/pubs/evaluation-of-supervisory-control-interfaces.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2014-ARSO"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2014-ARSO" tabindex="-1" role="dialog" aria-labelledby="Lalejini2014-ARSO-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2014-ARSO-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{Lalejini2014-ARSO,
+  abstract = {As robotic systems become more sophisticated, they are increasingly called upon to accompany humans in high-stress environments. This research was conducted to support the integration of robotic systems into tactical teams operating in challenging and stressful environments. Robotic systems used to assist tactical teams will need to support some form of autonomy; these systems must be capable of providing operators supervisory control in cases of unpredictable real-time events. An evaluation of the relative effectiveness of three different methods of supervisory control of an autonomously operated mobile robot system was conducted: (1) hand gestures using a Microsoft Kinect, (2) an interactive Android application on a hand-held mobile device, and (3) verbal commands issued through a headset. These methods of supervisory control were compared to a teleoperated robot using a gamepad controller. The results from this pilot study determined that the touchscreen device was the easiest interface to use to override the robot's next intended movement (L2(3,23)=11.413, p=.003, d=1.58) and was considered the easiest interface to use overall (L2(3,23)=8.078, p=.044, d=.93). The results also indicate that the touchscreen device provided the most enjoyable, satisfying, and engaging interface of the four user interfaces evaluated.},
+  author = {Lalejini, Alexander and Duckworth, Dexter and Sween, Richard and Bethel, Cindy L. and Carruth, Daniel},
+  booktitle = {2014 IEEE International Workshop on Advanced Robotics and its Social Impacts},
+  doi = {10.1109/ARSO.2014.7020971},
+  isbn = {978-1-4799-6968-5},
+  issn = {21627576},
+  month = {sep},
+  number = {January},
+  pages = {1--6},
+  publisher = {IEEE},
+  title = {{Evaluation of supervisory control interfaces for mobile robot integration with tactical teams}},
+  url = {http://ieeexplore.ieee.org/document/7020971/},
+  volume = {2015-Janua},
+  year = {2014}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+    </ul>
+
+  <!-- Filter the list of publications down to just those that are of this type. -->
+  
+  
+   <!-- If none exist, move along without making a header for this type. -->
+  <!-- If we're here, some number of publications of this type exist. Give a header. -->
+  <!-- The below nonsense lets me give an include argument to specify the heading level for
+        publication category headings. -->
+  <h2>
+    Peer-reviewed abstracts
+  </h2>
+    <p>These are short (usually 2-page) summaries of research recently published or
+to be published elsewhere.</p>
+ 
+    <ul class="fa-ul"> <!-- We'll use font awesome's unordered list (where fa icons are easily used as bullets) to list publications. -->
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Matthew Andres Moreno, <b>Alexander Lalejini</b>, and Charles Ofria. (2023).
+Tag Affinity Criteria Influence Adaptive Evolution.
+In Proceedings of the Companion Conference on Genetic and Evolutionary Computation (GECCO ‘23 Companion).
+Association for Computing Machinery, New York, NY, USA, 35–36.
+<a href="https://doi.org/10.1145/3583133.3595834">https://doi.org/10.1145/3583133.3595834</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#moreno_tag_2023"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="moreno_tag_2023" tabindex="-1" role="dialog" aria-labelledby="moreno_tag_2023-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="moreno_tag_2023-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{moreno_tag_2023,
+    author = {Moreno, Matthew Andres and Lalejini, Alexander and Ofria, Charles},
+    title = {Tag Affinity Criteria Influence Adaptive Evolution},
+    year = {2023},
+    isbn = {9798400701207},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3583133.3595834},
+    doi = {10.1145/3583133.3595834},
+    abstract = {This Hot-off-the-Press paper summarizes our recently published work, "Matchmaker, Matchmaker, Make Me a Match: Geometric, Variational, and Evolutionary Implications of Criteria for Tag Affinity" [8]. This work appeared in Genetic Programming and Evolvable Machines. Genetic programming systems commonly use tag matching to decide interactions between system components. However, the implications of criteria used to determine affinity between tags with respect evolutionary dynamics have not been directly studied. We investigate differences between tag-matching criteria with respect to geometric constraint and variation generated under mutation. In experiments, we find that tag-matching criteria can influence the rate of adaptive evolution and the quality of evolved solutions. Better understanding of the geometric, variational, and evolutionary properties of tag-matching criteria will facilitate more effective incorporation of tag matching into genetic programming systems. By showing that tag-matching criteria influence connectivity patterns and evolutionary dynamics, our findings also raise fundamental questions about the properties of tag-matching systems in nature.},
+    booktitle = {Proceedings of the Companion Conference on Genetic and Evolutionary Computation},
+    pages = {35–36},
+    numpages = {2},
+    keywords = {tag-based referencing, genetic programming, artificial gene regulatory networks, module-based genetic programming, event-driven genetic programming},
+    location = {Lisbon, Portugal},
+    series = {GECCO '23 Companion}
+  }
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Matthew Andres Moreno, and Charles Ofria. 2022.
+Tag-based module regulation for genetic programming.
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘22).
+Association for Computing Machinery, New York, NY, USA, 25–26.
+<a href="https://doi.org/10.1145/3520304.3534060">https://doi.org/10.1145/3520304.3534060</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+             <a href="/pubs/2022-07-tag-based-regulation-ext-abstract.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3520304.3534060,
+  author = {Lalejini, Alexander and Moreno, Matthew Andres and Ofria, Charles},
+  title = {Tag-Based Module Regulation for Genetic Programming},
+  year = {2022},
+  isbn = {9781450392686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3520304.3534060},
+  doi = {10.1145/3520304.3534060},
+  abstract = {This Hot-off-the-Press paper summarizes our recently published work, "Tag-based regulation of modules in genetic programming improves context-dependent problem solving," published in Genetic Programming and Evolvable Machines [1]. We introduce and experimentally demonstrate tag-based genetic regulation, a genetic programming (GP) technique that allows programs to dynamically adjust which code modules to express. Tags are evolvable labels that provide a flexible naming scheme for referencing code modules. Tag-based regulation extends tag-based naming schemes to allow programs to "promote" and "repress" code modules to alter module execution patterns. We find that tag-based regulation improves problem-solving success on problems where programs must adjust how they respond to current inputs based on prior inputs; indeed, some of these problems could not be solved until regulation was added. We also identify scenarios where the correct response to an input does not change over time, rendering tag-based regulation an unnecessary functionality that can sometimes impede evolution. Broadly, tag-based regulation adds to our repertoire of techniques for evolving more dynamic computer programs and can easily be incorporated into existing tag-enabled GP systems.},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages = {25–26},
+  numpages = {2},
+  keywords = {SignalGP, gene regulation, automatic program synthesis, tag-based referencing, genetic programming},
+  location = {Boston, Massachusetts},
+  series = {GECCO '22}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, and Emily Dolson. 2022.
+Phylogenetic diversity predicts future success in evolutionary computation.
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘22). Association for Computing Machinery, New York, NY, USA, 23–24.
+<a href="https://doi.org/10.1145/3520304.3534079">https://doi.org/10.1145/3520304.3534079</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#10.1145/3520304.3534079"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1145/3520304.3534079" tabindex="-1" role="dialog" aria-labelledby="10.1145/3520304.3534079-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1145/3520304.3534079-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3520304.3534079,
+  author = {Hernandez, Jose Guadalupe and Lalejini, Alexander and Dolson, Emily},
+  title = {Phylogenetic Diversity Predicts Future Success in Evolutionary Computation},
+  year = {2022},
+  isbn = {9781450392686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3520304.3534079},
+  doi = {10.1145/3520304.3534079},
+  abstract = {In our recent paper, "What can phylogenetic metrics tell us about useful diversity in evolutionary algorithms" [3], we explore the relationship between metrics of diversity based on phylogenetic topology and fitness. Our contribution is two-fold. First, we identify a technique for quantifying the relationship between diversity and fitness. Previous efforts to draw hard conclusions about this relationship had been stymied by the fact that these two properties are locked in a tight feedback loop. Second, we use this technique to assess the extent to which phylogenetic diversity leads to high-fitness solutions. We find that phylogenetic diversity is often more informative of future success in evolutionary algorithms than more commonly used diversity metrics, suggesting that is an underutilized tool in evolutionary computation research.},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages = {23–24},
+  numpages = {2},
+  keywords = {transfer entropy, causality analysis, diversity, phylogenetic diversity},
+  location = {Boston, Massachusetts},
+  series = {GECCO '22}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Austin J. Ferguson, Nkrumah A. Grant, and Charles Ofria (2022).
+The evolution of adaptive phenotypic plasticity stabilizes populations against environmental fluctuations.
+In Proceedings of the 2022 Conference on Artificial Life (ALIFE).
+<a href="https://doi.org/10.1162/isal_a_00499">https://doi.org/10.1162/isal_a_00499</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+             <a href="/pubs/2022-04-28-consequences-of-plasticity-extended-abstract.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#10.1162/isal_a_00499"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1162/isal_a_00499" tabindex="-1" role="dialog" aria-labelledby="10.1162/isal_a_00499-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1162/isal_a_00499-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@proceedings{10.1162/isal_a_00499,
+  author = {Lalejini, Alexander and Ferguson, Austin J. and Grant, Nkrumah A. and Ofria, Charles},
+  title = "{The evolution of adaptive phenotypic plasticity stabilizes populations against environmental fluctuations}",
+  volume = {ALIFE 2022: The 2022 Conference on Artificial Life},
+  series = {ALIFE 2022: The 2022 Conference on Artificial Life},
+  year = {2022},
+  month = {07},
+  doi = {10.1162/isal_a_00499},
+  url = {https://doi.org/10.1162/isal\_a\_00499},
+  note = {21},
+  eprint = {https://direct.mit.edu/isal/proceedings-pdf/isal/34/21/2035429/isal\_a\_00499.pdf},
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Anya E. Vostinar, Katherine G. Skocelas, <b>Alexander Lalejini</b>, and Luis Zaman (2022).
+Symbiosis in Digital Evolution: A Review and Future Directions.
+In Proceedings of the 2022 Conference on Artificial Life (ALIFE).
+<a href="https://doi.org/10.1162/isal_a_00481">https://doi.org/10.1162/isal_a_00481</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#10.1162/isal_a_00481"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1162/isal_a_00481" tabindex="-1" role="dialog" aria-labelledby="10.1162/isal_a_00481-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1162/isal_a_00481-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @proceedings{10.1162/isal_a_00481,
+      author = {Vostinar, Anya E. and Skocelas, Katherine G. and Lalejini, Alexander and Zaman, Luis},
+      title = "{Symbiosis in Digital Evolution: A Review and Future Directions}",
+      volume = {ALIFE 2022: The 2022 Conference on Artificial Life},
+      series = {ALIFE 2022: The 2022 Conference on Artificial Life},
+      year = {2022},
+      month = {07},
+      doi = {10.1162/isal_a_00481},
+      url = {https://doi.org/10.1162/isal\_a\_00481},
+      note = {4},
+      eprint = {https://direct.mit.edu/isal/proceedings-pdf/isal/34/4/2035391/isal\_a\_00481.pdf},
+  }
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b>, Emily Dolson, Anya E. Vostinar, and Luis Zaman. 2022.
+Selection schemes from evolutionary computing show promise for directed evolution of microbes.
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘22).
+Association for Computing Machinery, New York, NY, USA, 723–726.
+<a href="https://doi.org/10.1145/3520304.3528900">https://doi.org/10.1145/3520304.3528900</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#10.1145/3520304.35289"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1145/3520304.35289" tabindex="-1" role="dialog" aria-labelledby="10.1145/3520304.35289-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1145/3520304.35289-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3520304.3528900,
+  author = {Lalejini, Alexander and Dolson, Emily and Vostinar, Anya E. and Zaman, Luis},
+  title = {Selection Schemes from Evolutionary Computing Show Promise for Directed Evolution of Microbes},
+  year = {2022},
+  isbn = {9781450392686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3520304.3528900},
+  doi = {10.1145/3520304.3528900},
+  abstract = {Directed microbial evolution harnesses evolutionary processes in the laboratory to construct microorganisms with enhanced or novel functional traits. Directing evolutionary processes for applied goals is fundamental to evolutionary computation, which harnesses the principles of Darwinian evolution as a general purpose search engine for solutions to computational problems. Despite overlapping aims, artificial selection methods from evolutionary computing are not commonly applied to living systems in the laboratory. Here, we summarize recent work wherein we ask if parent selection algorithms from evolutionary computation might be useful for directing the evolution of microbial populations when selecting for multiple functional traits. To do so, we developed an agent-based model of directed microbial evolution, which we used to evaluate how well three selection schemes from evolutionary computing (tournament selection, lexicase selection, and non-dominated elite selection) performed relative to schemes used in the laboratory (elite and top-10% selection). We found that lexicase selection and non-dominated elite selection generally outperformed the commonly used directed evolution approaches. Our results are informing ongoing work to transfer these techniques into the laboratory and motivate future work testing more sophisticated selection schemes from evolutionary computation in a directed evolution context.},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages = {723–726},
+  numpages = {4},
+  keywords = {selection schemes, agent-based modeling, directed evolution, artificial selection, digital organisms},
+  location = {Boston, Massachusetts},
+  series = {GECCO '22}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, and Charles Ofria. 2022.
+Measuring the ability of lexicase selection to find obscure pathways to optimality.
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘22). Association for Computing Machinery, New York, NY, USA, 21–22.
+<a href="https://doi.org/10.1145/3520304.3534061">https://doi.org/10.1145/3520304.3534061</a>
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#10.1145/3520304.3534061"><i class="fas fa-quote-right"></i></a>
+            
+            
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="10.1145/3520304.3534061" tabindex="-1" role="dialog" aria-labelledby="10.1145/3520304.3534061-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="10.1145/3520304.3534061-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3520304.3534061,
+  author = {Hernandez, Jose Guadalupe and Lalejini, Alexander and Ofria, Charles},
+  title = {Measuring the Ability of Lexicase Selection to Find Obscure Pathways to Optimality},
+  year = {2022},
+  isbn = {9781450392686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3520304.3534061},
+  doi = {10.1145/3520304.3534061},
+  abstract = {This Hot-off-the-Press paper summarizes our recently published work, "An Exploration of Exploration: Measuring the Ability of Lexicase Selection to Find Obscure Pathways to Optimality," published as a chapter in Genetic Programming Theory and Practice XVIII [3]. In evolutionary search, selection schemes drive populations through a problem's search space, often trading off exploitation with exploration. Indeed, problem-solving success depends on how a selection scheme balances search space exploitation with exploration. In [3], we introduce an "exploration diagnostic" that measures a selection scheme's ability to explore different pathways in a search space. We use our exploration diagnostic to investigate the exploratory capacity of lexicase selection and several of its variants: epsilon lexicase, down-sampled lexicase, cohort lexicase, and novelty lexicase. We verify that lexicase selection out-explores tournament selection, and we demonstrate that lexicase selection's ability to explore a search space is sensitive to the ratio between population size and the number of test cases used for evaluating candidate solutions. We find that relaxing lexicase selection's elitism with epsilon lexicase can further improve search space exploration. Additionally, we find that both down-sampled and cohort lexicase---two methods of applying random subsampling to test cases---substantially degrade lexicase's exploratory capacity; however, cohort partitioning better preserves exploration than down-sampling. Finally, we find evidence that the addition of novelty-based test cases can degrade lexicase selection's exploratory capacity.},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages = {21–22},
+  numpages = {2},
+  keywords = {fitness landscapes, diagnostics, selection schemes, lexicase selection},
+  location = {Boston, Massachusetts},
+  series = {GECCO '22}
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b> and Charles Ofria. (2019).
+<a href="https://dl.acm.org/citation.cfm?doid=3319619.3321892">Tag-accessed memory for genetic programming.</a>
+In Proceedings of the Genetic and Evolutionary Computation Conference Companion (GECCO ‘19), Manuel López-Ibáñez (Ed.).
+ACM, New York, NY, USA, 346-347.
+DOI: <a href="https://doi.org/10.1145/3319619.3321892">https://doi.org/10.1145/3319619.3321892</a>
+
+            <br/>
+            
+             <a href="/pubs/Lalejini_Ofria_2019_Tag-accessed_Memory.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2019-TagMem"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GECCO-2019-tag-accessed-memory"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1j4IusMVaNVOEcxFkIcveNyB_sfaFowQUFcLqLloCa5M/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2019-TagMem" tabindex="-1" role="dialog" aria-labelledby="Lalejini2019-TagMem-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2019-TagMem-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Lalejini2019-TagMem</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Tag-accessed Memory for Genetic Programming}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Genetic and Evolutionary Computation Conference Companion}</span><span class="p">,</span>
+  <span class="na">series</span> <span class="p">=</span> <span class="s">{GECCO '19}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-1-4503-6748-6}</span><span class="p">,</span>
+  <span class="na">location</span> <span class="p">=</span> <span class="s">{Prague, Czech Republic}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{346--347}</span><span class="p">,</span>
+  <span class="na">numpages</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{http://doi.acm.org/10.1145/3319619.3321892}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3319619.3321892}</span><span class="p">,</span>
+  <span class="na">acmid</span> <span class="p">=</span> <span class="s">{3321892}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{ACM}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{genetic programming, linear genetic programming, memory access, tag-based referencing, tags}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b> and Charles Ofria. (2018).
+<a href="https://doi.org/10.1162/isal_a_00069">Evolving reactive agents with SignalGP</a>.
+In Proceedings of the 2018 Conference on Artificial Life (ALIFE).
+Edited by Takashi Ikegami, Nathaniel Virgo, Olaf Witkowski, Mizuki Oka, Reiji Suzuki, and Hiroyuki Iizuka.
+pp. 368-369. DOI: <a href="https://doi.org/10.1162/isal_a_00069">10.1162/isal_a_00069</a>. MIT Press.
+
+            <br/>
+            
+              <span class="badge badge-primary"> article summary </span>
+            
+             <a href="/pubs/evolving-reactive-agents-with-signalgp.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2018-ALIFE"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GECCO-2018-Evolving-Event-driven-Programs-with-SignalGP"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1iMp2ndNikf_VMVkdxW3WUCtuaE2mmGr16p8Z-RixenQ/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2018-ALIFE" tabindex="-1" role="dialog" aria-labelledby="Lalejini2018-ALIFE-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2018-ALIFE-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Lalejini2018-ALIFE</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Cambridge, MA}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Lalejini, Alexander and Ofria, Charles}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{The 2018 Conference on Artificial Life}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1162/isal_a_00069}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{368--369}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{MIT Press}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Evolving Reactive Agents with SignalGP}}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.mitpressjournals.org/doi/abs/10.1162/isal{\_}a{\_}00069}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+    </ul>
+
+  <!-- Filter the list of publications down to just those that are of this type. -->
+  
+  
+   <!-- If none exist, move along without making a header for this type. -->
+  <!-- If we're here, some number of publications of this type exist. Give a header. -->
+  <!-- The below nonsense lets me give an include argument to specify the heading level for
+        publication category headings. -->
+  <h2>
+    Book chapters
+  </h2>
+    
+    <ul class="fa-ul"> <!-- We'll use font awesome's unordered list (where fa icons are easily used as bullets) to list publications. -->
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, and Emily Dolson (2022)
+What Can Phylogenetic Metrics Tell us About Useful Diversity in Evolutionary Algorithms?.
+In: Banzhaf W., Trujillo L., Winkler S., Worzel B. (eds) Genetic Programming Theory and Practice XVIII.
+Genetic and Evolutionary Computation.
+Springer, Singapore. <a href="https://doi.org/10.1007/978-981-16-8113-4_4">https://doi.org/10.1007/978-981-16-8113-4_4</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#hernandez2021phylogenetic"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/emilydolson/phylodiversity-metrics-in-EC-GPTP-2021"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="hernandez2021phylogenetic" tabindex="-1" role="dialog" aria-labelledby="hernandez2021phylogenetic-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="hernandez2021phylogenetic-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Inbook{hernandez2021phylogenetic,
+  author="Hernandez, Jose Guadalupe
+  and Lalejini, Alexander
+  and Dolson, Emily",
+  editor="Banzhaf, Wolfgang
+  and Trujillo, Leonardo
+  and Winkler, Stephan
+  and Worzel, Bill",
+  title="What Can Phylogenetic Metrics Tell us About Useful Diversity in Evolutionary Algorithms?",
+  bookTitle="Genetic Programming Theory and Practice XVIII",
+  year="2022",
+  publisher="Springer Singapore",
+  address="Singapore",
+  pages="63--82",
+  isbn="978-981-16-8113-4",
+  doi="10.1007/978-981-16-8113-4_4",
+  url="https://doi.org/10.1007/978-981-16-8113-4_4"
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Jose Guadalupe Hernandez, <b>Alexander Lalejini</b>, and Charles Ofria (2022)
+An Exploration of Exploration: Measuring the Ability of Lexicase Selection to Find Obscure Pathways to Optimality.
+In: Banzhaf W., Trujillo L., Winkler S., Worzel B. (eds)
+Genetic Programming Theory and Practice XVIII. Genetic and Evolutionary Computation.
+Springer, Singapore. <a href="https://doi.org/10.1007/978-981-16-8113-4_5">https://doi.org/10.1007/978-981-16-8113-4_5</a>
+
+            <br/>
+            
+            
+            
+              <a href="#" data-toggle="modal" data-target="#hernandez2021exploration"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/jgh9094/GPTP-2021-Exploration-Of-Exploration"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="hernandez2021exploration" tabindex="-1" role="dialog" aria-labelledby="hernandez2021exploration-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="hernandez2021exploration-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Inbook{hernandez2022exploration,
+  author="Hernandez, Jose Guadalupe
+  and Lalejini, Alexander
+  and Ofria, Charles",
+  editor="Banzhaf, Wolfgang
+  and Trujillo, Leonardo
+  and Winkler, Stephan
+  and Worzel, Bill",
+  title="An Exploration of Exploration: Measuring the Ability of Lexicase Selection to Find Obscure Pathways to Optimality",
+  bookTitle="Genetic Programming Theory and Practice XVIII",
+  year="2022",
+  publisher="Springer Singapore",
+  address="Singapore",
+  pages="83--107",
+  isbn="978-981-16-8113-4",
+  doi="10.1007/978-981-16-8113-4_5",
+  url="https://doi.org/10.1007/978-981-16-8113-4_5"
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Austin J. Ferguson, Jose G. Hernandez, Daniel Junghans, <b>Alexander Lalejini</b>, Emily Dolson, Charles Ofria (2020).
+<a href="https://link.springer.com/chapter/10.1007/978-3-030-39958-0_1">Characterizing the Effects of Random Subsampling on Lexicase Selection.</a>
+In: Banzhaf W., Goodman E., Sheneman L., Trujillo L., Worzel B. (eds)
+Genetic Programming Theory and Practice XVII. Genetic and Evolutionary Computation.
+Springer, Cham
+
+            <br/>
+            
+             <a href="/pubs/Ferguson_et_al_2020_Characterizing_the_Effects_of_Random_Subsampling_on_Lexicase_Selection.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Ferguson-GPTP-2020"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/FergusonAJ/gptp-2019-subsampled-lexicase"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Ferguson-GPTP-2020" tabindex="-1" role="dialog" aria-labelledby="Ferguson-GPTP-2020-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Ferguson-GPTP-2020-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@Inbook</span><span class="p">{</span><span class="nl">Ferguson-GPTP-2020</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">"Ferguson, Austin J.
+  and Hernandez, Jose Guadalupe
+  and Junghans, Daniel
+  and Lalejini, Alexander
+  and Dolson, Emily
+  and Ofria, Charles"</span><span class="p">,</span>
+  <span class="na">editor</span><span class="p">=</span><span class="s">"Banzhaf, Wolfgang
+  and Goodman, Erik
+  and Sheneman, Leigh
+  and Trujillo, Leonardo
+  and Worzel, Bill"</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">"Characterizing the Effects of Random Subsampling on Lexicase Selection"</span><span class="p">,</span>
+  <span class="na">bookTitle</span><span class="p">=</span><span class="s">"Genetic Programming Theory and Practice XVII"</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">"2020"</span><span class="p">,</span>
+  <span class="na">publisher</span><span class="p">=</span><span class="s">"Springer International Publishing"</span><span class="p">,</span>
+  <span class="na">address</span><span class="p">=</span><span class="s">"Cham"</span><span class="p">,</span>
+  <span class="na">pages</span><span class="p">=</span><span class="s">"1--23"</span><span class="p">,</span>
+  <span class="na">abstract</span><span class="p">=</span><span class="s">"Lexicase selection is a proven parent-selection algorithm designed for genetic programming problems, especially for uncompromising test-based problems where many distinct test cases must all be passed. Previous work has shown that random subsampling techniques can improve lexicase selection's problem-solving success; here, we investigate why. We test two types of random subsampling lexicase variants: down-sampled lexicase, which uses a random subset of all training cases each generation; and cohort lexicase, which collects candidate solutions and training cases into small groups for testing, reshuffling those groups each generation. We show that both of these subsampling lexicase variants improve problem-solving success by facilitating deeper evolutionary searches; that is, they allow populations to evolve for more generations (relative to standard lexicase) given a fixed number of test-case evaluations. We also demonstrate that the subsampled variants require less computational effort to find solutions, even though subsampling hinders lexicase's ability to preserve specialists. Contrary to our expectations, we did not find any evidence of systematic loss of phenotypic diversity maintenance due to subsampling, though we did find evidence that cohort lexicase is significantly better at preserving phylogenetic diversity than down-sampled lexicase."</span><span class="p">,</span>
+  <span class="na">isbn</span><span class="p">=</span><span class="s">"978-3-030-39958-0"</span><span class="p">,</span>
+  <span class="na">doi</span><span class="p">=</span><span class="s">"10.1007/978-3-030-39958-0_1"</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">=</span><span class="s">"https://doi.org/10.1007/978-3-030-39958-0_1"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            <b>Alexander Lalejini</b> and Charles Ofria (2019).
+<a href="https://doi.org/10.1007/978-3-030-04735-1_6">What Else Is in an Evolved Name? Exploring Evolvable Specificity with SignalGP</a>.
+In Banzhaf W., Spector L., Sheneman L. (eds) Genetic Programming Theory and Practice XVI. Genetic and Evolutionary Computation. Springer, Cham
+
+            <br/>
+            
+             <a href="/pubs/Lalejini_Ofria_2019_What_Else_Is_in_an_Evolved_Name.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Lalejini2019-GPTP"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GPTP-2018-Exploring-Evolvable-Specificity-with-SignalGP"><i class="fab fa-github"></i></a> 
+            <a href="https://docs.google.com/presentation/d/1KF9iQb08CtQiWYD4py53DDJD_kjzT2U6Z3CtqfF8Bdc/edit?usp=sharing"><i class="fas fa-images"></i></a> 
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Lalejini2019-GPTP" tabindex="-1" role="dialog" aria-labelledby="Lalejini2019-GPTP-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Lalejini2019-GPTP-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@Inbook</span><span class="p">{</span><span class="nl">Lalejini2019-GPTP</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">"Lalejini, Alexander
+  and Ofria, Charles"</span><span class="p">,</span>
+  <span class="na">editor</span><span class="p">=</span><span class="s">"Banzhaf, Wolfgang
+  and Spector, Lee
+  and Sheneman, Leigh"</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">"What Else Is in an Evolved Name? Exploring Evolvable Specificity with SignalGP"</span><span class="p">,</span>
+  <span class="na">bookTitle</span><span class="p">=</span><span class="s">"Genetic Programming Theory and Practice XVI"</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">"2019"</span><span class="p">,</span>
+  <span class="na">publisher</span><span class="p">=</span><span class="s">"Springer International Publishing"</span><span class="p">,</span>
+  <span class="na">address</span><span class="p">=</span><span class="s">"Cham"</span><span class="p">,</span>
+  <span class="na">pages</span><span class="p">=</span><span class="s">"103--121"</span><span class="p">,</span>
+  <span class="na">abstract</span><span class="p">=</span><span class="s">"Tags are evolvable labels that provide genetic programs a flexible mechanism for specification. Tags are used to label and refer to programmatic elements, such as functions or jump targets. However, tags differ from traditional, more rigid methods for handling labeling because they allow for inexact references; that is, a referring tag need not exactly match its referent. Here, we explore how adjusting the threshold for how what qualifies as a match affects adaptive evolution. Further, we propose broadened applications of tags in the context of a genetic programming (GP) technique called SignalGP. SignalGP gives evolution direct access to the event-driven paradigm. Program modules in SignalGP are tagged and can be triggered by signals (with matching tags) from the environment, from other agents, or due to internal regulation. Specifically, we propose to extend this tag based system to: (1) provide more fine-grained control over module execution and regulation (e.g., promotion and repression) akin to natural gene regulatory networks, (2) employ a mosaic of GP representations within a single program, and (3) facilitate major evolutionary transitions in individuality (i.e., allow hierarchical program organization to evolve de novo)."</span><span class="p">,</span>
+  <span class="na">isbn</span><span class="p">=</span><span class="s">"978-3-030-04735-1"</span><span class="p">,</span>
+  <span class="na">doi</span><span class="p">=</span><span class="s">"10.1007/978-3-030-04735-1_6"</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">=</span><span class="s">"https://doi.org/10.1007/978-3-030-04735-1_6"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-book"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Emily Dolson, <b>Alexander Lalejini</b>, and Charles Ofria. (2019).
+<a href="https://doi.org/10.1007/978-3-030-04735-1_1">Exploring Genetic Programming Systems with MAP-Elites</a>.
+In Banzhaf W., Spector L., Sheneman L. (eds) Genetic Programming Theory and Practice XVI. Genetic and Evolutionary Computation. Springer, Cham
+
+            <br/>
+            
+             <a href="/pubs/Dolson_et_al_2019_Exploring_Genetic_Programming_Systems_with_MAP-Elites.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+              <a href="#" data-toggle="modal" data-target="#Dolson2019-GPTP"><i class="fas fa-quote-right"></i></a>
+            
+            <a href="https://github.com/amlalejini/GPTP-2018-Exploring-Genetic-Programming-Systems-with-MAP-Elites"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+          <div class="modal fade" id="Dolson2019-GPTP" tabindex="-1" role="dialog" aria-labelledby="Dolson2019-GPTP-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="Dolson2019-GPTP-label">Cite</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Inbook{Dolson2019-GPTP,
+  author="Dolson, Emily
+  and Lalejini, Alexander
+  and Ofria, Charles",
+  editor="Banzhaf, Wolfgang
+  and Spector, Lee
+  and Sheneman, Leigh",
+  title="Exploring Genetic Programming Systems with MAP-Elites",
+  bookTitle="Genetic Programming Theory and Practice XVI",
+  year="2019",
+  publisher="Springer International Publishing",
+  address="Cham",
+  pages="1--16",
+  abstract="MAP-Elites is an evolutionary computation technique that has proven valuable for exploring and illuminating the genotype-phenotype space of a computational problem. In MAP-Elites, a population is structured based on phenotypic traits of prospective solutions; each cell represents a distinct combination of traits and maintains only the most fit organism found with those traits. The resulting map of trait combinations allows the user to develop a better understanding of how each trait relates to fitness and how traits interact. While MAP-Elites has not been demonstrated to be competitive for identifying the optimal Pareto front, the insights it provides do allow users to better understand the underlying problem. In particular, MAP-Elites has provided insight into the underlying structure of problem representations, such as the value of connection cost or modularity to evolving neural networks. Here, we extend the use of MAP-Elites to examine genetic programming representations, using aspects of program architecture as traits to explore. We demonstrate that MAP-Elites can generate programs with a much wider range of architectures than other evolutionary algorithms do (even those that are highly successful at maintaining diversity), which is not surprising as this is the purpose of MAP-Elites. Ultimately, we propose that MAP-Elites is a useful tool for understanding why genetic programming representations succeed or fail and we suggest that it should be used to choose selection techniques and tune parameters.",
+  isbn="978-3-030-04735-1",
+  doi="10.1007/978-3-030-04735-1_1",
+  url="https://doi.org/10.1007/978-3-030-04735-1_1"
+}
+</code></pre></div></div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+    </ul>
+
+  <!-- Filter the list of publications down to just those that are of this type. -->
+  
+  
+   <!-- If none exist, move along without making a header for this type. -->
+  <!-- If we're here, some number of publications of this type exist. Give a header. -->
+  <!-- The below nonsense lets me give an include argument to specify the heading level for
+        publication category headings. -->
+  <h2>
+    Miscellaneous
+  </h2>
+    <p>Miscellaneous publications that are not peer reviewed.</p>
+ 
+    <ul class="fa-ul"> <!-- We'll use font awesome's unordered list (where fa icons are easily used as bullets) to list publications. -->
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-tools"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Nadine Strasser, <b>Alexander Lalejini</b>, and Charles Ofria (2020).
+Detecting the genetic signature of mutualisms from lineages.
+<a href="https://anyaevostinar.github.io/sal-workshop/">The 2020 Workshop on Symbiosis in Artificial Life</a> at the 2020 Conference on Artificial Life.
+
+            <br/>
+            
+             <a href="/pubs/strasser-2020-alife-2020-sal-workshop.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+            
+            
+          </p>
+        </li>
+        
+      
+        <li>
+          
+            
+                <i class="fa-li fas fa-chalkboard-teacher"></i>
+              
+          
+          <p>
+            <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
+            Lauren Gillespie, Emily Dolson, <b>Alexander Lalejini</b>, and Charles Ofria (2018).
+Changing Environments Drive the Separation of Genes and Increased Evolvability in NK-Inspired Landscapes.
+Late breaking abstract at The 2018 Conference on Artificial Life.
+
+            <br/>
+            
+             <a href="/pubs/gillespie-2018-changing-environments-drive-gene-separation.pdf"> <i class="fas fa-file-pdf"></i></a> 
+            
+            <a href="https://github.com/leg2015/Aagos"><i class="fab fa-github"></i></a> 
+            
+          </p>
+        </li>
+        
+      
+    </ul>
+
+
+    </div>
+  </div>
+
+</div>
+    <hr> <!-- Separate footer from rest of page with horizontal line. -->
+
+<footer>
+    <div class="container"> <!-- Footer is contained in Bootstrap container. -->
+
+        <!-- Email and social media on one side, address on the other. -->
+        <div class="row">
+
+            <div class="col-auto pr-0">
+                <ul class="fa-ul">
+                    <li class="text-secondary">Tanvir Hossain (he/him)</li>
+                    <li class="text-secondary">PhD Researcher in Electrical Engineering</li>
+                    <li class="text-secondary">Graduate Research Assistant</li>
+                    <li class="text-secondary">University of Kansas</li>
+                    <li><a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://linkedin.com/in/tanvir-hossain71">LinkedIn</a></li>
+                    <!-- <li><a href="https://sites.google.com/site/tanvirjewel71">Personal Website</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Give email and social media contact info. -->
+            <div class="col-auto pr-0" id="contact-me">
+                <ul class="fa-ul">
+                    <li class="text-secondary"><i class="fas fa-envelope"></i> tanvir@ku.edu</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/tanvir-jewel">tanvir-jewel</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://x.com/tanvirjewel71">@tanvirjewel71</a></li>
+                </ul>
+            </div>
+
+            <!-- Give physical work/office address. -->
+            <div class="col">
+                <ul class="fa-ul">
+                    <li class="text-secondary">
+                      <i class="fas fa-map-marker-alt"></i> 
+                      2335 Irving Hill Rd <br />
+Lawrence, KS 66047, USA
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === Site information ===  -->
+        <div class="row justify-content-center">
+            <a href="https://github.com/amlalejini/amlalejini.github.io"><img src="https://img.shields.io/github/last-commit/tanvir-jewel/tanvir.github.io.svg?label=last%20update"/></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <i class="fas fa-copyright"></i>
+                <small class="text-muted">
+                    Tanvir Hossain 2025.
+                    Powered by <a href="https://github.com/">GitHub</a>,
+                    <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://getbootstrap.com/">Bootstrap</a>,
+                    and <a href="https://fontawesome.com/">Font Awesome</a>.
+                    <a href="https://github.com/amlalejini/amlalejini.github.io">Source</a>.
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

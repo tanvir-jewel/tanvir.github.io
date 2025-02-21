@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333025-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125333025-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link in our stylesheets -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>
+    
+      Automatically deploy a bookdown ebook with GitHub actions | Tanvir Hossain
+    
+  </title>
+</head>
+  <body>
+    <!-- The one consistent feature of page headers will be the nav bar. -->
+<!-- Define the site's nav bar w/Bootstrap's navbar component -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"> 
+      Tanvir Hossain 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-sm">
+
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div class="row">
+          <header class="post-header pt-5">
+            <h1 class="post-title" itemprop="name headline">Automatically deploy a bookdown ebook with GitHub actions</h1>
+            
+            <p class="post-meta">
+              <time datetime="2021-01-09T00:00:00-06:00" itemprop="datePublished">Jan 9, 2021</time>
+               <i>(updated: Jan 10, 2021)</i> 
+               • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Alexander Lalejini</span></span>
+            </p>
+          </header>
+        </div>
+
+        
+          <div class="row pb-1">
+            <div class="col px-0">
+              <div class="card border-left-0 border-right-0 rounded-0">
+                <div class="card-body">
+                  <h4 class = "card-title">
+                    contents
+                  </h4>
+                  <ul>
+  <li><a href="#step-1-setting-up-our-bookdown-ebook">Step 1. Setting up our bookdown ebook</a></li>
+  <li><a href="#step-2-setting-up-a-dockerfile-to-run-bookdown">Step 2. Setting up a Dockerfile to run bookdown</a></li>
+  <li><a href="#step-3-using-github-actions-to-automatically-build-and-deploy-your-ebook">Step 3. Using GitHub actions to automatically build and deploy your ebook</a></li>
+  <li><a href="#useful-resources">Useful resources</a></li>
+</ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="row pt-4">
+          <div class="col px-0">
+            <div class="post-content" itemprop="articleBody">
+              <p>In this post, I’ll walk you (or future me 👋 😉) through getting a <a href="https://bookdown.org/">bookdown</a>-generated ebook to automatically deploy as a static website (using <a href="https://pages.github.com/">GitHub pages</a>) any time you make changes to your GitHub repository (using <a href="https://docs.github.com/en/free-pro-team@latest/actions">GitHub actions</a>). This guide is intended to get you started with a (mostly) minimal example.</p>
+
+<p>This guide assumes familiarity with each of the tools and services that we’ll use; I’m just here to help you duct tape them all together ☺️!</p>
+
+<p><strong>TL;DR: See <a href="https://github.com/amlalejini/auto-deploying-bookdown-example">this GitHub repository</a> for  the fully functional demo.</strong></p>
+
+<p>Ingredients 🍲</p>
+
+<ul>
+  <li><a href="https://bookdown.org/">bookdown</a> is an R package that can generate an ebook (or pdf, Word doc, etc.) from a collection of R markdown (and vanilla markdown) documents.
+    <ul>
+      <li>R markdown supports a wide range of languages in addition to R (e.g., Python, Julia, etc.)</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/">GitHub</a> - we’ll use a GitHub repository to store our bookdown-enabled project.</li>
+  <li><a href="https://pages.github.com/">GitHub Pages</a> - we’ll use GitHub pages to host our bookdown-generated ebook.</li>
+  <li><a href="https://docs.github.com/en/free-pro-team@latest/actions">Github actions</a> - we’ll use GitHub actions to automatically build and deploy our ebook to GitHub pages when changes are made to the GitHub repository.</li>
+  <li><a href="https://www.docker.com/">docker</a> - we’ll compile our ebook using a docker container loaded with the requisite dependencies.</li>
+</ul>
+      <h2 id="step-1-setting-up-our-bookdown-ebook">
+        
+        
+          <a href="#step-1-setting-up-our-bookdown-ebook" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Step 1. Setting up our bookdown ebook
+        
+        
+      </h2>
+
+<p>Make a new GitHub repository, and inside of it, we’ll  pull together a minimal-working book that we can compile locally. The files below are a modified subset of the files in <a href="https://github.com/rstudio/bookdown-demo">the canonical bookdown demo</a>. You’ll need to install all of <a href="https://bookdown.org/yihui/bookdown/get-started.html">bookdown’s prerequisites</a> if you want to be able to build your book locally (which is useful for debugging).</p>
+
+<p><code class="language-plaintext highlighter-rouge">index.Rmd</code> will define the first page of our ebook. This will also be the landing page for our GitHub pages site.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "An automatically deploying ebook"
+author: "Alexander Lalejini"
+date: "`r Sys.Date()`"
+output: bookdown::gitbook
+documentclass: book
+github-repo: amlalejini/auto-deploying-bookdown-example
+description: "This is a demo for automatically deploying your bookdown ebook to GitHub pages."
+---
+
+# Introduction
+
+Check out the GitHub repository with all the gears and levers to generate this example: &lt;https://github.com/amlalejini/auto-deploying-bookdown-example&gt;.
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">_bookdown.yml</code> contains general configuration for our bookdown build.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>book_filename: "demo"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+rmd_files: [
+  "index.Rmd"
+]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">_output.yml</code> species configuration details for particular output types. <a href="https://bookdown.org/yihui/bookdown/output-formats.html">Documentation here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bookdown::gitbook:
+  css: style.css
+  split_by: "chapter"
+  citation_package: natbib
+  config:
+    toc:
+      before: |
+        &lt;li&gt;&lt;a href="./"&gt;Auto-deploy Example&lt;/a&gt;&lt;/li&gt;
+      after: |
+        &lt;li&gt;&lt;a href="https://github.com/rstudio/bookdown" target="blank"&gt;Published with ❤ and bookdown&lt;/a&gt;&lt;/li&gt;
+    edit: https://github.com/amlalejini/auto-deploying-bookdown-example/tree/main/%s
+    download: ["pdf"]
+bookdown::pdf_book:
+  latex_engine: pdflatex
+  citation_package: natbib
+  keep_tex: yes
+  split_by: "chapter"
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">style.css</code> gives custom styling for the HTML output. The file below is pulled directly from <a href="https://github.com/amlalejini/auto-deploying-bookdown-example">the canonical bookdown demo</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">build_book.sh</code> is a convenience script that will build our ebook using bookdown. This script is modified from <a href="https://github.com/amlalejini/auto-deploying-bookdown-example">the build script in the canonical bookdown demo</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+
+set -ev
+
+Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
+</code></pre></div></div>
+
+<p>Running <code class="language-plaintext highlighter-rouge">build_book.sh</code> should compile your bookdown book into both an HTML and pdf document. Run <code class="language-plaintext highlighter-rouge">python -m http.server</code> for local viewing!</p>
+    
+      <h3 id="adding-references-using-bibtex">
+        
+        
+          <a href="#adding-references-using-bibtex" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Adding references using bibtex
+        
+        
+      </h3>
+
+<p>Want to incorporate references? How about citing all of the packages that you used to compile your book? Easy!</p>
+
+<p><code class="language-plaintext highlighter-rouge">book.bib</code> will hold the bibtex references we want to cite. E.g.,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@book{xie_r_2019,
+  address = {Boca Raton},
+  title = {R {Markdown}: the definitive guide},
+  isbn = {978-0-429-78296-1},
+  shorttitle = {R {Markdown}},
+  publisher = {CRC Press, Taylor and Francis Group},
+  author = {Xie, Yihui and Allaire, J. J. and Grolemund, Garrett},
+  year = {2019},
+  keywords = {Computer programs, Markdown (Document markup language), R (Computer program language), Web site development},
+}
+
+</code></pre></div></div>
+
+<p>You can cite things in text like <code class="language-plaintext highlighter-rouge">[@xie_r_2019]</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">tail.Rmd</code> will define the references section at the end of our ebook.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`r if (knitr::is_html_output()) '# References {-}'`
+
+```{r, include=FALSE}
+knitr::write_bib(c(.packages(), "bookdown"), file="packages.bib")
+```
+</code></pre></div></div>
+
+<p>You’ll also notice that <code class="language-plaintext highlighter-rouge">tail.Rmd</code> writes out <code class="language-plaintext highlighter-rouge">packages.bib</code>, which will contain bibtex entries for all of the R packages used to generate your bookdown book.</p>
+
+<p>You’ll also want to modify the front matter at the top of <code class="language-plaintext highlighter-rouge">index.Rmd</code> to configuration the bibliography:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "An automatically deploying ebook"
+author: "Alexander Lalejini"
+date: "`r Sys.Date()`"
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["book.bib", "packages.bib"]
+biblio-style: apalike
+nocite: '@*'
+link-citations: yes
+github-repo: amlalejini/auto-deploying-bookdown-example
+description: "This is a demo for automatically deploying your bookdown ebook to GitHub pages."
+---
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">nocite: '@*'</code> line tells bookdown to add <em>everything</em> from <code class="language-plaintext highlighter-rouge">book.bib</code> and <code class="language-plaintext highlighter-rouge">packages.bib</code> to the references section regardless of whether or not it was actually cited in text.</p>
+
+<p><strong>All of these example files can also be found on GitHub: <a href="https://github.com/amlalejini/auto-deploying-bookdown-example">https://github.com/amlalejini/auto-deploying-bookdown-example</a>.</strong></p>
+    
+      <h2 id="step-2-setting-up-a-dockerfile-to-run-bookdown">
+        
+        
+          <a href="#step-2-setting-up-a-dockerfile-to-run-bookdown" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Step 2. Setting up a Dockerfile to run bookdown
+        
+        
+      </h2>
+
+<p>With our ebook compiling locally, we want to specify a docker image with the requisite environment to compile everything.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Dockerfile</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Pull a base image
+FROM ubuntu:20.04
+
+# Copy everything (minus anything specified in .dockerignore) into the image
+COPY . /opt/auto-deploying-bookdown-example
+
+# To make installs not ask questions about timezones
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/New_York
+
+##############################
+# install base dependencies
+# - for R repository
+#   - dirmngr
+#   - gpg-agent
+# - for bookdown compilation
+#   - pandoc, pandoc-citeproc, texlive-base, texlive-latex-extra
+##############################
+RUN \
+  apt-get update \
+    &amp;&amp; \
+  apt-get install -y -qq --no-install-recommends \
+    software-properties-common \
+    curl=7.68.0-1ubuntu2.4 \
+    g++-10=10.2.0-5ubuntu1~20.04 \
+    make=4.2.1-1.2 \
+    cmake=3.16.3-1ubuntu1  \
+    python3=3.8.2-0ubuntu2 \
+    python3-pip \
+    python3-virtualenv \
+    git=1:2.25.1-1ubuntu3 \
+    dirmngr \
+    gpg-agent \
+    pandoc \
+    pandoc-citeproc \
+    texlive-base \
+    texlive-latex-extra \
+    lmodern \
+    &amp;&amp; \
+  echo "installed base dependencies"
+
+########################################################
+# install r with whatever r packages we need/want
+# - source: https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
+########################################################
+RUN \
+  gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \
+    &amp;&amp; \
+  gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add - \
+    &amp;&amp; \
+  apt update \
+    &amp;&amp; \
+  add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' \
+    &amp;&amp; \
+  apt-get install -y -q --no-install-recommends \
+    r-base=4.0.3-1.2004.0 \
+    r-base-dev \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libfreetype6-dev \
+    libmagick++-dev \
+    libxml2-dev \
+    libfontconfig1-dev \
+    cargo \
+    &amp;&amp; \
+  R -e "install.packages('rmarkdown', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    &amp;&amp; \
+  R -e "install.packages('knitr', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    &amp;&amp; \
+  R -e "install.packages('bookdown', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    &amp;&amp; \
+  R -e "install.packages('tidyverse',dependencies=NA, repos='http://cran.rstudio.com/')" \
+    &amp;&amp; \
+  R -e "install.packages('cowplot',dependencies=NA, repos='http://cran.rstudio.com/')" \
+    &amp;&amp; \
+  echo "installed r and configured r environment"
+
+
+########################################################
+# build supplemental material (will also run data analyses)
+########################################################
+RUN \
+  cd /opt/auto-deploying-bookdown-example \
+    &amp;&amp; \
+  ./build_book.sh \
+    &amp;&amp; \
+  echo "compiled bookdown ebook
+</code></pre></div></div>
+
+<p>This Dockerfile assumes that everything you need to build your bookdown site is inside your GitHub repository. What if you need data that you don’t want to add to your GitHub repository (e.g., too big/too much)?</p>
+    
+      <h3 id="using-data-stored-on-osf">
+        
+        
+          <a href="#using-data-stored-on-osf" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Using data stored on OSF
+        
+        
+      </h3>
+
+<p>Downloading data stored on the <a href="https://osf.io/">Open Science Framework</a> into your docker image is easy using the <a href="https://github.com/osfclient/osfclient">osfclient python package</a>.</p>
+
+<p>E.g., in your <code class="language-plaintext highlighter-rouge">Dockerfile</code> before running the <code class="language-plaintext highlighter-rouge">build_book.sh</code> script, add something along the lines of:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>########################################################
+# install osfclient, use to download project data
+########################################################
+RUN \
+  pip3 install osfclient \
+    &amp;&amp; \
+  export OSF_PROJECT=w95ne \
+    &amp;&amp; \
+  export PROJECT_PATH=/opt/auto-deploying-bookdown-example/ \
+    &amp;&amp; \
+  osf -p ${OSF_PROJECT} fetch data.tar.gz ${PROJECT_PATH}/data.tar.gz \
+    &amp;&amp; \
+  tar -xzf ${PROJECT_PATH}/data.tar.gz -C ${PROJECT_PATH}/ \
+    &amp;&amp; \
+  echo "download"
+</code></pre></div></div>
+    
+      <h2 id="step-3-using-github-actions-to-automatically-build-and-deploy-your-ebook">
+        
+        
+          <a href="#step-3-using-github-actions-to-automatically-build-and-deploy-your-ebook" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Step 3. Using GitHub actions to automatically build and deploy your ebook
+        
+        
+      </h2>
+
+<p>Now that we have a Dockerfile that specifies how to build our ebook, we can wire up some GitHub actions to watch our repository for new commits, build our ebook, and deploy to github pages.</p>
+
+<p>First, turn on GitHub pages for your repository (under the repo’s Settings tab).
+Select the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch, and save the changes.</p>
+
+<p>Next, we need to tell GitHub not to use jekyll to generate your site because we’ll be generating the site ourselves using bookdown. All you need to do is add an empty <code class="language-plaintext highlighter-rouge">.nojekyll</code> file to your gh-pages branch. You can do this manually or directly on GitHub with the Add file button.</p>
+
+<p>Finally, we’re ready to add a workflow (<code class="language-plaintext highlighter-rouge">.github/workflows/deploy-bookdown.yml</code>) to our GitHub repository that will string together GitHub actions to automatically build and deploy our bookdown site.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.github/workflows/deploy-bookdown.yml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: Build and deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: docker build
+        run:
+        |
+          docker build . --file Dockerfile --tag example
+          docker container create --name pages_build example:latest
+          docker cp pages_build:/opt/auto-deploying-bookdown-example/_book ./_book
+      - name: deploy to github pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: $
+          BRANCH: gh-pages # The branch the action should deploy to
+          FOLDER: _book # The folder the action should deploy
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+</code></pre></div></div>
+
+<p>Done!</p>
+
+<p>You can check out the Actions tab on your github repository to see the output log resulting from your workflow. E.g., <a href="https://github.com/amlalejini/auto-deploying-bookdown-example/actions">for this example repository</a>.</p>
+    
+      <h2 id="useful-resources">
+        
+        
+          <a href="#useful-resources" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Useful resources
+        
+        
+      </h2>
+
+<ul>
+  <li>bookdown
+    <ul>
+      <li>Bookdown has really good documentation in the form of a bookdown-generated ebook, <a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a></li>
+      <li><a href="https://github.com/rstudio/bookdown-demo">bookdown demo GitHub repository</a></li>
+    </ul>
+  </li>
+  <li>GitHub actions/workflows
+    <ul>
+      <li><a href="https://lab.github.com/">GitHub’s learning lab</a> has fantastic interactive tutorials for working with all sorts of GitHub features, including actions!</li>
+    </ul>
+  </li>
+</ul>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <hr> <!-- Separate footer from rest of page with horizontal line. -->
+
+<footer>
+    <div class="container"> <!-- Footer is contained in Bootstrap container. -->
+
+        <!-- Email and social media on one side, address on the other. -->
+        <div class="row">
+
+            <div class="col-auto pr-0">
+                <ul class="fa-ul">
+                    <li class="text-secondary">Tanvir Hossain (he/him)</li>
+                    <li class="text-secondary">PhD Researcher in Electrical Engineering</li>
+                    <li class="text-secondary">Graduate Research Assistant</li>
+                    <li class="text-secondary">University of Kansas</li>
+                    <li><a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://linkedin.com/in/tanvir-hossain71">LinkedIn</a></li>
+                    <!-- <li><a href="https://sites.google.com/site/tanvirjewel71">Personal Website</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Give email and social media contact info. -->
+            <div class="col-auto pr-0" id="contact-me">
+                <ul class="fa-ul">
+                    <li class="text-secondary"><i class="fas fa-envelope"></i> tanvir@ku.edu</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/tanvir-jewel">tanvir-jewel</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://x.com/tanvirjewel71">@tanvirjewel71</a></li>
+                </ul>
+            </div>
+
+            <!-- Give physical work/office address. -->
+            <div class="col">
+                <ul class="fa-ul">
+                    <li class="text-secondary">
+                      <i class="fas fa-map-marker-alt"></i> 
+                      2335 Irving Hill Rd <br />
+Lawrence, KS 66047, USA
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === Site information ===  -->
+        <div class="row justify-content-center">
+            <a href="https://github.com/amlalejini/amlalejini.github.io"><img src="https://img.shields.io/github/last-commit/tanvir-jewel/tanvir.github.io.svg?label=last%20update"/></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <i class="fas fa-copyright"></i>
+                <small class="text-muted">
+                    Tanvir Hossain 2025.
+                    Powered by <a href="https://github.com/">GitHub</a>,
+                    <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://getbootstrap.com/">Bootstrap</a>,
+                    and <a href="https://fontawesome.com/">Font Awesome</a>.
+                    <a href="https://github.com/amlalejini/amlalejini.github.io">Source</a>.
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

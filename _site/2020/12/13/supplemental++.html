@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333025-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125333025-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link in our stylesheets -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>
+    
+      Supplemental material++ | Tanvir Hossain
+    
+  </title>
+</head>
+  <body>
+    <!-- The one consistent feature of page headers will be the nav bar. -->
+<!-- Define the site's nav bar w/Bootstrap's navbar component -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"> 
+      Tanvir Hossain 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-sm">
+
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div class="row">
+          <header class="post-header pt-5">
+            <h1 class="post-title" itemprop="name headline">Supplemental material++</h1>
+            
+              <h3 class="text-secondary">a collection of tools and services to spice up (and improve) your supplemental material</h3>
+            
+            <p class="post-meta">
+              <time datetime="2020-12-13T00:00:00-06:00" itemprop="datePublished">Dec 13, 2020</time>
+               <i>(updated: Dec 18, 2020)</i> 
+               • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Alexander Lalejini</span></span>
+            </p>
+          </header>
+        </div>
+
+        
+          <div class="row pb-1">
+            <div class="col px-0">
+              <div class="card border-left-0 border-right-0 rounded-0">
+                <div class="card-body">
+                  <h4 class = "card-title">
+                    contents
+                  </h4>
+                  <ul>
+  <li><a href="#git--github">Git + GitHub</a></li>
+  <li><a href="#zenodo">Zenodo</a></li>
+  <li><a href="#repository-badges">Repository badges</a></li>
+  <li><a href="#github-pages">GitHub Pages</a></li>
+  <li><a href="#open-science-framework-osf">Open Science Framework (OSF)</a></li>
+  <li><a href="#docker-containers">Docker containers</a></li>
+  <li><a href="#r-markdown">R Markdown</a></li>
+  <li><a href="#bookdown">Bookdown</a></li>
+</ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="row pt-4">
+          <div class="col px-0">
+            <div class="post-content" itemprop="articleBody">
+              <p><strong>This post is meant to serve as a living bestiary for nifty tools and resources that I use (in practice or aspirationally) to compose supplemental material for academic papers (or really whatever I might want supplemental material for).</strong></p>
+
+<p>Apparently, I’m just really into supplemental material; this is the <em>second</em> blog post on ❤️supplemental material❤️ that I’ve scraped together, and blog posts aren’t really my thing!</p>
+
+<p>Most often, I see supplemental material provided as a pdf file with links to code and/or data hosted somewhere on the internet (or worse, pasted directly into the file 😱). PDFs just don’t cut it for me. The pdf is not an expressive enough medium 🎨 to hold all of the miscellaneous artifacts that should go along with a publication.</p>
+
+<p>Who is this post for?</p>
+
+<ul>
+  <li>Mostly future me</li>
+  <li>Anyone looking for inspiration for building beautiful supplemental material</li>
+</ul>
+
+<p><em>Disclaimer:</em> this bestiary isn’t meant to be exhaustive! Because my primary audience is future me, I’m only adding tools/services that <em>I</em> regularly use. There’s lots of awesome stuff out there that you might not find here. For example, You’ll notice that I don’t include jupyter notebooks at the moment; those are great, I just don’t use them very often because I do most of my analyses with R + R Markdown.</p>
+
+<p>☎️ I’m always curious about other folks’ workflows and favorite tools for putting together manuscripts/supplemental material! Reach out, send me suggestions!</p>
+      <h2 id="git--github">
+        
+        
+          <a href="#git--github" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Git + GitHub
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-backbone-ff69b4" alt="backbone" />
+<img src="https://img.shields.io/badge/-versioning-ff69b4" alt="versioning" />
+<img src="https://img.shields.io/badge/-code%20storage-ff69b4" alt="code" />
+<img src="https://img.shields.io/badge/-data%20storage%20(only%20a%20little)-ff69b4" alt="data" /></p>
+
+<p><a href="https://git-scm.com/">Git</a> repositories are the backbone of my entire workflow for every project.
+Git is your friendly neighborhood version control system.
+Track (and show) the history of your project, tag versions to easily access older versions of your project, make collaborating with other folks on your source code so much easier.
+Want to know when (and maybe why) exactly you added that line of code? Git blame is your friend!</p>
+
+<p><a href="https://github.com/">GitHub</a> gives your git repository a <em>really</em> nice home; there are other services out there that give git repositories a home in the cloud, but nothing has pulled me away from GitHub.
+I won’t list all the advantages/disadvantages of these tools here; google (or duckduckgo) around and you’ll find an abundance of relevant blog posts/tech articles.</p>
+
+<p>In some ways, a comprehensive and well managed GitHub repository is the ultimate supplemental material for any publication on its own; folks can access your project’s history, file issues (<em>e.g.</em>, to ask you questions), reproduce your work, or fork and extend your project.
+I try to put <em>almost</em> everything associated with a paper inside of a designated GitHub repository (minus large amounts of data and usually not my LaTex source files).
+Anything that I don’t include (like large data files), I am sure to link to in the repository’s README.
+All of this allows me use a paper’s GitHub repository as a one-stop-shop for all of that paper’s supplemental material.
+Even better, services like <a href="https://zenodo.org/">Zenodo</a> allow you to easily cite your repository by assigning it a permanent DOI (check out <a href="https://lalejini.com/2020/04/02/gh-supplemental-material-guide.html">this guide</a> for setting that up).</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>🛑, I don’t recommend storing large data files on GitHub. There are <a href="#open-science-framework-osf">better services</a> for storing data that you can link to from your repo!</li>
+  <li>README files aren’t just for your root directory! Add README.md files to important directories in your repository. If someone clicks into a directory with a README file on GitHub, the contents of the readme are automatically rendered below the directory listing. This is a great way to give folks a quick and convenient guide to the directory’s contents.</li>
+</ul>
+
+<p><strong>Resources</strong></p>
+
+<ul>
+  <li><a href="http://swcarpentry.github.io/git-novice/">Software carpentry lesson on git</a></li>
+  <li><a href="https://mmore500.com/waves/enrichment/week1.html">Enrichment seminar given by Dr. Emily Dolson on git/GitHub</a></li>
+  <li><a href="https://mmore500.com/waves/blog/extra-git.html">https://mmore500.com/waves/blog/extra-git.html</a></li>
+</ul>
+    
+      <h2 id="zenodo">
+        
+        
+          <a href="#zenodo" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Zenodo
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-citable%20doi-ff69b4" alt="doi" /></p>
+
+<p><a href="https://zenodo.org/">Zenodo</a> is a nifty service that you can use to attach a DOI to a GitHub repository (and to other things).
+Zenodo makes is super easy to cite GitHub repositories in a paper (<a href="https://lalejini.com/2020/04/02/gh-supplemental-material-guide.html">see this guide</a>).</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>For bibtex users, Zenodo will spit out the citation for your repo in bibtex format!
+    <ul>
+      <li>BUT, you should always sanity check the reference in your compiled document. Depending on your bibliography format, it may leave important things off like the actual DOI or the url. I can often get around this by adding a <code class="language-plaintext highlighter-rouge">note</code> field to the bibtex entry (<em>e.g.</em>, <code class="language-plaintext highlighter-rouge">note={DOI: xxxx}</code>).</li>
+      <li>Also, if you’re using the DOI’d repository as your supplemental material, consider updating the <code class="language-plaintext highlighter-rouge">title</code> field of your bibtex entry to make that obvious because the default <code class="language-plaintext highlighter-rouge">title</code> is just the name of the repository on GitHub.</li>
+    </ul>
+  </li>
+</ul>
+    
+      <h2 id="repository-badges">
+        
+        
+          <a href="#repository-badges" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Repository badges
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-fun-ff69b4" alt="fun" />
+<img src="https://img.shields.io/badge/-information%20at%20a%20glance-ff69b4" alt="informative" /></p>
+
+<p>Sticking badges on a repository (or any document, really) is just good fun.
+And useful, too!
+You often find badges at the top of README files on GitHub repositories.
+For example,</p>
+
+<p><a href="https://github.com/amlalejini/Tag-based-Genetic-Regulation-for-LinearGP"><img src="/imgs/blog/2020-12-13-supplemental++/readme-badges.png" alt="readme-badges-example" /></a></p>
+
+<p>Badges can give you an at-a-glance overview of the state of a repository.
+Often folks will report whether or not their code is passing tests, testing coverage, <em>et cetera</em>.
+Even more directly relevant to supplemental material, you can grab a badge from Zenodo that will report your repository’s DOI and link to the associated Zenodo page.
+Create custom badges to direct folks to where your data are hosted or where they can download your paper.</p>
+
+<p><strong>Places to generate badges</strong></p>
+
+<ul>
+  <li><a href="https://shields.io/">https://shields.io/</a>
+    <ul>
+      <li>I most commonly use this one. Lots of fantastic options to choose from, and you can generate <a href="https://shields.io/#your-badge"><img src="https://img.shields.io/badge/custom-badges%21%21-blueviolet" alt="custom-badge-badge" /></a></li>
+    </ul>
+  </li>
+  <li>Lot’s of services that you can hook into your GitHub repository (<em>e.g.</em>, code coverage, continuous integration, etc) will provide a badge that indicates the status of your repository on their service.</li>
+</ul>
+    
+      <h2 id="github-pages">
+        
+        
+          <a href="#github-pages" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> GitHub Pages
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-web%20accessibility-ff69b4" alt="accessibility" /></p>
+
+<p>What’s way cooler than pdf-bound supplemental material? Web-enabled supplemental material!</p>
+
+<p>GitHub pages is a minimal effort (and free!) way to generate and host a static website directly from a GitHub repository.
+Generating a website for a repository is actually as easy as toggling a switch in your repository’s settings.
+If you do nothing but flip on the GH pages switch and write a decent readme, you’ll have solid landing page for paper (<a href="https://lalejini.com/GECCO-2018-Evolving-Event-driven-Programs-with-SignalGP/">here’s one I did when I was first figuring out github pages</a>).</p>
+
+<p>By default, GH pages compiles your site using <a href="https://jekyllrb.com/">Jekyll</a>, which is really flexible, fairly easy to use, and has a huge community using it.
+You don’t <em>have</em> to use jekyll; you can use whatever you’d like (<em>e.g.</em>, <a href="#bookdown">bookdown!</a>).</p>
+
+<p>GH pages <em>really</em> shines for supplemental material in combination with other tools, like R markdown (<em>e.g.</em>, R analyses =&gt; pretty HTML files) or nbconvert for jupyter notebooks (<em>e.g.</em>, python notebook analyses =&gt; pretty HTML files). For example, instead of pointing readers to your raw source code, point them to a nicely formatted HTML file generated from your analysis code that weaves readable explanations together with code and output (<em>e.g.</em>, stats, visualizations, etc.).</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>Separate the main branch from the pages branch (<code class="language-plaintext highlighter-rouge">gh-pages</code> by default).
+    <ul>
+      <li>You can use another service (<em>e.g.</em>, github action) to push/deploy your site to the gh-pages anytime your push to the main branch if the changes pass automated testing. This way, your supplemental material will stay in lock-step with <em>working</em> versions of your project 😉</li>
+    </ul>
+  </li>
+  <li>GitHub pages is also great for personal websites (<em>e.g.</em>, <a href="https://github.com/amlalejini/amlalejini.github.io">this website</a>, lab websites, conference workshop websites, _et cetera!</li>
+</ul>
+
+<p><strong>Resources</strong></p>
+
+<ul>
+  <li><a href="https://lalejini.com/2020/04/02/gh-supplemental-material-guide.html#bonus-make-your-supplemental-material-web-accessible">blog post on making supplemental material web-accessible</a></li>
+</ul>
+    
+      <h2 id="open-science-framework-osf">
+        
+        
+          <a href="#open-science-framework-osf" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Open Science Framework (OSF)
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-code%20storage-ff69b4" alt="code" />
+<img src="https://img.shields.io/badge/-data%20storage-ff69b4" alt="data" />
+<img src="https://img.shields.io/badge/-citable%20doi-ff69b4" alt="doi" /></p>
+
+<p>OSF lets you create repositories (which will get a citable DOI) that you can put stuff in (<em>e.g.</em>, code, data, documentation, <em>etc</em>.).
+OSF repositories have all sorts of integrations that let you associate disparate backend components together in a sustainable/citable way.</p>
+
+<p>I’ve primarily used OSF repositories as a place to dump compressed data files (instead of dealing with git/github’s large file storage system).
+I’ll also link my OSF repository with my project’s associated GitHub repository (and whatever other integrations make sense).</p>
+
+<p>In my aspirational supplemental material, I like to include a ‘Data Availability’ section that links to/cites the OSF repository that holds my experiment data.</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li><a href="https://github.com/osfclient/osfclient">osfclient</a> is a nifty python library and command-line tool for uploading files to and downloading files from your OSF projects.
+    <ul>
+      <li><em>e.g.</em>, use this to have your experiment software automatically upload data when your experiment finishes, or use it to write convenient scripts that download/extract/organize your data for anyone interested in playing with it (including future you!).</li>
+    </ul>
+  </li>
+</ul>
+    
+      <h2 id="docker-containers">
+        
+        
+          <a href="#docker-containers" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Docker containers
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-reproducibility-ff69b4" alt="reproducibility" /></p>
+
+<p>Dockerfiles (and the images/containers they generate) give you a way of fully specifying the requisite development environment for compiling/running your computational experiments.
+Nüst <em>et al.</em> make a great case for using Docker for reproducible science in their <a href="https://doi.org/10.1371/journal.pcbi.1008316">10 simple rules paper</a>.</p>
+
+<p><a href="https://hub.docker.com/">Docker Hub</a> is a great place to host your containers.
+Plus, Docker Hub repositories can be linked with GitHub repositories.
+You can stick your Dockerfile in your GitHub repo, and Docker Hub will watch for new commits and build your Dockerfile.</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>Grab a badge from <shields.io>
+</shields.io>    <ul>
+      <li>to link to docker hub repo <a href="https://hub.docker.com/r/amlalejini/tag-based-genetic-regulation-for-gp"><img src="https://img.shields.io/badge/DockerHub-Hosted-blue" alt="DockerHub link" /></a></li>
+      <li>to indicate build status <img src="https://img.shields.io/docker/cloud/build/amlalejini/tag-based-genetic-regulation-for-gp" alt="Docker Cloud Build Status" /></li>
+    </ul>
+  </li>
+  <li>When you build your docker image locally (<em>e.g.</em>, <code class="language-plaintext highlighter-rouge">docker build .</code>), the build process will drop intermediate images as you go (for each RUN directive). If something fails during the build, you can always hop into the last successful image to investigate 🔍.
+    <ul>
+      <li>if your build fails, you can use <code class="language-plaintext highlighter-rouge">docker image ls -a</code> to see all of the recently created intermediate images</li>
+      <li>once you pick an image to spin up, you can run it interactively <code class="language-plaintext highlighter-rouge">docker run -it the_image_id</code></li>
+      <li><code class="language-plaintext highlighter-rouge">docker system prune</code> is your friend while you debug your dockerfile locally!</li>
+    </ul>
+  </li>
+  <li>Pinning versions
+    <ul>
+      <li>Great tip from <a href="https://twitter.com/morenomatthewa">Matthew</a>: you can build it without the pins, then open the container and run <code class="language-plaintext highlighter-rouge">apt policy packagename</code> for the things you want to pin</li>
+    </ul>
+  </li>
+  <li>Lot’s of great tips here: <a href="https://doi.org/10.1371/journal.pcbi.1008316">Ten simple rules for writing Dockerfiles for reproducible data science</a></li>
+</ul>
+
+<p><strong>Resources</strong></p>
+
+<ul>
+  <li>Nüst, D., Sochat, V., Marwick, B., Eglen, S. J., Head, T., Hirst, T., &amp; Evans, B. D. (2020). Ten simple rules for writing Dockerfiles for reproducible data science. PLOS Computational Biology, 16(11), e1008316. <a href="https://doi.org/10.1371/journal.pcbi.1008316">https://doi.org/10.1371/journal.pcbi.1008316</a>
+    <ul>
+      <li>Plus the associated github repository with lots of examples: <a href="https://github.com/nuest/ten-simple-rules-dockerfiles/tree/master/examples">https://github.com/nuest/ten-simple-rules-dockerfiles/tree/master/examples</a></li>
+    </ul>
+  </li>
+</ul>
+    
+      <h2 id="r-markdown">
+        
+        
+          <a href="#r-markdown" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> R Markdown
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-data%20analysis-ff69b4" alt="analysis" />
+<img src="https://img.shields.io/badge/-visualization-ff69b4" alt="visualization" />
+<img src="https://img.shields.io/badge/-web%20accessibility-ff69b4" alt="accessibility" /></p>
+
+<p>R Markdown lets you interweave your R code, visualizations, and explanatory text all together in one document.
+Then, use <a href="https://yihui.org/knitr/">knitr</a> to ‘knit’ it all into a single HTML file or pdf (or both!).
+Output your R Markdown as an HTML page, push it to your GitHub repository, turn on GitHub pages, and ✨!
+You’ve got a nicely formatted web page with all of your data analyses!</p>
+
+<p><a href="https://rstudio.com/">RStudio</a> (which I totally recommend to anyone starting out with R coding) makes this workflow <em>really</em> easy.
+Just pop open your <code class="language-plaintext highlighter-rouge">.Rmd</code> file, and mash the <code class="language-plaintext highlighter-rouge">Knit</code> button.</p>
+
+<p><img src="/imgs/blog/2020-12-13-supplemental++/knit.png" alt="knit" /></p>
+
+<p>Check out Yihui Xie’s <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: Definitive Guide</a> to see what’s possible with R Markdown (spoiler: a whole bunch of awesome stuff is possible).</p>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>Add a table of contents (<code class="language-plaintext highlighter-rouge">toc:true</code>) to your output to make it easier to jump around your document
+    <ul>
+      <li><em>e.g.</em> add <code class="language-plaintext highlighter-rouge">toc</code> options to your R markdown file’s front matter,
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "My fun analyses with a table of contents"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+---
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>If you want to go wild and interweave Python and R code, you can use the <a href="https://rstudio.github.io/reticulate/">reticulate</a> package!</li>
+</ul>
+
+<p><strong>Resources</strong></p>
+
+<ul>
+  <li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></li>
+  <li><a href="https://rmarkdown.rstudio.com/lesson-1.html">Getting started with R Markdown on RStudio</a></li>
+</ul>
+    
+      <h2 id="bookdown">
+        
+        
+          <a href="#bookdown" class="toc-anchor"><i class='far fa-link' style='color:slategrey;'></i></a> Bookdown
+        
+        
+      </h2>
+
+<p><img src="https://img.shields.io/badge/-web%20accessibility-ff69b4" alt="accessibility" />
+<img src="https://img.shields.io/badge/-it%20just%20looks%20slick-ff69b4" alt="slick" /></p>
+
+<p><a href="https://bookdown.org/">Bookdown</a> is an R package that can bundle multiple R Markdown (and vanilla markdown) documents into a cohesive and slick ebook.
+My first exposure to bookdown in the wild was Claus Wilke’s fantastic <a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a>, which was written entirely in R Markdown and compiled using bookdown.</p>
+
+<p>I like using bookdown to tie together all of my supplemental material into a single, nifty ebook (e.g., <a href="https://lalejini.com/Tag-based-Genetic-Regulation-for-LinearGP/supplemental/">https://lalejini.com/Tag-based-Genetic-Regulation-for-LinearGP/supplemental/</a>).</p>
+
+<p>I <em>highly</em> recommend starting with Yihui Xie’s <a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a>, which itself is compiled using bookdown!
+I also recommend playing around with Yihui Xie’s <a href="https://github.com/rstudio/bookdown-demo">bookdown demo</a> to get a feel for using bookdown.</p>
+
+<p><strong>Resources</strong></p>
+
+<ul>
+  <li><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a>
+    <ul>
+      <li>Comprehensive introduction/guide/documentation by the developer, Yihui Xie</li>
+      <li>This getting started demo is also super handy: <a href="https://github.com/rstudio/bookdown-demo">https://github.com/rstudio/bookdown-demo</a></li>
+    </ul>
+  </li>
+</ul>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <hr> <!-- Separate footer from rest of page with horizontal line. -->
+
+<footer>
+    <div class="container"> <!-- Footer is contained in Bootstrap container. -->
+
+        <!-- Email and social media on one side, address on the other. -->
+        <div class="row">
+
+            <div class="col-auto pr-0">
+                <ul class="fa-ul">
+                    <li class="text-secondary">Tanvir Hossain (he/him)</li>
+                    <li class="text-secondary">PhD Researcher in Electrical Engineering</li>
+                    <li class="text-secondary">Graduate Research Assistant</li>
+                    <li class="text-secondary">University of Kansas</li>
+                    <li><a href="https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en">Google Scholar</a></li>
+                    <li><a href="https://linkedin.com/in/tanvir-hossain71">LinkedIn</a></li>
+                    <!-- <li><a href="https://sites.google.com/site/tanvirjewel71">Personal Website</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Give email and social media contact info. -->
+            <div class="col-auto pr-0" id="contact-me">
+                <ul class="fa-ul">
+                    <li class="text-secondary"><i class="fas fa-envelope"></i> tanvir@ku.edu</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/tanvir-jewel">tanvir-jewel</a></li>
+                    <li><i class="fab fa-twitter"></i> <a href="https://x.com/tanvirjewel71">@tanvirjewel71</a></li>
+                </ul>
+            </div>
+
+            <!-- Give physical work/office address. -->
+            <div class="col">
+                <ul class="fa-ul">
+                    <li class="text-secondary">
+                      <i class="fas fa-map-marker-alt"></i> 
+                      2335 Irving Hill Rd <br />
+Lawrence, KS 66047, USA
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === Site information ===  -->
+        <div class="row justify-content-center">
+            <a href="https://github.com/amlalejini/amlalejini.github.io"><img src="https://img.shields.io/github/last-commit/tanvir-jewel/tanvir.github.io.svg?label=last%20update"/></a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <i class="fas fa-copyright"></i>
+                <small class="text-muted">
+                    Tanvir Hossain 2025.
+                    Powered by <a href="https://github.com/">GitHub</a>,
+                    <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://getbootstrap.com/">Bootstrap</a>,
+                    and <a href="https://fontawesome.com/">Font Awesome</a>.
+                    <a href="https://github.com/amlalejini/amlalejini.github.io">Source</a>.
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
