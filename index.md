@@ -5,10 +5,10 @@ layout: about
 about_me: |
   <strong style="color: red;">The website is currently under construction</strong>
 
-  Welcome to my website! I’m Tanvir Hossain, a PhD researcher in Electrical Engineering at the University of Kansas. This is my portfolio, where I document my research, academic journey, and teaching experiences—from my early days at Ahsanullah University of Science and Technology (AUST) to my current work in microelectronics and hardware security.
+  Welcome to my website! I’m Tanvir Hossain, a PhD researcher in Electrical Engineering at the University of Kansas. This is my portfolio website, where I document my research, academic journey, and teaching experiences—from my early days at Ahsanullah University of Science and Technology (AUST) to my current work in microelectronics and hardware security.
 
   **My Vision**  
-  This platform serves as a dedicated space for my research activities in microelectronics, circuit design, and hardware security. I aim to share insights from my academic work, including research findings, project developments, and technical discussions. Occasionally, I will also explore philosophical perspectives and broader academic themes through blog posts.
+  This platform serves as a dedicated space for my research activities in microelectronics, circuit design, and hardware security. I aim to share insights from my research and academic works, including research findings, project developments, and technical discussions. Occasionally, I will also explore philosophical perspectives and broader academic themes through blog posts.
 
   **Research & Interests**  
   - **Hardware Security**: My research focuses on detecting and mitigating vulnerabilities in commercial off-the-shelf (COTS) ICs. I develop techniques using formal verification and side-channel analysis to enhance the security of microelectronic systems.  
