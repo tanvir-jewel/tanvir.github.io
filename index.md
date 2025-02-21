@@ -17,7 +17,7 @@ about_me: |
 
   **What to Expect**  
   - **Curated Learning Resources**: Tutorials, guides, and recommended readings related to microelectronics and hardware security.  
-  - **Blog Posts**: Technical deep dives and philosophical musings—offering a holistic view of what it means to be a researcher, teacher, and lifelong learner.
+  - **Blog Posts**: Technical deep dives and philosophical musings—offering a holistic view of what it means to be a researcher, teacher, and lifelong learner..
 
   Thank you for visiting! Feel free to reach out if you have any questions or are interested in collaborating.
 
