@@ -1,15 +1,13 @@
 # cv_education.yml describes my collegiate education/degrees for my CV
 
-- degree: <b>Dual Ph.D.</b>, Electrical Engineering, Evolutionary Biology, & Behavior
-  institution: Michigan State University
-  location: East Lansing, MI
-  dates: 2021
-  advisor: Charles Ofria
-  thesis: <a href="https://github.com/amlalejini/DISSERTATION---EVOLVING-PHENOTYPICALLY-PLASTIC-DIGITAL-ORGANISMS">Evolving phenotypically plastic digital organisms</a>
-  committee: Christoph Adami, Wolfgang Banzhaf, Richard Lenski, and Charles Ofria (chair)
+- degree: <b>Doctor of Philosophy (Ph.D.)</b>, Electrical Engineering
+  institution: The University of Kansas
+  location: Lawrence, KS
+  dates: Expected 2026
+  advisor: Dr. Tamzidul Hoque
 
-- degree: <b>B.S.</b>, Computer Science
-  institution: Mississippi State University
-  location: Starkville, MS
-  dates: 2015
-  advisor: Cindy Bethel
+- degree: <b>Bachelor of Science (B.Sc.)</b>, Electrical and Electronic Engineering
+  institution: Ahsanullah University of Science and Technology
+  location: Dhaka, Bangladesh
+  dates: 2016 - 2021
+  advisor: Dr. Istiaque Rahman
