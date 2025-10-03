@@ -1,17 +1,29 @@
 # This data file contains contact information.
 
+phone:
+  number: "+1(785) 424-0647"
+
+email:
+  address: tanvir@ku.edu
+
+linkedin:
+  link: https://linkedin.com/in/tanvir-hossain71/
+  username: tanvir-hossain71
+
+google_scholar:
+  link: https://scholar.google.com/citations?user=lPEOU2wAAAAJ
+  username: "Google Scholar"
+
 twitter:
   link: https://x.com/tanvirjewel71
   username: "@tanvirjewel71"
-
 
 github:
   link: https://github.com/tanvir-jewel
   username: tanvir-jewel
 
-email:
-  address: tanvir@ku.edu
-
 address: |
     2335 Irving Hill Rd <br/>
-    Lawrence, KS 66047, USA
+    Lawrence, KS 66045 <br/>
+    University of Kansas <br/>
+    Department of EECS (Office)

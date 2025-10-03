@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b263b"/>
+    </linearGradient>
+    <style>
+      .chip { fill: #1f6f8b; stroke: #e0e1dd; stroke-width: 2; }
+      .trace { stroke: #e0e1dd; stroke-width: 3; fill: none; }
+      .wave { stroke: #f9c74f; stroke-width: 2.2; fill: none; }
+      .text { fill: #e0e1dd; font-family: 'Arial', sans-serif; font-size: 12px; }
+    </style>
+  </defs>
+  <rect width="240" height="160" fill="url(#bg)" rx="12"/>
+  <rect x="80" y="32" width="80" height="80" class="chip" rx="10"/>
+  <g stroke-linecap="round">
+    <path class="trace" d="M40 120 H200" stroke-dasharray="6 6"/>
+    <path class="trace" d="M120 112 V140"/>
+    <path class="wave" d="M20 82 C40 70, 60 94, 80 82 S120 70, 140 82 S180 94, 200 82 S220 70, 240 82"/>
+  </g>
+  <circle cx="120" cy="72" r="16" fill="#e0e1dd" opacity="0.15"/>
+  <path class="wave" d="M118 56 L136 48"/>
+  <path class="wave" d="M118 56 L104 40"/>
+  <path class="wave" d="M124 88 L142 100" opacity="0.7"/>
+  <path class="wave" d="M116 88 L96 96" opacity="0.7"/>
+  <text x="120" y="140" text-anchor="middle" class="text">Runtime EM Monitoring</text>
+</svg>

@@ -35,70 +35,76 @@ layout: default
           {% case research.image_pos %}
             
             {% when "left" %} <!-- When the image should be on the left -->
-              <div class="row no-gutters">
-                  <div class="col-4 mb-1 ml-1 mt-1">
+              <div class="row no-gutters align-items-center">
+                  <div class="col-md-4 col-12 p-3">
                     {% if research.image_is_figure %}
-                      <figure class="figure">
-                        <img src="{{ research.image | relative_url }}" class="img-fluid figure-img" alt="">
-                        <figcaption class="figure-caption ml-2 mr-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+                      <figure class="figure mb-0">
+                        <img src="{{ research.image | relative_url }}" class="img-fluid figure-img rounded" alt="{{ research.project }}">
+                        <figcaption class="figure-caption text-center mt-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
                       </figure>
                     {% else %}
-                      <img src="{{ research.image | relative_url }}" class="img-fluid" alt="">
-                    {% endif %}                  
+                      <img src="{{ research.image | relative_url }}" class="img-fluid rounded" alt="{{ research.project }}">
+                    {% endif %}
                   </div>
-                  <div class="col">
-                    <div class="card-block px-2">
-                        <h4 class="card-title mt-3"> {{ research.project }}</h4>
+                  <div class="col-md-8 col-12">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"> {{ research.project }}</h4>
                         <div class="card-text"> {{ research.description | markdownify }} </div>
                     </div>
                   </div>
               </div>
 
             {% when "right" %} <!-- When the image should be on the right -->
-              <div class="row no-gutters">
-                <div class="col">
-                  <div class="card-block px-2">
-                    <h4 class="card-title mt-3"> {{ research.project }}</h4>
+              <div class="row no-gutters align-items-center">
+                <div class="col-md-8 col-12">
+                  <div class="card-body">
+                    <h4 class="card-title text-primary"> {{ research.project }}</h4>
                     <div class="card-text"> {{ research.description | markdownify }} </div>
                   </div>
                 </div>
-                <div class="col-4 mb-1 mr-1 mt-1">
+                <div class="col-md-4 col-12 p-3">
                   {% if research.image_is_figure %}
-                    <figure class="figure">
-                      <img src="{{ research.image | relative_url }}" class="img-fluid figure-img" alt="">
-                      <figcaption class="figure-caption ml-2 mr-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+                    <figure class="figure mb-0">
+                      <img src="{{ research.image | relative_url }}" class="img-fluid figure-img rounded" alt="{{ research.project }}">
+                      <figcaption class="figure-caption text-center mt-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
                     </figure>
                   {% else %}
-                    <img src="{{ research.image | relative_url }}" class="img-fluid" alt="">
-                  {% endif %}   
+                    <img src="{{ research.image | relative_url }}" class="img-fluid rounded" alt="{{ research.project }}">
+                  {% endif %}
                 </div>
               </div>
 
             {% when "bottom" %} <!-- When the image should be at the bottom. -->
               <div class="card-body">
-                <h4 class="card-title">{{ research.project }}</h4>
+                <h4 class="card-title text-primary">{{ research.project }}</h4>
                 <div class="card-text"> {{ research.description | markdownify }} </div>
               </div>
-              {% if research.image_is_figure %}
-                <figure class="figure">
-                  <img src="{{ research.image | relative_url }}" class="card-img-bottom figure-img" alt="">
-                  <figcaption class="figure-caption ml-2 mr-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
-                </figure>
-              {% else %}
-                <img class="card-img-bottom" src="{{ research.image | relative_url }}" alt="Card image cap">
-              {% endif %}   
+              <div class="p-3">
+                {% if research.image_is_figure %}
+                  <figure class="figure mb-0">
+                    <img src="{{ research.image | relative_url }}" class="img-fluid figure-img rounded" alt="{{ research.project }}">
+                    <figcaption class="figure-caption text-center mt-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+                  </figure>
+                {% else %}
+                  <img class="img-fluid rounded" src="{{ research.image | relative_url }}" alt="{{ research.project }}">
+                {% endif %}
+              </div>   
             
-            {% else %} <!-- The default behavior is that the image is on the top of the card. -->
-              {% if research.image_is_figure %}
-                <figure class="figure">
-                  <img src="{{ research.image | relative_url }}" class="card-img-top figure-img" alt="">
-                  <figcaption class="figure-caption ml-2 mr-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
-                </figure>
-              {% else %}
-                <img class="card-img-top" src="{{ research.image | relative_url }}" alt="Card image cap">
-              {% endif %} 
+            {% else %} <!-- The default behavior - no image or image on top -->
+              {% if research.image %}
+                <div class="p-3 pb-0">
+                  {% if research.image_is_figure %}
+                    <figure class="figure mb-0">
+                      <img src="{{ research.image | relative_url }}" class="img-fluid figure-img rounded" alt="{{ research.project }}">
+                      <figcaption class="figure-caption text-center mt-2">{{research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+                    </figure>
+                  {% else %}
+                    <img class="img-fluid rounded" src="{{ research.image | relative_url }}" alt="{{ research.project }}">
+                  {% endif %}
+                </div>
+              {% endif %}
               <div class="card-body">
-                <h4 class="card-title">{{ research.project }}</h4>
+                <h4 class="card-title text-primary">{{ research.project }}</h4>
                 <div class="card-text"> {{ research.description | markdownify }} </div>
               </div>
 

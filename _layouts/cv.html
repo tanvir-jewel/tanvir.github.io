@@ -29,6 +29,7 @@ layout: default
             {% endif %}
             {% if edu.thesis %} Thesis: {{ edu.thesis }} <br/> {% endif %}
             {% if edu.advisor %} Advisor: {{ edu.advisor }} <br/> {% endif %}
+            {% if edu.additional %} {{ edu.additional }} <br/> {% endif %}
           </p></li>
         {% endfor %}
       </ul>
@@ -62,17 +63,15 @@ layout: default
     <div class="col">
       <h3>{{ site.data.icons.cv_publications_icon }} Publications</h3>
       <h6 class="py-2" style="font-weight:normal;">
-        &emsp; See <a href="{{ "https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en" | relative_url }}">my Google Scholar</a>.
+        &emsp; See <a href="https://scholar.google.com/citations?user=lPEOU2wAAAAJ" target="_blank">my Google Scholar</a> for complete list of publications and citations.
       </h6>
     </div>
   </div>
-<!-- 
+
   <!-- Category - presentations (posters and talks) -->
-<!--
   <div class="row" id="cv-presentations">
     <div class="col">
-      <h3>{{ site.data.icons.cv_presentations_icon }} Presentations</h3>
-        <h5>Talks</h5>
+      <h3>{{ site.data.icons.cv_presentations_icon }} Research Talks & Presentations</h3>
         <ul>
           {% assign presentations_sorted = site.data.cv_presentations| sort: 'year' | reverse %}
           {% for pres in presentations_sorted %}
@@ -85,22 +84,6 @@ layout: default
                 {{ pres.location }}.
                 {% if pres.abstract_pdf %} <a href="{{ pres.abstract_pdf | relative_url }}"> Abstract</a>. {% endif %}
                 {% if pres.slides_link %} <a href="{{ pres.slides_link }}">Slides</a>. {% endif %}
-              </p></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <h5>Posters</h5>
-        <ul>
-          {% assign presentations_sorted = site.data.cv_presentations| sort: 'year' | reverse %}
-          {% for pres in presentations_sorted %}
-            {% if pres.type == "poster" %}
-              <li><p>
-                <b>{{ pres.title }}</b><br/>
-                {% if pres.authors %}<i>By {{ pres.authors }}</i> <br/> {% endif %}
-                Presented at {{ pres.venue }}.
-                {{ pres.date }}.
-                {{ pres.location }}.
-                {% if pres.poster_link %} <a href="{{ pres.poster_link }}">Poster</a>. {% endif %}
               </p></li>
             {% endif %}
           {% endfor %}
@@ -146,7 +129,6 @@ layout: default
   </div>
 
   <!-- Category - grants/fellowships -->
-  <!--
   <div class="row" id="cv-grants">
     <div class="col">
       <h3>{{ site.data.icons.cv_grants_icon }} Grants & Fellowships</h3>
@@ -156,6 +138,22 @@ layout: default
             <li><p>
                 <b>{{ grant.award }}</b> ({{ grant.year }}) <br/>
                 {% if grant.description %} {{ grant.description }} {% endif %}
+            </p></li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+
+  <!-- Category - honors & awards -->
+  <div class="row" id="cv-awards">
+    <div class="col">
+      <h3>{{ site.data.icons.cv_awards_icon }} Honors & Awards</h3>
+      {% assign awards_sorted = site.data.cv_awards| sort: 'year' | reverse %}
+      <ul>
+          {% for award in awards_sorted %}
+            <li><p>
+                <b>{{ award.award }}</b> ({{ award.date }}) <br/>
+                {% if award.description %} {{ award.description }} {% endif %}
             </p></li>
           {% endfor %}
         </ul>

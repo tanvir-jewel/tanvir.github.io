@@ -4,15 +4,11 @@ layout: research
 permalink: /research/
 
 jumbo_txt: |
-    "So far, we have been able to study only one evolving
-    system and we cannot wait for interstellar flight to provide
-    us with a second. If we want to discover generalizations
-    about evolving systems, we will have to look to artificial
-    ones." - [John Maynard Smith](https://doi.org/10.1038/355772a0).
+    "The security of our digital infrastructure depends not just on the software we write,
+    but on the hardware foundation it runs upon. In an era of complex supply chains and
+    sophisticated adversaries, we must secure silicon from the ground up."
 
 overview: |
-    My research resides somewhere at the intersection of artificial life, evolutionary biology, and evolutionary computation. 
-    I am broadly interested in how evolutionary processes remain open-ended, continuously generating increasingly complex organisms. My work is a mishmash of using digital evolution to study
-    general properties of evolving systems and of drawing inspiration from natural evolution and its byproducts to develop new evolutionary computation techniques and representations. Below are some of my current research projects. If anything is of interest to you, feel free to [contact me](#contact-me)!
+    My research focuses on **hardware security** and **microelectronics trust**, with particular emphasis on protecting commercial-off-the-shelf (COTS) processors from malicious threats. I develop novel approaches using **side-channel analysis**, **electromagnetic monitoring**, and **secure coding techniques** to detect hardware Trojans and protect sensitive data on untrusted silicon. My work spans from theoretical foundations to practical implementations, aiming to create robust security solutions for embedded systems and critical infrastructure. Below are my current research projects. If you're interested in collaboration or have questions, feel free to [contact me](/contact/)!
 ---
 

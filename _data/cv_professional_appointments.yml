@@ -2,22 +2,33 @@
   location: Lawrence, KS
   position: Graduate Research Assistant
   department: Department of Electrical Engineering and Computer Science
-  dates: Jan 2022 - Present
+  dates: Jan 2022 - Aug 2024; Jan 2025 - Present
+  description: Conducted research on hardware security, focusing on detecting and mitigating hardware Trojans in microelectronic ICs. Developed a novel Trojan detection and data protection method using side-channel analysis, leading to publications in top-tier conferences and journals.
 
 - institution: The University of Kansas
   location: Lawrence, KS
   position: Graduate Teaching Assistant
   department: Department of Electrical Engineering and Computer Science
   dates: Aug 2024 - Dec 2024
+  description: Conducted lab sessions and graded assignments for undergraduate courses in digital logic and computer architecture, assisting in developing course materials and exams. Provided guidance in project-based learning using MARS MIPS and gem5 x86 simulators, enhancing student engagement and understanding.
+
+- institution: NSF Research Experience for Undergraduates (REU) Project
+  location: Lawrence, KS
+  position: Research Mentor
+  department: ""
+  dates: Summer 2025
+  description: Mentored four undergraduate research assistants as part of the NSF-funded REU program, in collaboration with the University of Kansas and Wright State University.
 
 - institution: The University of Kansas
   location: Lawrence, KS
   position: Co-Instructor
   department: Department of Electrical Engineering and Computer Science
   dates: Fall 2023
+  description: Co-taught the course "Hands-On Introduction to Computer Hardware using FPGA and Microcontroller," where I developed modules using FPGAs, simulations, and the ESP32 embedded Aha Board to teach hardware fundamentals of computer systems.
 
 - institution: The University of Kansas
   location: Lawrence, KS
   position: Summer Camp Instructor
   department: Department of Electrical Engineering and Computer Science
   dates: Summer 2023, 2024
+  description: Organized and conducted summer camps teaching high school students computer hardware fundamentals through gamified, hands-on projects using FPGAs and basic electronics. Fostered an engaging learning environment to teach electronics and programming concepts.

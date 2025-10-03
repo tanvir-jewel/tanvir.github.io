@@ -47,7 +47,15 @@
           </li>
           <!-- Loop through each item in the nav data, add to navbar. -->
           <li class="nav-item">
+            <a class="nav-link  active " href="/research/">Research</a>
+          </li>
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
             <a class="nav-link " href="/cv/">CV</a>
+          </li>
+          <!-- Loop through each item in the nav data, add to navbar. -->
+          <li class="nav-item">
+            <a class="nav-link " href="/contact/">Contact</a>
           </li>
         
       </ul>
@@ -59,11 +67,9 @@
   <div class="container">
     <h1 class="display-4">Research</h1>
     
-      <div class="lead"> <p>“So far, we have been able to study only one evolving
-system and we cannot wait for interstellar flight to provide
-us with a second. If we want to discover generalizations
-about evolving systems, we will have to look to artificial
-ones.” - <a href="https://doi.org/10.1038/355772a0">John Maynard Smith</a>.</p>
+      <div class="lead"> <p>“The security of our digital infrastructure depends not just on the software we write,
+but on the hardware foundation it runs upon. In an era of complex supply chains and
+sophisticated adversaries, we must secure silicon from the ground up.”</p>
  </div>
     
   </div>
@@ -77,9 +83,7 @@ ones.” - <a href="https://doi.org/10.1038/355772a0">John Maynard Smith</a>.</p
       <div class="card mb-3 border-0">
         <div class="card-body">
           <h4 class="card-title">Overview</h4>
-          <p class="card-text"> <p>My research resides somewhere at the intersection of artificial life, evolutionary biology, and evolutionary computation. 
-I am broadly interested in how evolutionary processes remain open-ended, continuously generating increasingly complex organisms. My work is a mishmash of using digital evolution to study
-general properties of evolving systems and of drawing inspiration from natural evolution and its byproducts to develop new evolutionary computation techniques and representations. Below are some of my current research projects. If anything is of interest to you, feel free to <a href="#contact-me">contact me</a>!</p>
+          <p class="card-text"> <p>My research focuses on <strong>hardware security</strong> and <strong>microelectronics trust</strong>, with particular emphasis on protecting commercial-off-the-shelf (COTS) processors from malicious threats. I develop novel approaches using <strong>side-channel analysis</strong>, <strong>electromagnetic monitoring</strong>, and <strong>secure coding techniques</strong> to detect hardware Trojans and protect sensitive data on untrusted silicon. My work spans from theoretical foundations to practical implementations, aiming to create robust security solutions for embedded systems and critical infrastructure. Below are my current research projects. If you’re interested in collaboration or have questions, feel free to <a href="/contact/">contact me</a>!</p>
  </p>
         </div>
       </div>
@@ -93,186 +97,96 @@ general properties of evolving systems and of drawing inspiration from natural e
         <div class="card mb-3">
           
           <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
-           <!-- When the image should be at the bottom. -->
-              <div class="card-body">
-                <h4 class="card-title">Evolving event-driven programs with SignalGP</h4>
-                <div class="card-text"> <p>Genetic programming (GP) is the application of natural principles to evolve
-computer programs rather than by writing them by hand. 
-The types of programs that are easily evolvable depends on the underlying
-programming representation - <em>i.e.</em>, the way we organize and interpet programs.</p>
-
-<p>SignalGP is a new GP technique designed to give evolution direct access to the
-event-driven programming paradigm where computations are triggered response to 
-signals from the environment, from other agents, or that are internally generated. 
-I designed and developed the initial version of SignalGP in 2017, resulting 
-in a <a href="https://doi.org/10.1145/3205455.3205523">paper</a> and a talk at GECCO 2018
-where I demonstrate the value of giving evolution direct access to the event-driven
-paradigm.</p>
-
-<p>I am currently working on several extensions to the SignalGP representation,
-such as function regulation, multi-representation SignalGP, and multi-level/hierarchical
-SignalGP.</p>
-
- </div>
-              </div>
+           <!-- The default behavior - no image or image on top -->
               
-                <img class="card-img-bottom" src="/imgs/signalgp.svg" alt="Card image cap">
-                 
-            
-            
-          
-        </div>
-      </div> <!-- end column -->
-    </div>
-  
-    <div class="row">
-      <div class="col"> <!-- each card has its own column in row column -->
-        <div class="card mb-3">
-          
-          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
-           <!-- When the image should be on the right -->
-              <div class="row no-gutters">
-                <div class="col">
-                  <div class="card-block px-2">
-                    <h4 class="card-title mt-3"> Major transitions in individuality</h4>
-                    <div class="card-text"> <p>Major transitions in individuality redefine what it means to be
-an individual: formerly independent individuals unite to form a new, more
-complex lifeform. Examples include the evolution of eukaryotes, multicellularity,
-and eusocial insect colonies. From a computational perspective, major transitions
-in individuality result in distributed systems.</p>
-
-<p>The goal of this research is to develop a digital model for studying biological
-evolutionary transitions, allowing us to ask general questions about their dynamics.
-In the context of evolutionary computation, a system capable of transitions
-in individuality would be useful for allowing evolution to incrementally build
-distributed solutions.
-I am currently working to extend the SignalGP represention to allow co-evolving
-programs to unite to form hiearchically organized programs.</p>
- </div>
-                  </div>
-                </div>
-                <div class="col-4 mb-1 mr-1 mt-1">
-                  
-                    <img src="/imgs/majortrans.svg" class="img-fluid" alt="">
-                     
-                </div>
-              </div>
-
-            
-          
-        </div>
-      </div> <!-- end column -->
-    </div>
-  
-    <div class="row">
-      <div class="col"> <!-- each card has its own column in row column -->
-        <div class="card mb-3">
-          
-          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
-           <!-- When the image should be on the left -->
-              <div class="row no-gutters">
-                  <div class="col-4 mb-1 ml-1 mt-1">
-                    
-                      <figure class="figure">
-                        <img src="/imgs/mape4gp.svg" class="img-fluid figure-img" alt="">
-                        <figcaption class="figure-caption ml-2 mr-2">Example heat map of the optimal SignalGP programs evolved using 50 replicates
-of MAP-Elites, showing that below a certain ‘similarity threhold’ (how closely
-signal tags must match function tags in order for the signal to trigger
-the function) this particular
-problem is unlikely to be solved with less than approximately 20 functions.
-See <a href="https://doi.org/10.7287/peerj.preprints.27122v1">this paper</a> for full figure context.
-</figcaption>
-                      </figure>
-                                      
-                  </div>
-                  <div class="col">
-                    <div class="card-block px-2">
-                        <h4 class="card-title mt-3"> Exploring genetic programming systems with MAP-Elites</h4>
-                        <div class="card-text"> <blockquote class="blockquote"><small>
-MAP-Elites is an evolutionary computation technique that has proven
-valuable for exploring and illuminating the genotype-phenotype space of a computational
-problem. In MAP-Elites, a population is structured based on phenotypic
-traits of prospective solutions; each cell represents a distinct combination of traits
-and maintains only the most fit organism found with those traits. The resulting map
-of trait combinations allows the user to develop a better understanding of how each
-trait relates to fitness and how traits interact.
-<footer class="blockquote-footer"><a href="https://doi.org/10.7287/peerj.preprints.27154v1">2018 GPTP contribution by Emily Dolson, Alexander
-Lalejini, and Charles Ofria</a></footer>
-</small></blockquote>
-
-<p>If we define a MAP-Elites map with traits associated with different aspects
-of our genetic programming representation (<em>e.g.</em>, functions, program length, <em>etc</em>.),
-we can use MAP-Elites as a tool to explore how different aspects of different
-representations interact across different problems. Are there trade-offs
-between different aspects of our representation? Are there parts of representation-space
-that are unlikely to yield solutions? Exploring our GP representations in this
-way may inform how we configure things such as variation/mutation or selection operators.</p>
-
-<p>This project is an ongoing collaboration with fellow devolab student, <a href="http://emilyldolson.com">Emily Dolson</a>.</p>
- </div>
-                    </div>
-                  </div>
-              </div>
-
-            
-          
-        </div>
-      </div> <!-- end column -->
-    </div>
-  
-    <div class="row">
-      <div class="col"> <!-- each card has its own column in row column -->
-        <div class="card mb-3">
-          
-          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
-           <!-- When the image should be at the bottom. -->
               <div class="card-body">
-                <h4 class="card-title">The evolution of phenotypic plasticity and gene regulation</h4>
-                <div class="card-text"> <p>Phenotypic plasticity is the capacity of a genotype to express different
-phenotypes (<em>e.g.</em>, traits or characteristics) in response to different 
-environmental conditions. Plasticity is often leveraged as a strategy to 
-cope with heterogenous environments. In computer science, our computer programs
-are often plastic in the sense that they may perform different computations
-in response to different types of input.
-The programmatic underpinning of many types of computational plasticity
-are flow control statements (e.g., <code class="language-plaintext highlighter-rouge">if</code> or <code class="language-plaintext highlighter-rouge">while</code>).
-In biological organisms, the genetic underpinning of many types of phenotpyic
-plasticity is gene regulation.</p>
+                <h4 class="card-title text-primary">Side-Channel Assisted Runtime Integrity Monitoring</h4>
+                <div class="card-text"> <p><strong>Detecting hardware Trojans in real-time without golden references</strong></p>
 
-<p>The goal of this research is to study the step-by-step process by which gene
-regulation and phenotypic plasticity evolve. See <a href="https://doi.org/10.7551/978-0-262-33936-0-ch063">this paper</a> for work using
-Avida to observe the step-by-step process by which phenotypic plasticity evolves.
-Currently, I am working on extending SignalGP to allow for more biologically
-inspired forms of function regulation, making it a good model for studying the
-process by which gene regulation and any resulting phenotypic plasticity evolves.</p>
+<p>Commercial processors in critical systems face threats from supply-chain attacks and hardware Trojans. Traditional detection methods require pristine “golden” reference chips that are often unavailable. I develop <strong>contactless electromagnetic (EM) side-channel monitoring</strong> techniques that can fingerprint legitimate control-flow behavior and detect malicious activity in real-time.</p>
+
+<p>My approach uses <strong>spectral analysis</strong> combined with <strong>watermarking techniques</strong> to precisely locate attacked code blocks in multi-core COTS processors. This method provides runtime assurance without requiring invasive modifications or golden references, making it practical for deployment in real-world systems.</p>
+
+<p><em>Key innovations: Non-invasive EM monitoring, real-time Trojan detection, watermark-based localization</em></p>
  </div>
               </div>
+
+          
+          
+        </div>
+      </div> <!-- end column -->
+    </div>
+  
+    <div class="row">
+      <div class="col"> <!-- each card has its own column in row column -->
+        <div class="card mb-3">
+          
+          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
+           <!-- The default behavior - no image or image on top -->
               
-                <figure class="figure">
-                  <img src="/imgs/evoplast.svg" class="card-img-bottom figure-img" alt="">
-                  <figcaption class="figure-caption ml-2 mr-2">This figure shows time slices of the ancestral lineages of dominant digital organisms from
-100 independent replicates of evolution using the Avida Digital Evolution Platform.
-Each lineage is represented as a vertical sequence of states over time where states
-are defined by the phenotype of ancestral organisms on the lineage. State changes
-imply a change in phenotype along the lineage.
+              <div class="card-body">
+                <h4 class="card-title text-primary">Run-time Protection of Secrets in COTS Processors</h4>
+                <div class="card-text"> <p><strong>Keeping sensitive data encoded during execution on untrusted silicon</strong></p>
 
-In this particular condition, digital organisms must evolve a form of phenotypic 
-plasticity: the ability to alter their phenotype depending on the current state
-of the environment. In this case, the environment cycles between two possible
-states at a regular interval.
+<p>Modern processors leak sensitive information through side-channels and hardware Trojans. I design <strong>software frameworks</strong> that employ <strong>Residue Number Coding</strong> to keep sensitive data encoded throughout the entire execution pipeline, ensuring that raw secrets never appear in the microarchitecture.</p>
 
-Time (updates) flows from top to bottom of the figure. The environment is given
-by the left-most vertical bar. Each lineage state sequence is represented
-by a single vertical bar, and states along the sequence are denoted by color.
-This type of visualization lets us see, at a glance, how lineages traversed
-phenotype space in route to the evolution of phenotypic plasticity.
+<p>The <strong>HOACS (Homomorphic Obfuscation Assisted Concealing of Secrets)</strong> system demonstrates how to protect against both hardware Trojans and side-channel attacks with minimal performance overhead. This approach is particularly suitable for embedded COTS processors where security cannot be compromised.</p>
 
-For full context on this experiment and visualization, see <a href="https://doi.org/10.7551/978-0-262-33936-0-ch063">this paper</a>.
-</figcaption>
-                </figure>
-                 
-            
-            
+<p><em>Key innovations: Residue number system encoding, minimal overhead protection, COTS processor compatibility</em></p>
+ </div>
+              </div>
+
+          
+          
+        </div>
+      </div> <!-- end column -->
+    </div>
+  
+    <div class="row">
+      <div class="col"> <!-- each card has its own column in row column -->
+        <div class="card mb-3">
+          
+          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
+           <!-- The default behavior - no image or image on top -->
+              
+              <div class="card-body">
+                <h4 class="card-title text-primary">Side-Channel Assisted Verification for COTS</h4>
+                <div class="card-text"> <p><strong>Detecting sequential hardware Trojans through finite state machine analysis</strong></p>
+
+<p>Sequential hardware Trojans that activate after specific trigger sequences pose unique detection challenges. I develop novel approaches that analyze <strong>finite state machines</strong> through integrated <strong>power and EM side-channel data</strong> to detect these sophisticated threats.</p>
+
+<p>This verification approach enables detection of complex Trojans in COTS processors without requiring proprietary design information, making it practical for security evaluation of commercial hardware in critical applications.</p>
+
+<p><em>Key innovations: FSM-based analysis, integrated power/EM monitoring, sequential Trojan detection</em></p>
+ </div>
+              </div>
+
+          
+          
+        </div>
+      </div> <!-- end column -->
+    </div>
+  
+    <div class="row">
+      <div class="col"> <!-- each card has its own column in row column -->
+        <div class="card mb-3">
+          
+          <!-- We do different stuff depending on where exactly the image is positioned in the card (top/left/bottom/right). -->
+           <!-- The default behavior - no image or image on top -->
+              
+              <div class="card-body">
+                <h4 class="card-title text-primary">Gamified Learning Framework for Computer Hardware Fundamentals</h4>
+                <div class="card-text"> <p><strong>Making hardware security education engaging and accessible</strong></p>
+
+<p>Building the next generation of hardware security experts requires innovative educational approaches. Through <strong>NSF-funded research</strong>, I develop <strong>hardware-based games</strong> that teach fundamental computer hardware concepts using <strong>Verilog</strong>, <strong>FPGAs</strong>, and <strong>ESP32 development boards</strong>.</p>
+
+<p>This gamified framework makes complex topics like side-channel analysis, hardware Trojans, and secure design accessible to high school students and early undergraduates. Students learn by doing, building real circuits and observing security vulnerabilities firsthand.</p>
+
+<p>Summer camp evaluations show significant improvements in <strong>systems thinking</strong> and <strong>retention rates</strong>, demonstrating the effectiveness of hands-on, game-based learning for technical subjects.</p>
+ </div>
+              </div>
+
+          
           
         </div>
       </div> <!-- end column -->
@@ -315,7 +229,9 @@ For full context on this experiment and visualization, see <a href="https://doi.
                     <li class="text-secondary">
                       <i class="fas fa-map-marker-alt"></i> 
                       2335 Irving Hill Rd <br />
-Lawrence, KS 66047, USA
+Lawrence, KS 66045 <br />
+University of Kansas <br />
+Department of EECS (Office)
 
                     </li>
                 </ul>

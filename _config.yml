@@ -6,6 +6,9 @@ email: tanvir@ku.edu
 include:
   - _pages
 
+exclude:
+  - PROJECT_STRUCTURE.md
+
 sass:
   sass_dir: _sass
   style: compressed

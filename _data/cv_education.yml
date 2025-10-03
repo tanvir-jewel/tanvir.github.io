@@ -4,10 +4,15 @@
   institution: The University of Kansas
   location: Lawrence, KS
   dates: Expected 2026
-  advisor: Dr. Tamzidul Hoque
+  advisor: Dr. Tamzidul Hoque, Assistant Professor, EECS, KU
 
-- degree: <b>Bachelor of Science (B.Sc.)</b>, Electrical and Electronic Engineering
+- degree: <b>Master's of Science (M.S.)</b>, Electrical Engineering
+  institution: The University of Kansas
+  location: Lawrence, KS
+  dates: May 2025
+  advisor: Dr. Tamzidul Hoque, Assistant Professor, EECS, KU
+
+- degree: <b>Bachelor of Science</b>, Electrical and Electronic Engineering
   institution: Ahsanullah University of Science and Technology
-  location: Dhaka, Bangladesh
+  location: Bangladesh
   dates: 2016 - 2021
-  advisor: Dr. Istiaque Rahman

@@ -1,31 +1,91 @@
 # cv_awards gives entries to the awards/fellowships/honors section of my CV
 
-- award: Computing Research Association (CRA) Outstanding Undergraduate Male Researcher, Honorable Mention
-  date: Awarded - Spring 2015
-  year: 2015
-
-- award: James Worth Bagley College of Engineering Student Hall of Fame
-  date: Awarded - Spring 2015
+- award: First Place (Poster Presentation)
+  date: January 2024
   description: |
-    Awarded by the Bagley College of Engineering at Mississippi State University to
-    students who have demonstrated superior academic achievement, leadership, service,
-    and character.
-  year: 2015
+    In the I2S Student Research Symposium
+  year: 2024
 
-- award: Honorable Mention, Engineering Graduate Research Symposium Recognition for Outstanding Research
-  date: Awarded - Spring 2016
+- award: Champion - Microelectronics Security Challenge (IP security)
+  date: May 2023
   description: |
-    Awarded for my poster presentation titled, The Evolutionary Origins of Phenotypic Plasticity
-  year: 2016
+    IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2023 Symposium)
+  year: 2023
 
-- award: Best Student Paper at the 2016 International Conference on the Synthesis and Simulation of Living Systems (ALIFE)
-  date: Awarded - Summer 2016
+- award: National Science Foundation (NSF) Travel Grant
+  date: May 2023
   description: |
-    Awarded for our paper titled, The Evolutionary Origins of Phenotypic Plasticity
-  year: 2016
+    IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2023 Symposium)
+  year: 2023
 
-- award: Honorable Mention, Engineering Graduate Research Symposium Recognition for Outstanding Research
-  date: Awarded - Spring 2018
+- award: David D. and Mildred H. ROBB Award
+  date: April 2023
   description: |
-    Awarded for my poster presentation titled, SignalGP
+    Awarded by the EECS department of the University of Kansas
+  year: 2023
+
+- award: People's Choice Award (Poster Presentation)
+  date: April 2023
+  description: |
+    Among 16 participants in the 2023 Research Showcase by the Graduate Engineering Association of KU
+  year: 2023
+
+- award: Third Place (Poster Presentation)
+  date: April 2023
+  description: |
+    Among 16 participants in the 2023 Research Showcase by the Graduate Engineering Association of KU
+  year: 2023
+
+- award: Second Place (Research Showcasing)
+  date: March 2023
+  description: |
+    Among 20 participants in the I2S Student Research Symposium
+  year: 2023
+
+- award: Bangladesh Sweden Trust Fund
+  date: December 2022
+  description: |
+    A travel grant for Graduate study in USA
+  year: 2022
+
+- award: National Science Foundation (NSF) Travel Grant
+  date: June 2022
+  description: |
+    IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2022 Symposium)
+  year: 2022
+
+- award: Best AUST Paper Award
+  date: March 2021
+  description: |
+    The 23rd International Conference on Computer and Information Technology (ICCIT 2020)
+  year: 2021
+
+- award: Tuition Waiver Award
+  date: Fall 2019
+  description: |
+    Based on the result of the top 8% students
+  year: 2019
+
+- award: Runner-up
+  date: August 2018
+  description: |
+    Hardware Exhibition, Inter University Software and Hardware Carnival-2018, University of Asia Pacific
+  year: 2018
+
+- award: Second Runner-up
+  date: April 2018
+  description: |
+    Project Showcasing of Technival '18, Khulna University of Engineering and Technology (KUET)
+  year: 2018
+
+- award: Second Runner-up
+  date: February 2018
+  description: |
+    Hardware of Engenius '18, Organized by AUST EEE Society
+  year: 2018
+
+- award: Champion
+  date: February 2018
+  description: |
+    Hardware Showcasing of Technomania '18, AUST CSE Society
   year: 2018

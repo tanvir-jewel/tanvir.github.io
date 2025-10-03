@@ -16,6 +16,9 @@
 <loc>http://localhost:4000/blog/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/contact/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/cv/</loc>
 </url>
 <url>
@@ -34,12 +37,8 @@
 <loc>http://localhost:4000/run_page_offline.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/cv/CV.html</loc>
-<lastmod>2025-01-01T20:20:45-06:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/cv/</loc>
-<lastmod>2025-01-01T20:28:09-06:00</lastmod>
+<loc>http://localhost:4000/CV_Tanvir_H.pdf</loc>
+<lastmod>2025-09-29T15:55:37-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/pubs/2022-04-28-consequences-of-plasticity-extended-abstract.pdf</loc>
