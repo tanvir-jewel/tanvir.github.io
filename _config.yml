@@ -2,6 +2,7 @@
 # Site settings
 title: "Tanvir Hossain"
 email: tanvir@ku.edu
+description: "PhD Researcher in Hardware Security and Microelectronics Trust"
 
 include:
   - _pages
