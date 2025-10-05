@@ -17,7 +17,7 @@ publications:
 
   # Under Review Publications
   - citation: |
-      Tanvir Hossain, Jonathan Cruz, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
+      **Tanvir Hossain**, Jonathan Cruz, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
       "Attacking the Protections under Zero Trust Model"
       Under Review
     year: 2024
@@ -25,7 +25,7 @@ publications:
     venue: journal
 
   - citation: |
-      Ashutosh Ghimire, Tanvir Hossain, Fathi Amsaad, Tamzidul Hoque.
+      Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
       "ML-Assisted Approach for Hardware Trojan Detection without Golden Chip Signature"
       Under Review
     year: 2024
@@ -33,7 +33,7 @@ publications:
     venue: journal
 
   - citation: |
-      Tanvir Hossain, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
+      **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
       "HOACS: Homomorphic Obfuscation Assisted Concealing of Secrets to Thwart Trojan Attacks in COTS Processor"
       Under Review. Pre-print: arXiv:2402.09701
     year: 2024
@@ -44,7 +44,7 @@ publications:
 
   # Journal Articles
   - citation: |
-      Md Mashfiq Rizvee, Fairuz Shadmani Shishir, Tanvir Hossain, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
+      Md Mashfiq Rizvee, Fairuz Shadmani Shishir, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
       "A Persistent Hierarchical Bloom Filter-based Framework for Scalable Authentication and Tracking of ICs"
       ACM Journal on Emerging Technologies in Computing Systems, Volume 21, Issue 4, Pages 1-22. Publisher: ACM.
     year: 2025
@@ -52,7 +52,7 @@ publications:
     venue: journal
 
   - citation: |
-      Sriram Prabhakara Rao, Shree Ram Abayankar Balaji, Farishta Rahman, Tasneem Suha, Tanzim Mahfuz, Tanvir Hossain, Mahmudul Hasan, Md Sakib Hasan, Tamzidul Hoque, Prabuddha Chakraborty, Prakash Ranganathan.
+      Sriram Prabhakara Rao, Shree Ram Abayankar Balaji, Farishta Rahman, Tasneem Suha, Tanzim Mahfuz, **Tanvir Hossain**, Mahmudul Hasan, Md Sakib Hasan, Tamzidul Hoque, Prabuddha Chakraborty, Prakash Ranganathan.
       "Secure and Trustworthy Microelectronics: Vulnerabilities, Solutions, and Trends"
       Journal of Hardware and Systems Security. Publisher: Springer International Publishing.
     year: 2025
@@ -60,7 +60,7 @@ publications:
     venue: journal
 
   - citation: |
-      Tanvir Hossain, Istiaque Rahman.
+      **Tanvir Hossain**, Istiaque Rahman.
       "Bandgap tuning and Variable Quantum Barrier of Armchair Graphene Nanoribbon by Inducing Antidote Topologies"
       Journal of Computational Electronics. Publisher: Springer Nature.
       DOI: 10.1007/s10825-023-02108-7
@@ -70,7 +70,7 @@ publications:
     link: https://doi.org/10.1007/s10825-023-02108-7
 
   - citation: |
-      Tanvir Hossain, Istiaque Rahman, Mahbub Alam.
+      **Tanvir Hossain**, Istiaque Rahman, Mahbub Alam.
       "Antidote induced armchair graphene nanoribbon based resonant tunneling diodes"
       Semiconductor Science and Technology. Publisher: IOP Publishing (Institute of Physics Publishing).
       DOI: 10.1088/1361-6641/ac01fc
@@ -81,7 +81,7 @@ publications:
 
   # Conference Proceedings
   - citation: |
-      S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, Tanvir Hossain, Md Sakib Hasan, Tamzidul Hoque.
+      S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
       "Accurate, Yet Scalable: A SPICE-based Design and Optimization Framework for eNVM-based Analog In-memory Computing"
       Accepted to 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, USA
     year: 2024
@@ -89,7 +89,7 @@ publications:
     venue: conference
 
   - citation: |
-      Tanvir Hossain, S M Mojahidul Ahsan, Tamzidul Hoque.
+      **Tanvir Hossain**, S M Mojahidul Ahsan, Tamzidul Hoque.
       "Potential and Pitfalls of Multilevel Logic Circuits for Hardware Security"
       2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
       DOI: 10.1109/DCAS57389.2023.10130261
@@ -99,7 +99,7 @@ publications:
     link: https://doi.org/10.1109/DCAS57389.2023.10130261
 
   - citation: |
-      S M Mojahidul Ahsan, Tanvir Hossain, Md Sakib Hasan, Tamzidul Hoque.
+      S M Mojahidul Ahsan, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
       "Resistive RAM based PUF: Challenges and Opportunities"
       2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
       DOI: 10.1109/DCAS57389.2023.10130179
@@ -109,7 +109,7 @@ publications:
     link: https://doi.org/10.1109/DCAS57389.2023.10130179
 
   - citation: |
-      Ashutosh Ghimire, Fathi Amsaad, Tanvir Hossain, Tamzidul Hoque, Ahmed Sherif.
+      Ashutosh Ghimire, Fathi Amsaad, **Tanvir Hossain**, Tamzidul Hoque, Ahmed Sherif.
       "FPGA Hardware Trojan Detection: Golden-Free Machine Learning Approach"
       NAECON 2023 - IEEE National Aerospace and Electronics Conference, Dayton, OH, USA, 2023.
       DOI: 10.1109/NAECON58068.2023.10365812
@@ -119,7 +119,7 @@ publications:
     link: https://doi.org/10.1109/NAECON58068.2023.10365812
 
   - citation: |
-      Andrea Ramirez-Salgado, Tanvir Hossain, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
+      Andrea Ramirez-Salgado, **Tanvir Hossain**, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
       "Board 393: Supporting Hardware Engineering Career Choice in First-Year Engineering Students"
       2024 ASEE Annual Conference & Exposition, Baltimore, Maryland
     year: 2024
@@ -128,7 +128,7 @@ publications:
     link: https://peer.asee.org/46979.pdf
 
   - citation: |
-      Andrea Ramirez-Salgado, Tanvir Hossain, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
+      Andrea Ramirez-Salgado, **Tanvir Hossain**, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
       "Board 265: Engaging Students in Exploring Computer Hardware Fundamentals Using FPGA Board Games"
       2023 ASEE Annual Conference & Exposition, Baltimore, Maryland
     year: 2023
@@ -137,7 +137,7 @@ publications:
     link: https://peer.asee.org/42715
 
   - citation: |
-      Tanvir Hossain, Md Shyeem Rahman, Md. Mushfiqur Rahman, Ahmed Rabbi Arini Dibbo.
+      **Tanvir Hossain**, Md Shyeem Rahman, Md. Mushfiqur Rahman, Ahmed Rabbi Arini Dibbo.
       "Performance Analysis of Graphene Nanoribbon Field Effect Transistor (GNRFET) based 6T and 7T SRAMs"
       23rd International Conference on Computer and Information Technology (ICCIT), 2020, pp. 1-5.
       DOI: 10.1109/ICCIT51783.2020.9392713
