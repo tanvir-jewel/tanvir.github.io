@@ -31,5 +31,38 @@ layout: default
     </div>
 
   </div> <!-- end row -->
-  
+
+  <!-- News Section -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card border-0">
+        <div class="card-body">
+          <div class="row align-items-center mb-3">
+            <div class="col-md-8">
+              <h4 class="card-title text-primary mb-0">Recent News & Achievements</h4>
+            </div>
+            <div class="col-md-4 text-md-right text-center mt-2 mt-md-0">
+              <a href="{{ '/CV_Tanvir_H.pdf' | relative_url }}" class="btn btn-outline-primary" download>
+                <i class="fas fa-download"></i> Download CV
+              </a>
+            </div>
+          </div>
+          <div class="card-text">
+            {% if site.data.news %}
+            <ul class="list-unstyled">
+              {% for item in site.data.news limit:5 %}
+              <li class="mb-2">
+                <strong>{{ item.date }}:</strong> {{ item.news }}
+              </li>
+              {% endfor %}
+            </ul>
+            {% else %}
+            <p>No news items available.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end news section -->
+
 </div>
