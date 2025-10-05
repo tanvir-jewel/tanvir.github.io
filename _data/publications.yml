@@ -51,6 +51,14 @@ publications:
 
   # Journal Articles
   - citation: |
+      Sriram Prabhakara Rao, Shree Ram Abayankar Balaji, Farishta Rahman, Tasneem Suha, Tanzim Mahfuz, Tanvir Hossain, Mahmudul Hasan, Md Sakib Hasan, Tamzidul Hoque, Prabuddha Chakraborty, Prakash Ranganathan.
+      "Secure and Trustworthy Microelectronics: Vulnerabilities, Solutions, and Trends"
+      Journal of Hardware and Systems Security. Publisher: Springer International Publishing.
+    year: 2025
+    type: journal
+    venue: journal
+
+  - citation: |
       Tanvir Hossain, Istiaque Rahman.
       "Bandgap tuning and Variable Quantum Barrier of Armchair Graphene Nanoribbon by Inducing Antidote Topologies"
       Journal of Computational Electronics. Publisher: Springer Nature.
