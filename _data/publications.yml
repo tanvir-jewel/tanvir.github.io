@@ -41,15 +41,16 @@ publications:
     venue: journal
     link: https://arxiv.org/abs/2402.09701
 
-  - citation: |
-      Mashfiq Rizvee, Fairuz Shadmani Shishir, Tanvir Hossain, Tamzidul Hoque, Sumaiya Shomaji.
-      "A Hierarchical Bloom Filter-based Framework for Scalable Authentication and Tracking of ICs"
-      Under Review
-    year: 2024
-    type: under-review
-    venue: journal
 
   # Journal Articles
+  - citation: |
+      Md Mashfiq Rizvee, Fairuz Shadmani Shishir, Tanvir Hossain, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
+      "A Persistent Hierarchical Bloom Filter-based Framework for Scalable Authentication and Tracking of ICs"
+      ACM Journal on Emerging Technologies in Computing Systems, Volume 21, Issue 4, Pages 1-22. Publisher: ACM.
+    year: 2025
+    type: journal
+    venue: journal
+
   - citation: |
       Sriram Prabhakara Rao, Shree Ram Abayankar Balaji, Farishta Rahman, Tasneem Suha, Tanzim Mahfuz, Tanvir Hossain, Mahmudul Hasan, Md Sakib Hasan, Tamzidul Hoque, Prabuddha Chakraborty, Prakash Ranganathan.
       "Secure and Trustworthy Microelectronics: Vulnerabilities, Solutions, and Trends"
@@ -134,16 +135,6 @@ publications:
     type: conference
     venue: conference
     link: https://peer.asee.org/42715
-
-  - citation: |
-      Fairuz Shadmani Shishir, Mashfiq Rizvee, Tanvir Hossain, Tamzidul Hoque, Sumaiya Shomaji.
-      "A Persistent Hierarchical Bloom Filter-based Framework for Authentication and Tracking of ICs"
-      3RD IEEE International Workshop on Silicon Lifecycle Management.
-      DOI: 10.48550/arXiv.2408.16950
-    year: 2024
-    type: conference
-    venue: workshop
-    link: https://arxiv.org/abs/2408.16950
 
   - citation: |
       Tanvir Hossain, Md Shyeem Rahman, Md. Mushfiqur Rahman, Ahmed Rabbi Arini Dibbo.
