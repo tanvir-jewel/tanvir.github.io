@@ -1,0 +1,10 @@
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.tanvirhossain.net/sitemap.xml
+
+# Disallow indexing of specific directories
+Disallow: /assets/
+Disallow: /_site/

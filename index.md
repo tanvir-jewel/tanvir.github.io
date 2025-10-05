@@ -1,6 +1,8 @@
 ---
 title: Home
 layout: about
+description: "Tanvir Hossain - PhD Researcher in Hardware Security at University of Kansas. Specializing in hardware Trojans detection, side-channel analysis, and secure COTS processor design."
+keywords: "Tanvir Hossain, hardware security researcher, hardware Trojans, side-channel analysis, University of Kansas, PhD student, secure hardware design"
 
 about_me: |
   <strong style="color: red;">The website is currently under construction</strong>

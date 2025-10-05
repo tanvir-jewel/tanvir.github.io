@@ -13,6 +13,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}/imgs/me/Tanv1.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image" content="{{ site.url }}/imgs/me/Tanv1.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Google Scholar Meta Tags -->
+  <meta name="citation_author" content="Tanvir Hossain">
+  <meta name="citation_title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tanvir Hossain",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/imgs/me/Tanv1.jpg",
+    "jobTitle": "PhD Researcher",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of Kansas",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lawrence",
+        "addressRegion": "KS",
+        "addressCountry": "USA"
+      }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/tanvir-hossain71/",
+      "https://scholar.google.com/citations?user=lPEOU2wAAAAJ",
+      "https://github.com/tanvir-jewel"
+    ],
+    "knowsAbout": ["Hardware Security", "Side-Channel Analysis", "Hardware Trojans", "Microelectronics Trust", "Secure Hardware Design"],
+    "alumniOf": "Ahsanullah University of Science and Technology"
+  }
+  </script>
+
   <!-- Link in our stylesheets -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">

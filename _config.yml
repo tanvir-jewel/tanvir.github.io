@@ -2,7 +2,26 @@
 # Site settings
 title: "Tanvir Hossain"
 email: tanvir@ku.edu
-description: "PhD Researcher in Hardware Security and Microelectronics Trust"
+description: "PhD Researcher in Hardware Security and Microelectronics Trust at University of Kansas. Research focuses on hardware Trojans, side-channel analysis, and secure hardware design."
+url: "https://www.tanvirhossain.net"
+baseurl: ""
+author: "Tanvir Hossain"
+keywords: "hardware security, side-channel analysis, hardware Trojans, COTS processors, microelectronics trust, secure hardware design, PhD researcher, University of Kansas"
+
+# Social profiles for SEO
+social:
+  name: Tanvir Hossain
+  links:
+    - https://www.linkedin.com/in/tanvir-hossain71/
+    - https://scholar.google.com/citations?user=lPEOU2wAAAAJ
+    - https://github.com/tanvir-jewel
+
+# Google Scholar
+google_scholar: lPEOU2wAAAAJ
+
+# SEO settings
+lang: en_US
+locale: en_US
 
 include:
   - _pages
@@ -23,3 +42,4 @@ defaults:
     
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
