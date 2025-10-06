@@ -33,6 +33,13 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
 defaults:
   -
     scope:
