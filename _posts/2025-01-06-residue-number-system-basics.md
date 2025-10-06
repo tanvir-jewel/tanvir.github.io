@@ -161,4 +161,4 @@ In future posts, I will explore how RNS is applied in practical hardware securit
 
 **References:**
 - Soderstrand, M. A., et al. "Residue number system arithmetic: modern applications in digital signal processing." IEEE Press, 1986.
-- Bajard, J. C., et al. "A RNS based approach for cryptographic applications." Proceedings of the 2004 International Symposium on Circuits and Systems, 2004.
+- Omondi, A., and Premkumar, B. "Residue Number Systems: Theory and Implementation." Imperial College Press, 2007.
