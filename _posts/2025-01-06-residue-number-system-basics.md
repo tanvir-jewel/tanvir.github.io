@@ -201,7 +201,7 @@ In my research, RNS provides several security advantages:
 
 4. **Side-Channel Resistance:** The encoded representation makes it harder for attackers to extract sensitive information through power analysis or electromagnetic emissions.
 
-In the HOACS system, we leverage RNS to keep cryptographic keys and sensitive data encoded throughout the entire execution pipeline on untrusted COTS processors, preventing hardware Trojans from accessing raw secret values.
+In the HOACS (Homomorphic Obfuscation Assisted Concealing of Secrets) system, we leverage RNS to keep cryptographic keys and sensitive data encoded throughout the entire execution pipeline on untrusted COTS processors, preventing hardware Trojans from accessing raw secret values. By transforming cryptographic operations to be fully homomorphic using residue number coding, we can perform AES encryption while keeping the secret key perpetually encoded, never exposing it in plaintext form even during computation.
 
 ## Conclusion
 
@@ -212,5 +212,6 @@ In future posts, I will explore how RNS is applied in practical hardware securit
 ---
 
 **References:**
+- Hossain, T., Showers, M., Hasan, M., and Hoque, T. "HOACS: Homomorphic Obfuscation Assisted Concealing of Secrets to Thwart Trojan Attacks in COTS Processor." arXiv preprint arXiv:2402.09701, 2024. [Link](https://arxiv.org/abs/2402.09701)
 - Soderstrand, M. A., et al. "Residue number system arithmetic: modern applications in digital signal processing." IEEE Press, 1986.
 - Omondi, A., and Premkumar, B. "Residue Number Systems: Theory and Implementation." Imperial College Press, 2007.
