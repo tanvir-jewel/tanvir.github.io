@@ -3,8 +3,8 @@ layout: post
 title: "Understanding Residue Number Systems: The Basics"
 date: 2025-01-06
 author: Tanvir Hossain
-categories: [Hardware Security, Cryptography]
-tags: [RNS, Residue Number System, Mathematics, Secure Computing]
+categories: [hardware-security, cryptography]
+tags: [RNS, residue-number-system, mathematics, secure-computing]
 excerpt: "An introduction to Residue Number Systems (RNS), covering moduli, dynamic range, and the Chinese Remainder Theorem with practical examples."
 ---
 
