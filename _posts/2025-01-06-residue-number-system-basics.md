@@ -50,7 +50,7 @@ where $x_i = X \mod m_i$
 - $x_2 = 23 \mod 5 = 3$
 - $x_3 = 23 \mod 7 = 2$
 
-Therefore: $23_{\text{decimal}} = (2, 3, 2)_{\text{RNS}}$
+Therefore: 23 in decimal = (2, 3, 2) in RNS
 
 ## Arithmetic Operations in RNS
 
@@ -66,9 +66,9 @@ $$(a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = ((a_1 + b_1) \mod m_1, (a_
 - $(3 + 2) \mod 5 = 0$
 - $(2 + 3) \mod 7 = 5$
 
-Result: $(1, 0, 5)_{\text{RNS}}$
+Result: (1, 0, 5) in RNS
 
-Verification: $23 + 17 = 40$, and $40 = (1, 0, 5)_{\text{RNS}}$ ✓
+Verification: $23 + 17 = 40$, and 40 = (1, 0, 5) in RNS ✓
 
 ### Multiplication
 
@@ -80,9 +80,9 @@ $$(a_1, a_2, \ldots, a_n) \times (b_1, b_2, \ldots, b_n) = ((a_1 \times b_1) \mo
 - $(2 \times 4) \mod 5 = 3$
 - $(0 \times 2) \mod 7 = 0$
 
-Result: $(0, 3, 0)_{\text{RNS}}$
+Result: (0, 3, 0) in RNS
 
-Verification: $7 \times 9 = 63$, and $63 = (0, 3, 0)_{\text{RNS}}$ ✓
+Verification: $7 \times 9 = 63$, and 63 = (0, 3, 0) in RNS ✓
 
 ## Chinese Remainder Theorem (CRT)
 
@@ -101,7 +101,7 @@ where:
 
 ### CRT Example
 
-Let's convert $(2, 3, 2)_{\text{RNS}}$ back to decimal using $M = \{3, 5, 7\}$.
+Let's convert (2, 3, 2) from RNS back to decimal using $M = \{3, 5, 7\}$.
 
 **Step 1:** Calculate $M$
 
@@ -135,7 +135,7 @@ $$X = (140 + 63 + 30) \mod 105$$
 
 $$X = 233 \mod 105 = 23$$
 
-Therefore: $(2, 3, 2)_{\text{RNS}} = 23_{\text{decimal}}$ ✓
+Therefore: (2, 3, 2) in RNS = 23 in decimal ✓
 
 ## Why RNS Matters for Hardware Security
 
