@@ -2,35 +2,40 @@
 layout: blog
 title: Blog
 permalink: /blog/
+description: "Blog posts by Tanvir Hossain on hardware security, research insights, and academic life."
+keywords: "hardware security blog, research blog, PhD student blog, microelectronics"
+jumbo_txt: |
+  Thoughts on hardware security, research insights, and my journey as a PhD researcher.
 ---
 
-## <a href="#here"><i class='far fa-link' style='color:slategrey;'></i></a> here
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## <a href="#devolab"><i class='far fa-link' style='color:slategrey;'></i></a> [devolab](https://devolab.org/)
-<ul class="posts">
-  {% for post in site.data.devolab_posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-  <a href="https://devolab.org/author/lalejini/">[all devolab posts]</a>
-</ul>
-
-## <a href="#mentees_collaborators">🔗</a> mentees & collaborators
-<ul class="posts">
-  {% for post in site.data.mentees_collaborators_posts %}
-    <li>
-      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> by <a href="{{ post.who_url }}">{{ post.who }}</a>
-      {% if post.where %}
-        {% if post.where_url %}
-          @ <a href="{{ post.where_url }}">{{ post.where }}</a>
-        {% else %}
-          @ {{ post.where }}
-        {% endif %}
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+{% if site.posts.size > 0 %}
+<div class="row">
+  <div class="col-12">
+    <h3>Recent Posts</h3>
+    <ul class="list-unstyled">
+      {% for post in site.posts %}
+        <li class="mb-3">
+          <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+          <p class="text-muted">
+            <small>{{ post.date | date: "%B %d, %Y" }}</small>
+          </p>
+          {% if post.excerpt %}
+            <p>{{ post.excerpt }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% else %}
+<div class="row">
+  <div class="col-12">
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">Blog Coming Soon!</h4>
+      <p>I'm currently setting up my blog where I'll share insights about hardware security research, academic experiences, and technical topics.</p>
+      <hr>
+      <p class="mb-0">Check back soon for new posts!</p>
+    </div>
+  </div>
+</div>
+{% endif %}
