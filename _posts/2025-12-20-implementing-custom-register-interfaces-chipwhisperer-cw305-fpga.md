@@ -2708,8 +2708,3 @@ def main_production_capture():
 This approach ensures reliable, reproducible trace capture for any custom algorithm implementation. The patterns shown here are **used in research** and handle real-world edge cases that simple tutorials often miss.
 
 ---
-
-**Tutorial Version**: 2.1 
-**Production Addendum**: December 2025 
-**Verification Status**: Based on working chaotic AES implementations 
-****: Includes error handling, verification, and optimization
