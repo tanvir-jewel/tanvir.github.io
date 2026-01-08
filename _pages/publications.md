@@ -6,7 +6,7 @@ description: "Academic publications by Tanvir Hossain on hardware security, hard
 keywords: "Tanvir Hossain publications, hardware security papers, hardware Trojan detection, side-channel analysis research, HOACS, graphene nanoribbon"
 
 jumbo_txt: |
-  My publications can also be found on my [Google Scholar page](https://scholar.google.com/citations?user=sb89k5kAAAAJ&hl=en).
+  My publications can also be found on my [Google Scholar page](https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en).
     
 overview: |
   Because my work often spans multiple disciplines, I publish in a variety of 
