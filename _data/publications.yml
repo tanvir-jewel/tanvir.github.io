@@ -75,10 +75,10 @@ publications:
   # Conference Proceedings
   
   - citation: |
-    **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
-    "HOACS: Homomorphic Obfuscation Assisted Concealing of Secrets to Thwart Trojan Attacks in COTS Processor"
-    Cryptographic Hardware and Embedded Systems (CHES), 2026.
-    Pre-print: arXiv:2402.09701
+      **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
+      "On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans"
+      Accepted to Cryptographic Hardware and Embedded Systems (CHES), 2026.
+      Pre-print: arXiv:2402.09701
     year: 2026
     type: conference
     venue: conference
