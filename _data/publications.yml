@@ -17,7 +17,7 @@ publications:
 
   # Under Review Publications
   - citation: |
-      **Tanvir Hossain**, Jonathan Cruz, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
+      **Tanvir Hossain**, S M Mojahidul Ahsan,Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
       "Attacking the Protections under Zero Trust Model"
       Under Review
     year: 2024
@@ -32,14 +32,7 @@ publications:
     type: under-review
     venue: journal
 
-  - citation: |
-      **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
-      "HOACS: Homomorphic Obfuscation Assisted Concealing of Secrets to Thwart Trojan Attacks in COTS Processor"
-      Under Review. Pre-print: arXiv:2402.09701
-    year: 2024
-    type: under-review
-    venue: journal
-    link: https://arxiv.org/abs/2402.09701
+
 
 
   # Journal Articles
@@ -80,6 +73,17 @@ publications:
     link: https://doi.org/10.1088/1361-6641/ac01fc
 
   # Conference Proceedings
+  
+  - citation: |
+    **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
+    "HOACS: Homomorphic Obfuscation Assisted Concealing of Secrets to Thwart Trojan Attacks in COTS Processor"
+    Cryptographic Hardware and Embedded Systems (CHES), 2026.
+    Pre-print: arXiv:2402.09701
+    year: 2026
+    type: conference
+    venue: conference
+    link: https://arxiv.org/abs/2402.09701
+
   - citation: |
       S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
       "Accurate, Yet Scalable: A SPICE-based Design and Optimization Framework for eNVM-based Analog In-memory Computing"
