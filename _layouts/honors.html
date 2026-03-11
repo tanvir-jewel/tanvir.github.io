@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<!-- Header -->
+<div class="jumbotron jumbotron-fluid py-4">
+  <div class="container">
+    <h1 class="display-4"><i class="fas fa-trophy text-warning mr-3"></i>Honors &amp; Awards</h1>
+    <p class="lead text-muted">Recognition, awards, and professional service activities</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Awards & Recognition -->
+  <div class="row mb-2">
+    <div class="col">
+      <h3><i class="fas fa-award text-primary mr-2"></i>Awards &amp; Recognition</h3>
+    </div>
+  </div>
+
+  {% assign awards_sorted = site.data.cv_awards | sort: 'year' | reverse %}
+  {% for award in awards_sorted %}
+  <div class="row mb-3">
+    <div class="col">
+      <div class="card border-left-primary shadow-sm h-100" style="border-left: 4px solid #007bff;">
+        <div class="card-body py-3">
+          <div class="d-flex align-items-start">
+            <div class="mr-3 mt-1" style="min-width: 2rem; text-align: center;">
+              <i class="{{ award.icon }} fa-lg {{ award.icon_color }}"></i>
+            </div>
+            <div>
+              <h5 class="card-title mb-1">
+                {% if award.link %}
+                  <a href="{{ award.link }}" target="_blank">{{ award.award }}</a>
+                {% else %}
+                  {{ award.award }}
+                {% endif %}
+              </h5>
+              <p class="card-text text-muted mb-0" style="font-size: 0.9rem;">
+                {{ award.description }}
+              </p>
+              <small class="text-secondary"><i class="fas fa-calendar-alt mr-1"></i>{{ award.date }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Peer Review Service -->
+  <div class="row mt-4 mb-2">
+    <div class="col">
+      <h3><i class="fas fa-search text-primary mr-2"></i>Professional Service: Peer Review</h3>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-md-6 mb-3">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5 class="mb-0"><i class="fas fa-book-open mr-2 text-info"></i>Journal Reviewer</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for entry in site.data.cv_reviewed_for %}
+            {% if entry.type == "Journal Reviewer" %}
+              <li class="list-group-item py-2">
+                <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5 class="mb-0"><i class="fas fa-chalkboard-teacher mr-2 text-info"></i>Conference Reviewer</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for entry in site.data.cv_reviewed_for %}
+            {% if entry.type == "Conference Reviewer" %}
+              <li class="list-group-item py-2">
+                <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
