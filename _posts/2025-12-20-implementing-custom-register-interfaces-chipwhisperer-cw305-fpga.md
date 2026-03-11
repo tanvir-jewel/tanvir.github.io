@@ -4,6 +4,7 @@ title: "Implementing Custom Register Interfaces on ChipWhisperer CW305 FPGA Targ
 date: 2025-12-20
 author: Tanvir Hossain
 categories: [hardware-security, fpga, embedded-systems]
+type: technical
 tags: [ChipWhisperer, CW305, FPGA, Verilog, register-interface, custom-hardware, side-channel-analysis, cryptographic-accelerators]
 excerpt: "A comprehensive guide to extending the ChipWhisperer CW305 FPGA board with custom register interfaces for implementing cryptographic algorithms, hardware accelerators, and custom digital circuits. Includes verified implementations, clock domain crossing techniques, and Python control software."
 no_toc: true

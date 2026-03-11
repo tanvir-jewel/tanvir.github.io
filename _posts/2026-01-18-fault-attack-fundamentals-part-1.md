@@ -4,6 +4,7 @@ title: "Fault Attack Fundamentals Part-1: Clock and Voltage Glitching with ChipW
 date: 2026-01-18
 author: Tanvir Hossain
 categories: [hardware-security, fault-injection, embedded-systems]
+type: technical
 tags: [ChipWhisperer, Husky, glitch-attacks, clock-glitching, voltage-glitching, fault-injection, hardware-security, embedded-security]
 excerpt: "A comprehensive academic introduction to fault injection attack methodologies using the ChipWhisperer Husky platform. This tutorial provides systematic coverage of clock glitching and voltage glitching parameter configurations for embedded systems security research."
 no_toc: true
