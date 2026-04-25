@@ -1,19 +1,15 @@
-# Define variables
-COMMIT_MSG = "Updated site content and structure"
+# Usage:
+#   make m="your commit message"
+# Commits and pushes everything except .claude/ and CLAUDE.md.
 
-# Default target
+m ?= Updated site content and structure
+
+.PHONY: all commit_and_push
+
 all: commit_and_push
 
-# Declare the target as phony
-.PHONY: commit_and_push
-
-# Commit and push updates
 commit_and_push:
-    @read -p "Enter commit message: " COMMIT_MSG; \
-    echo "Adding all changes to staging..."; \
-    git add .; \
-    echo "Committing changes..."; \
-    git commit -m "$$COMMIT_MSG"; \
-    echo "Pushing changes to the repository..."; \
-    git push origin master; \
-    echo "All changes have been pushed!"
+	git add . ":!.claude" ":!.claude/**" ":!CLAUDE.md"
+	git commit -m "$(m)"
+	git push origin master
+	@echo "All changes have been pushed!"

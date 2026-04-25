@@ -1,6 +1,12 @@
 # Recent News and Updates
 # Format: date, news item
 
+- date: "March 2026"
+  news: "📄 Paper accepted to ACM Transactions on Design Automation of Electronic Systems (TODAES): \"Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks\""
+
+- date: "January 2026"
+  news: "📄 Paper accepted to IACR Transactions on Cryptographic Hardware and Embedded Systems (CHES) 2026: \"On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans\""
+
 - date: "January 2024"
   news: "🏆 First Place (Poster Presentation) at I2S Student Research Symposium"
 

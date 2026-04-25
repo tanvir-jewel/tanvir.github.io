@@ -17,14 +17,6 @@ publications:
 
   # Under Review Publications
   - citation: |
-      **Tanvir Hossain**, S M Mojahidul Ahsan,Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
-      "Attacking the Protections under Zero Trust Model"
-      Under Review
-    year: 2024
-    type: under-review
-    venue: journal
-
-  - citation: |
       Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
       "ML-Assisted Approach for Hardware Trojan Detection without Golden Chip Signature"
       Under Review
@@ -36,6 +28,16 @@ publications:
 
 
   # Journal Articles
+  - citation: |
+      **Tanvir Hossain**, S M Mojahidul Ahsan, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
+      "Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks"
+      ACM Transactions on Design Automation of Electronic Systems (TODAES), Just Accepted, March 2026.
+      DOI: 10.1145/3804452
+    year: 2026
+    type: journal
+    venue: journal
+    link: https://doi.org/10.1145/3804452
+
   - citation: |
       Md Mashfiq Rizvee, Fairuz Shadmani Shishir, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
       "A Persistent Hierarchical Bloom Filter-based Framework for Scalable Authentication and Tracking of ICs"
@@ -77,12 +79,12 @@ publications:
   - citation: |
       **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
       "On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans"
-      Accepted to Cryptographic Hardware and Embedded Systems (CHES), 2026.
-      Pre-print: arXiv:2402.09701
+      IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Vol. 2026, No. 2, pp. 736–763, 2026.
+      DOI: 10.46586/tches.v2026.i2.736-763
     year: 2026
-    type: conference
-    venue: conference
-    link: https://arxiv.org/abs/2402.09701
+    type: journal
+    venue: journal
+    link: https://tches.iacr.org/index.php/TCHES/article/view/12907
 
   - citation: |
       S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
