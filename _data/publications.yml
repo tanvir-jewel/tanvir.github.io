@@ -133,6 +133,16 @@ publications:
     link: https://doi.org/10.1109/NAECON58068.2023.10365812
 
   - citation: |
+      Fairuz Shadmani Shishir, Md Mashfiq Rizvee, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
+      "A Persistent Hierarchical Bloom Filter-based Framework for Authentication and Tracking of ICs"
+      IEEE International Workshop on Silicon Lifecycle Management, October 2023.
+      DOI: 10.48550/arXiv.2408.16950
+    year: 2023
+    type: conference
+    venue: conference
+    link: https://doi.org/10.48550/arXiv.2408.16950
+
+  - citation: |
       Andrea Ramirez-Salgado, **Tanvir Hossain**, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
       "Board 393: Supporting Hardware Engineering Career Choice in First-Year Engineering Students"
       2024 ASEE Annual Conference & Exposition, Baltimore, Maryland
