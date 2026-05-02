@@ -1,6 +1,12 @@
 # Recent News and Updates
 # Format: date, news item
 
+- date: "May 2026"
+  news: "📄 \"SPHINX: A Framework for Security Primitive Hardware Identification and EXtraction\" accepted to the Great Lakes Symposium on VLSI (GLSVLSI 2026)"
+
+- date: "May 2026"
+  news: "🏛️ Serving as a Technical Program Committee (TPC) Member at IEEE International Symposium on VLSI (ISVLSI 2026)"
+
 - date: "March 2026"
   news: "📄 Paper accepted to ACM Transactions on Design Automation of Electronic Systems (TODAES): \"Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks\""
 

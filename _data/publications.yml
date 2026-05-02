@@ -87,6 +87,14 @@ publications:
     link: https://tches.iacr.org/index.php/TCHES/article/view/12907
 
   - citation: |
+      **Tanvir Hossain**, S M Mojahidul Ahsan, Tamzidul Hoque.
+      "SPHINX: A Framework for Security Primitive Hardware Identification and EXtraction"
+      Great Lakes Symposium on VLSI (GLSVLSI 2026).
+    year: 2026
+    type: conference
+    venue: conference
+
+  - citation: |
       S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
       "Accurate, Yet Scalable: A SPICE-based Design and Optimization Framework for eNVM-based Analog In-memory Computing"
       Accepted to 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, USA

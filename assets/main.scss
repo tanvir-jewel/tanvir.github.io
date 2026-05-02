@@ -88,6 +88,27 @@ blockquote {
 }
 
 /*
+ *  Publications page — mobile responsiveness
+ */
+@media (max-width: 767.98px) {
+  /* Scale down the large jumbotron heading */
+  .jumbotron .display-4 {
+    font-size: 2rem;
+  }
+
+  /* Prevent long citation text / URLs from overflowing */
+  .fa-ul li p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Give the fa-ul list a bit of room on narrow screens */
+  .fa-ul {
+    margin-left: 2em;
+  }
+}
+
+/*
  *  toc-anchor
  */
  .toc-anchor {
