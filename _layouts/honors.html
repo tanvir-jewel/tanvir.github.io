@@ -19,35 +19,35 @@ layout: default
     </div>
   </div>
 
+  <!-- Grouped by year as a dense list. Fifteen awards read as substantial when
+       they are visible together; one card each buried that under scrolling. -->
   {% assign awards_sorted = site.data.cv_awards | sort: 'year' | reverse %}
-  {% for award in awards_sorted %}
-  <div class="row mb-3">
+  <div class="row">
     <div class="col">
-      <div class="card border-left-primary shadow-sm h-100" style="border-left: 4px solid #007bff;">
-        <div class="card-body py-3">
-          <div class="d-flex align-items-start">
-            <div class="mr-3 mt-1" style="min-width: 2rem; text-align: center;">
-              <i class="{{ award.icon }} fa-lg {{ award.icon_color }}"></i>
-            </div>
-            <div>
-              <h5 class="card-title mb-1">
-                {% if award.link %}
-                  <a href="{{ award.link }}" target="_blank">{{ award.award }}</a>
-                {% else %}
-                  {{ award.award }}
-                {% endif %}
-              </h5>
-              <p class="card-text text-muted mb-0" style="font-size: 0.9rem;">
-                {{ award.description }}
-              </p>
-              <small class="text-secondary"><i class="fas fa-calendar-alt mr-1"></i>{{ award.date }}</small>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% assign current_year = "" %}
+      {% for award in awards_sorted %}
+        {% if award.year != current_year %}
+          {% unless forloop.first %}</ul>{% endunless %}
+          <h4 class="award-year">{{ award.year }}</h4>
+          <ul class="award-list list-unstyled">
+          {% assign current_year = award.year %}
+        {% endif %}
+        <li class="award-item">
+          <i class="{{ award.icon }} {{ award.icon_color }} award-icon"></i>
+          <span class="award-name">
+            {% if award.link %}
+              <a href="{{ award.link }}" target="_blank" rel="noopener">{{ award.award }}</a>
+            {% else %}
+              {{ award.award }}
+            {% endif %}
+          </span>
+          <span class="award-desc">{{ award.description | strip_newlines }}</span>
+          <span class="award-date">{{ award.date }}</span>
+        </li>
+        {% if forloop.last %}</ul>{% endif %}
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
 
   <!-- Peer Review Service -->
   <div class="row mt-4 mb-2">

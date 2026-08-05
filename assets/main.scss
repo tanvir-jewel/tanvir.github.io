@@ -1,16 +1,238 @@
 ---
 ---
 
+/*
+ *  Typography overrides. These MUST come before the bootstrap import — Sass
+ *  !default variables only take the first assignment, so anything set after
+ *  the import is ignored.
+ */
+$font-size-base:        1.0625rem;   // 17px; 16px is cramped for long-form prose
+$line-height-base:      1.6;
+$headings-margin-bottom: 0.75rem;
+$h1-font-size:          2.25rem;
+$h3-font-size:          1.375rem;    // stock 1.75rem competed with the page title
+$h4-font-size:          1.15rem;
+
 @import "bootstrap/bootstrap.scss";
 @import "codeblocks.scss";
 @import "syntax-highlighting.scss";
 
-$spacing-unit:     30px;
+/*
+ *  Measure. Body text at the full 1140px container runs ~120 characters per
+ *  line; comfortable reading is 65-75. Applied to prose only, so tables,
+ *  cards and grids keep the full width.
+ */
+.page-prose,
+.pub-citation,
+.news-text,
+.jumbotron .lead {
+  max-width: 68ch;
+}
 
 blockquote {
   border-left: 4px solid gray("300");
   margin: 1.5em 10px;
   padding: 0.5em 10px;
+}
+
+/*
+ *  Home page identity header
+ */
+.site-name {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.site-role {
+  font-size: 1.15rem;
+  margin-bottom: 0.15rem;
+  color: gray("800");
+}
+
+.site-affiliation {
+  color: gray("600");
+  margin-bottom: 0.75rem;
+}
+
+.site-quicklinks {
+  margin-bottom: 0;
+
+  .list-inline-item:not(:last-child)::after {
+    content: "·";
+    color: gray("500");
+    margin-left: 0.5rem;
+  }
+}
+
+.section-rule {
+  margin: 2rem 0 1.5rem;
+}
+
+.section-heading {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/*
+ *  Publication list — year rail on the left, citation and metadata on the right.
+ */
+.pub-list {
+  margin-bottom: 2.5rem;
+}
+
+.pub-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid gray("200");
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.pub-year {
+  color: gray("600");
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pub-citation {
+  // Long DOIs and titles must not push the column wider than the viewport.
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.pub-meta {
+  margin-top: 0.35rem;
+  font-size: 0.875rem;
+  line-height: 1.9;
+}
+
+.pub-venue-tag {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid gray("300");
+  border-radius: 3px;
+  color: gray("700");
+  white-space: nowrap;
+}
+
+.pub-link {
+  margin-right: 0.75rem;
+  white-space: nowrap;
+}
+
+.page-intro {
+  margin-bottom: 1.75rem;
+}
+
+/*
+ *  Honors — grouped by year, one line per award.
+ */
+.award-year {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid gray("200");
+  color: gray("600");
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.award-list {
+  margin-bottom: 0;
+}
+
+.award-item {
+  padding: 0.4rem 0;
+}
+
+.award-icon {
+  width: 1.25rem;
+  text-align: center;
+  margin-right: 0.4rem;
+}
+
+.award-name {
+  font-weight: 600;
+}
+
+.award-desc {
+  color: gray("700");
+
+  &::before {
+    content: " — ";
+    color: gray("500");
+  }
+}
+
+.award-date {
+  color: gray("600");
+  white-space: nowrap;
+
+  &::before {
+    content: " · ";
+    color: gray("500");
+  }
+}
+
+/*
+ *  News — muted fixed-width date column so dates line up and can be scanned.
+ */
+.news-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.4rem 0;
+}
+
+.news-date {
+  flex: 0 0 9.5rem;
+  color: gray("600");
+  white-space: nowrap;
+}
+
+.news-text {
+  flex: 1 1 20rem;
+}
+
+@media (max-width: 575.98px) {
+  .news-date {
+    flex-basis: 100%;
+    font-size: 0.875rem;
+  }
+}
+
+/*
+ *  Research — related publications block at the foot of each project card.
+ */
+.research-pubs {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid gray("200");
+  font-size: 0.925rem;
+}
+
+.research-pubs-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: gray("600");
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+}
+
+.research-pub-item {
+  padding: 0.15rem 0;
+}
+
+.research-pub-venue {
+  color: gray("600");
+
+  &::before {
+    content: " · ";
+  }
 }
 
 /*
@@ -88,7 +310,7 @@ blockquote {
 }
 
 /*
- *  Publications page — mobile responsiveness
+ *  Mobile
  */
 @media (max-width: 767.98px) {
   /* Scale down the large jumbotron heading */
@@ -96,15 +318,8 @@ blockquote {
     font-size: 2rem;
   }
 
-  /* Prevent long citation text / URLs from overflowing */
-  .fa-ul li p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Give the fa-ul list a bit of room on narrow screens */
-  .fa-ul {
-    margin-left: 2em;
+  .site-name {
+    font-size: 1.85rem;
   }
 }
 

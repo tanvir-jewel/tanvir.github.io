@@ -13,14 +13,14 @@
 - date: "January 2026"
   news: "📄 Paper accepted to IACR Transactions on Cryptographic Hardware and Embedded Systems (CHES) 2026: \"On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans\""
 
-- date: "January 2024"
-  news: "🏆 First Place (Poster Presentation) at I2S Student Research Symposium"
-
 - date: "September 2024"
   news: "📄 Paper accepted to 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD), San Francisco, CA"
 
 - date: "June 2024"
   news: "📄 Paper accepted to 2024 ASEE Annual Conference & Exposition, Baltimore, Maryland"
+
+- date: "January 2024"
+  news: "🏆 First Place (Poster Presentation) at I2S Student Research Symposium"
 
 - date: "May 2023"
   news: "🏆 Champion - Microelectronics Security Challenge (IP security) at IEEE HOST 2023"

@@ -4,64 +4,76 @@ layout: default
 
 <div class="container">
 
-  <div class="row mt-3 flex-column-reverse flex-md-row"> <!-- This row contains the about me blurb w/a picture. -->
+  <!-- Identity header. This is the first thing a visitor reads, so it answers
+       "who, where, what do they work on" before any prose. -->
+  <div class="row mt-4 flex-column-reverse flex-md-row align-items-center">
 
-    <div class="col-12 col-md-8"> <!-- About me blurb -->
-      <div class="card border-0">
-        <div class="card-body">
-          <div class="card-block px-2">
-            <h4 class="card-title">Bits, Bytes & Brainwaves</h4>
-            <p class="card-text">
-              {{ page.about_me | markdownify }}
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="col-12 col-md-8">
+      <h1 class="site-name">{{ site.author }}</h1>
+      <p class="site-role">{{ page.role }}</p>
+      <p class="site-affiliation">{{ page.affiliation }}</p>
+      <ul class="site-quicklinks list-inline">
+        <li class="list-inline-item">
+          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ site.data.contact.google_scholar.link }}" target="_blank" rel="noopener">Google Scholar</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ '/CV_Tanvir_H.pdf' | relative_url }}">CV (PDF)</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="mailto:{{ site.data.contact.email.address }}">{{ site.data.contact.email.address }}</a>
+        </li>
+      </ul>
     </div>
 
     <div class="col-12 col-md-4 mb-3 mb-md-0"> <!-- Image of me -->
       <figure class="figure">
-        <img src="{{ page.about_me_img | relative_url }}" class="figure-img img-fluid rounded" alt="Picture of me!">
-        <figcaption class="figure-caption text-right">
-          <small>
-            {{ page.about_me_img_caption | markdownify }}
-          </small>
-        </figcaption>
+        <img src="{{ page.about_me_img | relative_url }}" class="figure-img img-fluid rounded" alt="Photograph of {{ site.author }}">
+        {% if page.about_me_img_caption %}
+          <figcaption class="figure-caption text-right">
+            <small>{{ page.about_me_img_caption | markdownify }}</small>
+          </figcaption>
+        {% endif %}
       </figure>
     </div>
 
-  </div> <!-- end row -->
+  </div> <!-- end identity row -->
+
+  <hr class="section-rule">
+
+  <div class="row">
+    <div class="col-12">
+      <!-- markdownify emits block elements, so this must be a div and not a p. -->
+      <div class="card-text page-prose">
+        {{ page.about_me | markdownify }}
+      </div>
+    </div>
+  </div>
 
   <!-- News Section -->
   <div class="row mt-4">
     <div class="col-12">
-      <div class="card border-0">
-        <div class="card-body">
-          <div class="row align-items-center mb-3">
-            <div class="col-md-8">
-              <h4 class="card-title text-primary mb-0">Recent News & Achievements</h4>
-            </div>
-            <div class="col-md-4 text-md-right text-center mt-2 mt-md-0">
-              <a href="{{ '/CV_Tanvir_H.pdf' | relative_url }}" class="btn btn-outline-primary" download>
-                <i class="fas fa-download"></i> Download CV
-              </a>
-            </div>
-          </div>
-          <div class="card-text">
-            {% if site.data.news %}
-            <ul class="list-unstyled">
-              {% for item in site.data.news limit:5 %}
-              <li class="mb-2">
-                <strong>{{ item.date }}:</strong> {{ item.news }}
-              </li>
-              {% endfor %}
-            </ul>
-            {% else %}
-            <p>No news items available.</p>
-            {% endif %}
-          </div>
-        </div>
-      </div>
+      <h2 class="section-heading">Recent News</h2>
+      {% if site.data.news %}
+        <ul class="news-list list-unstyled">
+          {% for item in site.data.news limit:6 %}
+            <li class="news-item">
+              <span class="news-date">{{ item.date }}</span>
+              <span class="news-text">{{ item.news }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        {% assign news_count = site.data.news | size %}
+        {% if news_count > 6 %}
+          <p class="mb-0">
+            <a href="{{ '/news/' | relative_url }}">All news &rarr;</a>
+          </p>
+        {% endif %}
+      {% else %}
+        <p>No news items available.</p>
+      {% endif %}
     </div>
   </div> <!-- end news section -->
 

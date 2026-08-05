@@ -1,4 +1,14 @@
 # publications.yml lists both publication types and publications
+#
+# Fields per entry:
+#   citation     - markdown; author names, title, venue. **bold** marks Tanvir.
+#   year         - used for sorting and for the year rail in the rendered list
+#   type         - journal | conference | under-review (groups the entry)
+#   venue        - journal | conference | workshop | book | preprint (picks the icon)
+#   venue_short  - acronym shown as a tag, for scanning (TCHES, TODAES, ...)
+#   link         - canonical URL; rendered as a DOI/link button. Don't also put
+#                  the bare "DOI: ..." string in the citation, it duplicates this.
+#   badges       - LIST of award strings, e.g. ["Best Paper Award"]
 
 # Types of publication (in order of listing on page)
 publication_types:
@@ -19,35 +29,42 @@ publications:
   - citation: |
       Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
       "ML-Assisted Approach for Hardware Trojan Detection without Golden Chip Signature"
-      Under Review
     year: 2024
     type: under-review
     venue: journal
-
-
-
+    venue_short: Under Review
 
   # Journal Articles
   - citation: |
       **Tanvir Hossain**, S M Mojahidul Ahsan, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
       "Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks"
       ACM Transactions on Design Automation of Electronic Systems (TODAES), Just Accepted, March 2026.
-      DOI: 10.1145/3804452
     year: 2026
     type: journal
     venue: journal
+    venue_short: TODAES
     link: https://doi.org/10.1145/3804452
 
   - citation: |
       Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
       "AI-Assisted Side-Channel Analysis for Golden-Chip Free Detection and Localization of Hardware Trojans"
       Journal of Hardware and Systems Security, Volume 10, Issue 1, Article 12, June 2026. Publisher: Springer International Publishing.
-      DOI: 10.1007/s41635-026-00182-4
       **[NOTE: Jointly first author]**
     year: 2026
     type: journal
     venue: journal
+    venue_short: JHSS
     link: https://doi.org/10.1007/s41635-026-00182-4
+
+  - citation: |
+      **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
+      "On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans"
+      IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Vol. 2026, No. 2, pp. 736–763, 2026.
+    year: 2026
+    type: journal
+    venue: journal
+    venue_short: TCHES
+    link: https://tches.iacr.org/index.php/TCHES/article/view/12907
 
   - citation: |
       Md Mashfiq Rizvee, Fairuz Shadmani Shishir, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
@@ -56,6 +73,7 @@ publications:
     year: 2025
     type: journal
     venue: journal
+    venue_short: JETC
 
   - citation: |
       Sriram Prabhakara Rao, Shree Ram Abayankar Balaji, Farishta Rahman, Tasneem Suha, Tanzim Mahfuz, **Tanvir Hossain**, Mahmudul Hasan, Md Sakib Hasan, Tamzidul Hoque, Prabuddha Chakraborty, Prakash Ranganathan.
@@ -64,38 +82,29 @@ publications:
     year: 2025
     type: journal
     venue: journal
+    venue_short: JHSS
 
   - citation: |
       **Tanvir Hossain**, Istiaque Rahman.
       "Bandgap tuning and Variable Quantum Barrier of Armchair Graphene Nanoribbon by Inducing Antidote Topologies"
       Journal of Computational Electronics. Publisher: Springer Nature.
-      DOI: 10.1007/s10825-023-02108-7
     year: 2023
     type: journal
     venue: journal
+    venue_short: J. Comput. Electron.
     link: https://doi.org/10.1007/s10825-023-02108-7
 
   - citation: |
       **Tanvir Hossain**, Istiaque Rahman, Mahbub Alam.
       "Antidote induced armchair graphene nanoribbon based resonant tunneling diodes"
       Semiconductor Science and Technology. Publisher: IOP Publishing (Institute of Physics Publishing).
-      DOI: 10.1088/1361-6641/ac01fc
     year: 2021
     type: journal
     venue: journal
+    venue_short: Semicond. Sci. Technol.
     link: https://doi.org/10.1088/1361-6641/ac01fc
 
   # Conference Proceedings
-  
-  - citation: |
-      **Tanvir Hossain**, Matthew Showers, Mahmudul Hasan, Tamzidul Hoque.
-      "On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans"
-      IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Vol. 2026, No. 2, pp. 736–763, 2026.
-      DOI: 10.46586/tches.v2026.i2.736-763
-    year: 2026
-    type: journal
-    venue: journal
-    link: https://tches.iacr.org/index.php/TCHES/article/view/12907
 
   - citation: |
       **Tanvir Hossain**, S M Mojahidul Ahsan, Tamzidul Hoque.
@@ -104,6 +113,7 @@ publications:
     year: 2026
     type: conference
     venue: conference
+    venue_short: GLSVLSI
 
   - citation: |
       S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
@@ -112,46 +122,7 @@ publications:
     year: 2024
     type: conference
     venue: conference
-
-  - citation: |
-      **Tanvir Hossain**, S M Mojahidul Ahsan, Tamzidul Hoque.
-      "Potential and Pitfalls of Multilevel Logic Circuits for Hardware Security"
-      2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
-      DOI: 10.1109/DCAS57389.2023.10130261
-    year: 2023
-    type: conference
-    venue: conference
-    link: https://doi.org/10.1109/DCAS57389.2023.10130261
-
-  - citation: |
-      S M Mojahidul Ahsan, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
-      "Resistive RAM based PUF: Challenges and Opportunities"
-      2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
-      DOI: 10.1109/DCAS57389.2023.10130179
-    year: 2023
-    type: conference
-    venue: conference
-    link: https://doi.org/10.1109/DCAS57389.2023.10130179
-
-  - citation: |
-      Ashutosh Ghimire, Fathi Amsaad, **Tanvir Hossain**, Tamzidul Hoque, Ahmed Sherif.
-      "FPGA Hardware Trojan Detection: Golden-Free Machine Learning Approach"
-      NAECON 2023 - IEEE National Aerospace and Electronics Conference, Dayton, OH, USA, 2023.
-      DOI: 10.1109/NAECON58068.2023.10365812
-    year: 2023
-    type: conference
-    venue: conference
-    link: https://doi.org/10.1109/NAECON58068.2023.10365812
-
-  - citation: |
-      Fairuz Shadmani Shishir, Md Mashfiq Rizvee, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
-      "A Persistent Hierarchical Bloom Filter-based Framework for Authentication and Tracking of ICs"
-      IEEE International Workshop on Silicon Lifecycle Management, October 2023.
-      DOI: 10.48550/arXiv.2408.16950
-    year: 2023
-    type: conference
-    venue: conference
-    link: https://doi.org/10.48550/arXiv.2408.16950
+    venue_short: ICCAD
 
   - citation: |
       Andrea Ramirez-Salgado, **Tanvir Hossain**, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
@@ -160,7 +131,48 @@ publications:
     year: 2024
     type: conference
     venue: conference
+    venue_short: ASEE
     link: https://peer.asee.org/46979.pdf
+
+  - citation: |
+      **Tanvir Hossain**, S M Mojahidul Ahsan, Tamzidul Hoque.
+      "Potential and Pitfalls of Multilevel Logic Circuits for Hardware Security"
+      2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
+    year: 2023
+    type: conference
+    venue: conference
+    venue_short: DCAS
+    link: https://doi.org/10.1109/DCAS57389.2023.10130261
+
+  - citation: |
+      S M Mojahidul Ahsan, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
+      "Resistive RAM based PUF: Challenges and Opportunities"
+      2023 IEEE 16th Dallas Circuits and Systems Conference (DCAS), Denton, TX, USA, 2023, pp. 1-6.
+    year: 2023
+    type: conference
+    venue: conference
+    venue_short: DCAS
+    link: https://doi.org/10.1109/DCAS57389.2023.10130179
+
+  - citation: |
+      Ashutosh Ghimire, Fathi Amsaad, **Tanvir Hossain**, Tamzidul Hoque, Ahmed Sherif.
+      "FPGA Hardware Trojan Detection: Golden-Free Machine Learning Approach"
+      NAECON 2023 - IEEE National Aerospace and Electronics Conference, Dayton, OH, USA, 2023.
+    year: 2023
+    type: conference
+    venue: conference
+    venue_short: NAECON
+    link: https://doi.org/10.1109/NAECON58068.2023.10365812
+
+  - citation: |
+      Fairuz Shadmani Shishir, Md Mashfiq Rizvee, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
+      "A Persistent Hierarchical Bloom Filter-based Framework for Authentication and Tracking of ICs"
+      IEEE International Workshop on Silicon Lifecycle Management, October 2023.
+    year: 2023
+    type: conference
+    venue: workshop
+    venue_short: SLM
+    link: https://doi.org/10.48550/arXiv.2408.16950
 
   - citation: |
       Andrea Ramirez-Salgado, **Tanvir Hossain**, Tamzidul Hoque, Swarup Bhunia, Mary Jo Koroly, Bradford Davey, Pavlo Antonenko.
@@ -169,16 +181,16 @@ publications:
     year: 2023
     type: conference
     venue: conference
+    venue_short: ASEE
     link: https://peer.asee.org/42715
 
   - citation: |
       **Tanvir Hossain**, Md Shyeem Rahman, Md. Mushfiqur Rahman, Ahmed Rabbi Arini Dibbo.
       "Performance Analysis of Graphene Nanoribbon Field Effect Transistor (GNRFET) based 6T and 7T SRAMs"
       23rd International Conference on Computer and Information Technology (ICCIT), 2020, pp. 1-5.
-      DOI: 10.1109/ICCIT51783.2020.9392713
-      (Best AUST paper award)
     year: 2020
     type: conference
     venue: conference
-    badges: "Best AUST Paper Award"
+    venue_short: ICCIT
+    badges: ["Best AUST Paper Award"]
     link: https://doi.org/10.1109/ICCIT51783.2020.9392713

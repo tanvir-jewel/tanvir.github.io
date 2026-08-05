@@ -26,8 +26,18 @@ locale: en_US
 include:
   - _pages
 
+# Repo documentation and working notes — not site content.
+# Without these, jekyll renders them as pages and jekyll-sitemap indexes them.
 exclude:
   - PROJECT_STRUCTURE.md
+  - CLAUDE.md
+  - CONTRIBUTORS.md
+  - README.md
+  - SEO_IMPLEMENTATION.md
+  - WEBSITE_IMPROVEMENT_SUGGESTIONS.md
+  - run_page_offline.md
+  - walkthrough.md
+  - blog_files/
 
 sass:
   sass_dir: _sass
