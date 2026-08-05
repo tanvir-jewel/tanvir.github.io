@@ -62,21 +62,8 @@ blockquote {
 
 .site-interests {
   font-size: 0.95rem;
-  margin-bottom: 1.15rem;
-  color: gray("600");
-}
-
-.site-quicklinks {
   margin-bottom: 0;
-  font-size: 0.95rem;
-
-  // Bootstrap's .list-inline-item already carries margin-right: .5rem, so the
-  // separator only needs spacing on its left to sit evenly between links.
-  .list-inline-item:not(:last-child)::after {
-    content: "·";
-    color: gray("500");
-    margin-left: 0.55rem;
-  }
+  color: gray("600");
 }
 
 /*
