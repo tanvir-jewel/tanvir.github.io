@@ -5,13 +5,17 @@ layout: default
 <div class="container">
 
   <!-- Identity header. This is the first thing a visitor reads, so it answers
-       "who, where, what do they work on" before any prose. -->
-  <div class="row mt-4 flex-column-reverse flex-md-row align-items-center">
+       "who, where, what do they work on" before any prose. Text and portrait are
+       top-aligned; centering them left dead space above the name. -->
+  <div class="row mt-4 flex-column-reverse flex-md-row align-items-start">
 
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 col-lg-9">
       <h1 class="site-name">{{ site.author }}</h1>
       <p class="site-role">{{ page.role }}</p>
       <p class="site-affiliation">{{ page.affiliation }}</p>
+      {% if page.interests %}
+        <p class="site-interests">{{ page.interests }}</p>
+      {% endif %}
       <ul class="site-quicklinks list-inline">
         <li class="list-inline-item">
           <a href="{{ '/publications/' | relative_url }}">Publications</a>
@@ -28,15 +32,10 @@ layout: default
       </ul>
     </div>
 
-    <div class="col-12 col-md-4 mb-3 mb-md-0"> <!-- Image of me -->
-      <figure class="figure">
-        <img src="{{ page.about_me_img | relative_url }}" class="figure-img img-fluid rounded" alt="Photograph of {{ site.author }}">
-        {% if page.about_me_img_caption %}
-          <figcaption class="figure-caption text-right">
-            <small>{{ page.about_me_img_caption | markdownify }}</small>
-          </figcaption>
-        {% endif %}
-      </figure>
+    <div class="col-12 col-md-4 col-lg-3 mb-4 mb-md-0"> <!-- Portrait -->
+      <img src="{{ page.about_me_img | relative_url }}"
+           class="site-portrait img-fluid rounded"
+           alt="Photograph of {{ site.author }}">
     </div>
 
   </div> <!-- end identity row -->

@@ -26,9 +26,7 @@ layout: default
     </div>
   </div>
 
-  <!-- One card per project. Optional image on top, then the description, then
-       the papers that came out of the project so the reader can go straight
-       from "what is this" to "what did it produce". -->
+  <!-- One card per project: optional image on top, then the description. -->
   {% for research in site.data.research %}
     <div class="row">
       <div class="col"> <!-- each card has its own column in row column -->
@@ -50,24 +48,6 @@ layout: default
           <div class="card-body">
             <h4 class="card-title text-primary">{{ research.project }}</h4>
             <div class="card-text page-prose"> {{ research.description | markdownify }} </div>
-
-            {% if research.publications %}
-              <div class="research-pubs">
-                <span class="research-pubs-label">Related publications</span>
-                <ul class="list-unstyled mb-0">
-                  {% for paper in research.publications %}
-                    <li class="research-pub-item">
-                      {% if paper.link %}
-                        <a href="{{ paper.link }}" target="_blank" rel="noopener">{{ paper.title }}</a>
-                      {% else %}
-                        {{ paper.title }}
-                      {% endif %}
-                      <span class="research-pub-venue">{{ paper.venue }}</span>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            {% endif %}
           </div>
 
         </div>

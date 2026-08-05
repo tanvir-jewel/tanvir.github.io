@@ -9,13 +9,6 @@
     My approach uses **spectral analysis** combined with **watermarking techniques** to precisely locate attacked code blocks in multi-core COTS processors. This method provides runtime assurance without requiring invasive modifications or golden references, making it practical for deployment in real-world systems.
 
     *Key innovations: Non-invasive EM monitoring, real-time Trojan detection, watermark-based localization*
-  publications:
-    - title: "AI-Assisted Side-Channel Analysis for Golden-Chip Free Detection and Localization of Hardware Trojans"
-      venue: "JHSS 2026"
-      link: https://doi.org/10.1007/s41635-026-00182-4
-    - title: "FPGA Hardware Trojan Detection: Golden-Free Machine Learning Approach"
-      venue: "NAECON 2023"
-      link: https://doi.org/10.1109/NAECON58068.2023.10365812
 
 - project: Run-time Protection of Secrets in COTS Processors
   description: |
@@ -26,13 +19,6 @@
     The **HOACS (Homomorphic Obfuscation Assisted Concealing of Secrets)** system demonstrates how to protect against both hardware Trojans and side-channel attacks with minimal performance overhead. This approach is particularly suitable for embedded COTS processors where security cannot be compromised.
 
     *Key innovations: Residue number system encoding, minimal overhead protection, COTS processor compatibility*
-  publications:
-    - title: "On the Security of Lightweight Homomorphic Obfuscation for Protecting Against Hardware Trojans"
-      venue: "TCHES 2026"
-      link: https://tches.iacr.org/index.php/TCHES/article/view/12907
-    - title: "Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks"
-      venue: "TODAES 2026"
-      link: https://doi.org/10.1145/3804452
 
 - project: Side-Channel Assisted Verification for COTS
   description: |
@@ -43,9 +29,6 @@
     This verification approach enables detection of complex Trojans in COTS processors without requiring proprietary design information, making it practical for security evaluation of commercial hardware in critical applications.
 
     *Key innovations: FSM-based analysis, integrated power/EM monitoring, sequential Trojan detection*
-  publications:
-    - title: "SPHINX: A Framework for Security Primitive Hardware Identification and EXtraction"
-      venue: "GLSVLSI 2026"
 
 - project: Gamified Learning Framework for Computer Hardware Fundamentals
   description: |
@@ -56,10 +39,3 @@
     This gamified framework makes complex topics like side-channel analysis, hardware Trojans, and secure design accessible to high school students and early undergraduates. Students learn by doing, building real circuits and observing security vulnerabilities firsthand.
 
     Summer camp evaluations show significant improvements in **systems thinking** and **retention rates**, demonstrating the effectiveness of hands-on, game-based learning for technical subjects.
-  publications:
-    - title: "Board 393: Supporting Hardware Engineering Career Choice in First-Year Engineering Students"
-      venue: "ASEE 2024"
-      link: https://peer.asee.org/46979.pdf
-    - title: "Board 265: Engaging Students in Exploring Computer Hardware Fundamentals Using FPGA Board Games"
-      venue: "ASEE 2023"
-      link: https://peer.asee.org/42715

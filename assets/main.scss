@@ -36,32 +36,63 @@ blockquote {
 }
 
 /*
- *  Home page identity header
+ *  Home page identity header. Each line carries one fact and gets progressively
+ *  quieter, so the eye reads name -> role -> place -> topics without effort.
  */
 .site-name {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
 }
 
 .site-role {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
   margin-bottom: 0.15rem;
   color: gray("800");
 }
 
 .site-affiliation {
-  color: gray("600");
+  font-size: 1.125rem;
+  line-height: 1.4;
   margin-bottom: 0.75rem;
+  color: gray("700");
+}
+
+.site-interests {
+  font-size: 0.95rem;
+  margin-bottom: 1.15rem;
+  color: gray("600");
 }
 
 .site-quicklinks {
   margin-bottom: 0;
+  font-size: 0.95rem;
 
+  // Bootstrap's .list-inline-item already carries margin-right: .5rem, so the
+  // separator only needs spacing on its left to sit evenly between links.
   .list-inline-item:not(:last-child)::after {
     content: "·";
     color: gray("500");
-    margin-left: 0.5rem;
+    margin-left: 0.55rem;
+  }
+}
+
+/*
+ *  Portrait. The source image is ~1010x1085, which fills a col-md-4 at roughly
+ *  370px and towers over the text block; cap it so the two read as a pair.
+ */
+.site-portrait {
+  max-width: 215px;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .site-portrait {
+    display: block;
+    max-width: 180px;
+    margin: 0 auto;
   }
 }
 
@@ -205,37 +236,6 @@ blockquote {
 }
 
 /*
- *  Research — related publications block at the foot of each project card.
- */
-.research-pubs {
-  margin-top: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid gray("200");
-  font-size: 0.925rem;
-}
-
-.research-pubs-label {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: gray("600");
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 0.75rem;
-}
-
-.research-pub-item {
-  padding: 0.15rem 0;
-}
-
-.research-pub-venue {
-  color: gray("600");
-
-  &::before {
-    content: " · ";
-  }
-}
-
-/*
  *  Blog post images - responsive and margin-aligned
  */
 .post-content img {
@@ -294,18 +294,6 @@ blockquote {
 @media (min-width: 1200px) {
   .post-content figure {
     margin: 2.5rem auto;
-  }
-}
-
-/*
- *  Home page about image - constrain on small screens so it doesn't fill the viewport
- */
-@media (max-width: 767.98px) {
-  .col-12.col-md-4 > .figure {
-    display: block;
-    max-width: 280px;
-    margin: 0 auto;
-    text-align: center;
   }
 }
 
