@@ -39,6 +39,17 @@ publications:
     link: https://doi.org/10.1145/3804452
 
   - citation: |
+      Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
+      "AI-Assisted Side-Channel Analysis for Golden-Chip Free Detection and Localization of Hardware Trojans"
+      Journal of Hardware and Systems Security, Volume 10, Issue 1, Article 12, June 2026. Publisher: Springer International Publishing.
+      DOI: 10.1007/s41635-026-00182-4
+      *Jointly first author.*
+    year: 2026
+    type: journal
+    venue: journal
+    link: https://doi.org/10.1007/s41635-026-00182-4
+
+  - citation: |
       Md Mashfiq Rizvee, Fairuz Shadmani Shishir, **Tanvir Hossain**, Tamzidul Hoque, Domenic Forte, Sumaiya Shomaji.
       "A Persistent Hierarchical Bloom Filter-based Framework for Scalable Authentication and Tracking of ICs"
       ACM Journal on Emerging Technologies in Computing Systems, Volume 21, Issue 4, Pages 1-22. Publisher: ACM.
