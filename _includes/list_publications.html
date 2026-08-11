@@ -1,78 +1,77 @@
-
-<!-- First, we'll loop over the types of publications, creating a header for each
-      and listing out all publications that are of that type. -->
 {% for pub_type in site.data.publications.publication_types %}
-  <!-- Filter the list of publications down to just those that are of this type. -->
   {% assign pubs = site.data.publications.publications | where: "type",pub_type.type_id | sort: "year" | reverse %}
   {% assign num_pubs = pubs | size %}
-  {% if num_pubs == 0 %} {% continue %} {% endif %} <!-- If none exist, move along without making a header for this type. -->
-  <!-- If we're here, some number of publications of this type exist. Give a header. -->
-  <!-- The below nonsense lets me give an include argument to specify the heading level for
-        publication category headings. -->
+  {% if num_pubs == 0 %} {% continue %} {% endif %}
+
   <h{% if include.header_level %}{{include.header_level}}{% else %}2{% endif %}>
     {{ pub_type.pretty }}
   </h{% if include.header_level %}{{include.header_level}}{% else %}2{% endif %}>
-    {% if pub_type.overview %}{{ pub_type.overview | markdownify }} {% endif %}
-    <ul class="list-unstyled pub-list">
-      {% for pub in pubs %}
-        <li class="pub-item">
-          <div class="row">
-            <!-- Year rail: makes the reverse-chronological order visible at a glance. -->
-            <div class="col-3 col-sm-2 col-lg-1 pub-year">{{ pub.year }}</div>
-            <div class="col-9 col-sm-10 col-lg-11">
-              <!-- | remove: '<p>' | remove: '</p>' | is a hacky solution to remove <p></p> tags that markdownify surrounds things with. -->
-              <div class="pub-citation">
-                {{ pub.citation | markdownify | remove: '<p>' | remove: '</p>' }}
+  {% if pub_type.overview %}{{ pub_type.overview | markdownify }} {% endif %}
+
+  <ul class="list-unstyled pub-list">
+    {% for pub in pubs %}
+      <li class="pub-item">
+        <div class="pub-row">
+          <div class="pub-year">{{ pub.year }}</div>
+          <div class="pub-body">
+            <div class="pub-citation">
+              {{ pub.citation | markdownify | remove: '<p>' | remove: '</p>' }}
+            </div>
+            <div class="pub-meta">
+              {% if pub.venue_short %}
+                <span class="pub-venue-tag">
+                  {% case pub.venue %}
+                    {% when 'book' %}{{ site.data.icons.venue_book_icon }}
+                    {% when 'conference' %}{{ site.data.icons.venue_conference_icon }}
+                    {% when 'workshop' %}{{ site.data.icons.venue_workshop_icon }}
+                    {% when 'journal' %}{{ site.data.icons.venue_journal_icon }}
+                    {% when 'preprint' %}{{ site.data.icons.venue_preprint_icon }}
+                  {% endcase %}
+                  {{ pub.venue_short }}
+                </span>
+              {% endif %}
+              {% for badge in pub.badges %}
+                <span class="badge badge-primary">{{ badge }}</span>
+              {% endfor %}
+              {% if pub.link %}
+                <a href="{{ pub.link }}" class="pub-link" target="_blank" rel="noopener">Read paper</a>
+              {% endif %}
+              {% if pub.pdf %}
+                <a href="{{ pub.pdf | relative_url }}" class="pub-link">{{ site.data.icons.pdf_icon }} PDF</a>
+              {% endif %}
+              {% if pub.bibtex %}
+                <a href="#" class="pub-link" data-toggle="modal" data-target="#{{ pub.bibtex_id }}">{{ site.data.icons.bibtex_icon }} BibTeX</a>
+              {% endif %}
+              {% if pub.github_repository_link %}
+                <a href="{{ pub.github_repository_link }}" class="pub-link">{{ site.data.icons.github_repository_icon }} Code</a>
+              {% endif %}
+              {% if pub.presentation_link %}
+                <a href="{{ pub.presentation_link }}" class="pub-link">{{ site.data.icons.presentation_icon }} Slides</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </li>
+      {% if pub.bibtex %}
+        <div class="modal fade" id="{{ pub.bibtex_id }}" tabindex="-1" role="dialog" aria-labelledby="{{ pub.bibtex_id }}-label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="{{pub.bibtex_id}}-label">Cite</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <div class="pub-meta">
-                {% if pub.venue_short %}
-                  <span class="pub-venue-tag">
-                    {% case pub.venue %}
-                      {% when 'book' %}{{ site.data.icons.venue_book_icon }}
-                      {% when 'conference' %}{{ site.data.icons.venue_conference_icon }}
-                      {% when 'workshop' %}{{ site.data.icons.venue_workshop_icon }}
-                      {% when 'journal' %}{{ site.data.icons.venue_journal_icon }}
-                      {% when 'preprint' %}{{ site.data.icons.venue_preprint_icon }}
-                    {% endcase %}
-                    {{ pub.venue_short }}
-                  </span>
-                {% endif %}
-                {% for badge in pub.badges %}
-                  <span class="badge badge-primary">{{ badge }}</span>
-                {% endfor %}
-                {% if pub.link %}
-                  <a href="{{ pub.link }}" class="pub-link" target="_blank" rel="noopener">Read paper</a>
-                {% endif %}
-                {% if pub.pdf %} <a href="{{ pub.pdf | relative_url }}" class="pub-link">{{ site.data.icons.pdf_icon }} PDF</a> {% endif %}
-                {% if pub.bibtex %}
-                  <a href="#" class="pub-link" data-toggle="modal" data-target="#{{ pub.bibtex_id }}">{{ site.data.icons.bibtex_icon }} BibTeX</a>
-                {% endif %}
-                {% if pub.github_repository_link %}<a href="{{ pub.github_repository_link }}" class="pub-link">{{ site.data.icons.github_repository_icon }} Code</a> {% endif %}
-                {% if pub.presentation_link %}<a href="{{ pub.presentation_link }}" class="pub-link">{{ site.data.icons.presentation_icon }} Slides</a> {% endif %}
+              <div class="modal-body">
+                {{ pub.bibtex | markdownify }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-        </li>
-        {% if pub.bibtex %}
-          <div class="modal fade" id="{{ pub.bibtex_id }}" tabindex="-1" role="dialog" aria-labelledby="{{ pub.bibtex_id }}-label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="{{pub.bibtex_id}}-label">Cite</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  {{ pub.bibtex | markdownify }}
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </ul>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </ul>
 {% endfor %}

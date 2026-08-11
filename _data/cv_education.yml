@@ -1,18 +1,18 @@
 # cv_education.yml describes my collegiate education/degrees for my CV
 
-- degree: <b>Doctor of Philosophy (Ph.D.)</b>, Electrical Engineering
+- degree: Doctor of Philosophy (Ph.D.), Electrical Engineering
   institution: The University of Kansas
   location: Lawrence, KS
   dates: Expected 2026
   advisor: Dr. Tamzidul Hoque, Assistant Professor, EECS, KU
 
-- degree: <b>Master's of Science (M.S.)</b>, Electrical Engineering
+- degree: Master's of Science (M.S.), Electrical Engineering
   institution: The University of Kansas
   location: Lawrence, KS
   dates: May 2025
   advisor: Dr. Tamzidul Hoque, Assistant Professor, EECS, KU
 
-- degree: <b>Bachelor of Science</b>, Electrical and Electronic Engineering
+- degree: Bachelor of Science, Electrical and Electronic Engineering
   institution: Ahsanullah University of Science and Technology
   location: Bangladesh
   dates: 2016 - 2021

@@ -1,0 +1,38 @@
+{% comment %}
+  In-flow page title block. Lives inside the site .container (same shell as the
+  navbar) so title, lead, and body share the brand/Contact horizontal edges.
+{% endcomment %}
+<header class="page-title-block">
+  {% if include.action_href %}
+    <div class="page-header-row">
+      <div class="page-header-main">
+        <h1 class="page-header-title">
+          {% if include.title %}{{ include.title }}{% else %}{{ page.title }}{% endif %}
+        </h1>
+        {% if include.lead %}
+          <div class="page-header-lead">{{ include.lead }}</div>
+        {% elsif include.lead_md %}
+          <div class="page-header-lead">{{ include.lead_md | markdownify }}</div>
+        {% elsif page.jumbo_txt %}
+          <div class="page-header-lead">{{ page.jumbo_txt | markdownify }}</div>
+        {% endif %}
+      </div>
+      <div class="page-header-action">
+        <a href="{{ include.action_href | relative_url }}" class="btn btn-primary" {% if include.action_download %}download{% endif %}>
+          {% if include.action_icon %}<i class="{{ include.action_icon }}"></i> {% endif %}{{ include.action_label }}
+        </a>
+      </div>
+    </div>
+  {% else %}
+    <h1 class="page-header-title">
+      {% if include.title %}{{ include.title }}{% else %}{{ page.title }}{% endif %}
+    </h1>
+    {% if include.lead %}
+      <div class="page-header-lead">{{ include.lead }}</div>
+    {% elsif include.lead_md %}
+      <div class="page-header-lead">{{ include.lead_md | markdownify }}</div>
+    {% elsif page.jumbo_txt %}
+      <div class="page-header-lead">{{ page.jumbo_txt | markdownify }}</div>
+    {% endif %}
+  {% endif %}
+</header>

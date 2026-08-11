@@ -2,82 +2,96 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="row mt-3">
-    <div class="col-12">
-      <div class="card border-0">
-        <div class="card-body">
-          <div class="card-block px-2">
-            <h4 class="card-title">Contact Information</h4>
-            <!-- div, not p: markdownify emits block elements. -->
-            <div class="card-text page-prose">
-              {{ page.contact_intro | markdownify }}
-            </div>
+<div class="container page-body">
+  <div class="content-column">
 
-            <div class="row mt-4">
-              <div class="col-md-6">
-                <h5>Get in Touch</h5>
+    {% include page_header.html title="Contact" %}
 
-                {% if site.data.contact.email %}
-                <div class="mb-3">
-                  <i class="fas fa-envelope"></i>
-                  <strong>Email:</strong>
-                  <a href="mailto:{{ site.data.contact.email.address }}">{{ site.data.contact.email.address }}</a>
-                </div>
-                {% endif %}
+    {% if page.contact_intro %}
+      <p class="contact-intro">
+        {{ page.contact_intro | markdownify | remove: '<p>' | remove: '</p>' }}
+      </p>
+    {% endif %}
 
-                {% if site.data.contact.phone %}
-                <div class="mb-3">
-                  <i class="fas fa-phone"></i>
-                  <strong>Phone:</strong>
-                  <a href="tel:{{ site.data.contact.phone.number }}">{{ site.data.contact.phone.number }}</a>
-                </div>
-                {% endif %}
+    <div class="contact-grid">
 
-                {% if site.data.contact.address %}
-                <div class="mb-3">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <strong>Address:</strong><br>
-                  {{ site.data.contact.address }}
-                </div>
-                {% endif %}
-              </div>
+      <section class="contact-block">
+        <h2 class="contact-block-title">Get in Touch</h2>
 
-              <div class="col-md-6">
-                <h5>Connect Online</h5>
+        {% if site.data.contact.email %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+          <div class="contact-detail">
+            <span class="contact-label">Email</span>
+            <a href="mailto:{{ site.data.contact.email.address }}">{{ site.data.contact.email.address }}</a>
+          </div>
+        </div>
+        {% endif %}
 
-                {% if site.data.contact.linkedin %}
-                <div class="mb-2">
-                  <i class="fab fa-linkedin"></i>
-                  <a href="{{ site.data.contact.linkedin.link }}" target="_blank">LinkedIn</a>
-                </div>
-                {% endif %}
+        {% if site.data.contact.phone %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <a href="tel:{{ site.data.contact.phone.number }}">{{ site.data.contact.phone.number }}</a>
+          </div>
+        </div>
+        {% endif %}
 
-                {% if site.data.contact.google_scholar %}
-                <div class="mb-2">
-                  <i class="fas fa-graduation-cap"></i>
-                  <a href="{{ site.data.contact.google_scholar.link }}" target="_blank">Google Scholar</a>
-                </div>
-                {% endif %}
-
-                {% if site.data.contact.github %}
-                <div class="mb-2">
-                  <i class="fab fa-github"></i>
-                  <a href="{{ site.data.contact.github.link }}" target="_blank">GitHub</a>
-                </div>
-                {% endif %}
-
-                {% if site.data.contact.twitter %}
-                <div class="mb-2">
-                  <i class="fab fa-twitter"></i>
-                  <a href="{{ site.data.contact.twitter.link }}" target="_blank">Twitter</a>
-                </div>
-                {% endif %}
-              </div>
+        {% if site.data.contact.address %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="contact-detail">
+            <span class="contact-label">Address</span>
+            <div class="contact-address">
+              {{ site.data.contact.address | strip }}
             </div>
           </div>
         </div>
-      </div>
+        {% endif %}
+      </section>
+
+      <section class="contact-block">
+        <h2 class="contact-block-title">Connect Online</h2>
+
+        {% if site.data.contact.linkedin %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+          <div class="contact-detail">
+            <a href="{{ site.data.contact.linkedin.link }}" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.contact.google_scholar %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+          <div class="contact-detail">
+            <a href="{{ site.data.contact.google_scholar.link }}" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.contact.github %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+          <div class="contact-detail">
+            <a href="{{ site.data.contact.github.link }}" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.contact.twitter %}
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
+          <div class="contact-detail">
+            <a href="{{ site.data.contact.twitter.link }}" target="_blank" rel="noopener">Twitter / X</a>
+          </div>
+        </div>
+        {% endif %}
+      </section>
+
     </div>
+
   </div>
 </div>

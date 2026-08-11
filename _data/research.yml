@@ -1,6 +1,7 @@
 # research.yml gives research project entries used on the Research page
 
 - project: Side-Channel Assisted Runtime Integrity Monitoring
+  image: /imgs/research/runtime-monitoring.svg
   description: |
     **Detecting hardware Trojans in real-time without golden references**
 
@@ -11,6 +12,7 @@
     *Key innovations: Non-invasive EM monitoring, real-time Trojan detection, watermark-based localization*
 
 - project: Run-time Protection of Secrets in COTS Processors
+  image: /imgs/research/residue-security.svg
   description: |
     **Keeping sensitive data encoded during execution on untrusted silicon**
 
@@ -21,6 +23,7 @@
     *Key innovations: Residue number system encoding, minimal overhead protection, COTS processor compatibility*
 
 - project: Side-Channel Assisted Verification for COTS
+  image: /imgs/research/runtime-monitoring.svg
   description: |
     **Detecting sequential hardware Trojans through finite state machine analysis**
 
@@ -31,6 +34,7 @@
     *Key innovations: FSM-based analysis, integrated power/EM monitoring, sequential Trojan detection*
 
 - project: Gamified Learning Framework for Computer Hardware Fundamentals
+  image: /imgs/research/gamified-learning.svg
   description: |
     **Making hardware security education engaging and accessible**
 

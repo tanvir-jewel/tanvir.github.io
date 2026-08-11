@@ -2,57 +2,43 @@
 layout: default
 ---
 
-<div class="jumbotron jumbotron-fluid py-4">
-  <div class="container">
-    <h1 class="display-4">{{ page.title }}</h1>
-    {% if page.jumbo_txt %}
-      <div class="lead"> {{ page.jumbo_txt | markdownify }} </div>
-    {% endif %}
-  </div>
-</div>
+<div class="container page-body">
+  <div class="content-column">
 
-<div class="container">
+    {% include page_header.html %}
 
-  <!-- This row gives a research overview. -->
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3 border-0">
-        <div class="card-body">
-          <h4 class="card-title">Overview</h4>
-          <!-- div, not p: markdownify emits block elements. -->
-          <div class="card-text page-prose"> {{ page.overview | markdownify }} </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <section class="research-overview">
+      <h2 class="section-heading">Overview</h2>
+      {{ page.overview | markdownify }}
+    </section>
 
-  <!-- One card per project: optional image on top, then the description. -->
-  {% for research in site.data.research %}
-    <div class="row">
-      <div class="col"> <!-- each card has its own column in row column -->
-        <div class="card mb-3">
-
+    <div class="research-projects">
+      {% for research in site.data.research %}
+        <article class="research-project">
           {% if research.image %}
-            <div class="p-3 pb-0">
+            <div class="research-project-media">
               {% if research.image_is_figure %}
                 <figure class="figure mb-0">
-                  <img src="{{ research.image | relative_url }}" class="img-fluid figure-img rounded" alt="{{ research.project }}">
-                  <figcaption class="figure-caption text-center mt-2">{{ research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+                  <img src="{{ research.image | relative_url }}" class="img-fluid" alt="{{ research.project }}">
+                  {% if research.figure_caption %}
+                    <figcaption class="figure-caption text-center mt-2">
+                      {{ research.figure_caption | markdownify | remove: '<p>' | remove: '</p>' }}
+                    </figcaption>
+                  {% endif %}
                 </figure>
               {% else %}
-                <img class="img-fluid rounded" src="{{ research.image | relative_url }}" alt="{{ research.project }}">
+                <img class="img-fluid" src="{{ research.image | relative_url }}" alt="{{ research.project }}">
               {% endif %}
             </div>
           {% endif %}
 
-          <div class="card-body">
-            <h4 class="card-title text-primary">{{ research.project }}</h4>
-            <div class="card-text page-prose"> {{ research.description | markdownify }} </div>
+          <h3 class="research-project-title">{{ research.project }}</h3>
+          <div class="research-project-body">
+            {{ research.description | markdownify }}
           </div>
-
-        </div>
-      </div> <!-- end column -->
+        </article>
+      {% endfor %}
     </div>
-  {% endfor %}
 
+  </div>
 </div>

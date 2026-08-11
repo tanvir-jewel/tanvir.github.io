@@ -2,31 +2,23 @@
 layout: default
 ---
 
-<!-- Page header -->
-<div class="jumbotron jumbotron-fluid py-4">
-  <div class="container">
-    <h1 class="display-4">{{ page.title }}</h1>
-    <div class="lead">
-      {{ page.jumbo_txt | markdownify }}
-    </div>
-  </div>
-</div>
+<div class="container page-body">
+  <div class="content-column content-column--wide">
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      {% if site.data.news %}
-        <ul class="news-list list-unstyled">
-          {% for item in site.data.news %}
-            <li class="news-item">
-              <span class="news-date">{{ item.date }}</span>
-              <span class="news-text">{{ item.news }}</span>
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <p>No news items available.</p>
-      {% endif %}
-    </div>
+    {% include page_header.html %}
+
+    {% if site.data.news %}
+      <ul class="news-list list-unstyled">
+        {% for item in site.data.news %}
+          <li class="news-item">
+            <span class="news-date">{{ item.date }}</span>
+            <span class="news-text">{{ item.news }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No news items available.</p>
+    {% endif %}
+
   </div>
 </div>

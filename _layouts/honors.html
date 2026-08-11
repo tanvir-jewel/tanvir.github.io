@@ -2,38 +2,30 @@
 layout: default
 ---
 
-<!-- Header -->
-<div class="jumbotron jumbotron-fluid py-4">
-  <div class="container">
-    <h1 class="display-4"><i class="fas fa-trophy text-warning mr-3"></i>Honors &amp; Awards</h1>
-    <p class="lead text-muted">Recognition, awards, and professional service activities</p>
-  </div>
-</div>
+<div class="container page-body">
+  <div class="content-column content-column--wide">
 
-<div class="container">
+    {% include page_header.html
+      title="Honors & Awards"
+      lead="<p class='mb-0'>Recognition, awards, and professional service activities</p>"
+    %}
 
-  <!-- Awards & Recognition -->
-  <div class="row mb-2">
-    <div class="col">
-      <h3><i class="fas fa-award text-primary mr-2"></i>Awards &amp; Recognition</h3>
-    </div>
-  </div>
+    <h2 class="section-heading">
+      <i class="fas fa-award mr-2" style="color: #1b4f72;"></i>Awards &amp; Recognition
+    </h2>
 
-  <!-- Grouped by year as a dense list. Fifteen awards read as substantial when
-       they are visible together; one card each buried that under scrolling. -->
-  {% assign awards_sorted = site.data.cv_awards | sort: 'year' | reverse %}
-  <div class="row">
-    <div class="col">
-      {% assign current_year = "" %}
-      {% for award in awards_sorted %}
-        {% if award.year != current_year %}
-          {% unless forloop.first %}</ul>{% endunless %}
-          <h4 class="award-year">{{ award.year }}</h4>
-          <ul class="award-list list-unstyled">
-          {% assign current_year = award.year %}
-        {% endif %}
-        <li class="award-item">
-          <i class="{{ award.icon }} {{ award.icon_color }} award-icon"></i>
+    {% assign awards_sorted = site.data.cv_awards | sort: 'year' | reverse %}
+    {% assign current_year = "" %}
+    {% for award in awards_sorted %}
+      {% if award.year != current_year %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <h3 class="award-year">{{ award.year }}</h3>
+        <ul class="award-list list-unstyled">
+        {% assign current_year = award.year %}
+      {% endif %}
+      <li class="award-item">
+        <i class="{{ award.icon }} {{ award.icon_color }} award-icon"></i>
+        <div class="award-content">
           <span class="award-name">
             {% if award.link %}
               <a href="{{ award.link }}" target="_blank" rel="noopener">{{ award.award }}</a>
@@ -43,53 +35,50 @@ layout: default
           </span>
           <span class="award-desc">{{ award.description | strip_newlines }}</span>
           <span class="award-date">{{ award.date }}</span>
-        </li>
-        {% if forloop.last %}</ul>{% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <!-- Peer Review Service -->
-  <div class="row mt-4 mb-2">
-    <div class="col">
-      <h3><i class="fas fa-search text-primary mr-2"></i>Professional Service: Peer Review</h3>
-    </div>
-  </div>
-
-  <div class="row mb-5">
-    <div class="col-md-6 mb-3">
-      <div class="card h-100">
-        <div class="card-header">
-          <h5 class="mb-0"><i class="fas fa-book-open mr-2 text-info"></i>Journal Reviewer</h5>
         </div>
-        <ul class="list-group list-group-flush">
-          {% for entry in site.data.cv_reviewed_for %}
-            {% if entry.type == "Journal Reviewer" %}
-              <li class="list-group-item py-2">
-                <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+      </li>
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+
+    <h2 class="section-heading mt-5">
+      <i class="fas fa-search mr-2" style="color: #1b4f72;"></i>Professional Service: Peer Review
+    </h2>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-header bg-white">
+            <h3 class="h5 mb-0"><i class="fas fa-book-open mr-2 text-muted"></i>Journal Reviewer</h3>
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for entry in site.data.cv_reviewed_for %}
+              {% if entry.type == "Journal Reviewer" %}
+                <li class="list-group-item py-2">
+                  <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-header bg-white">
+            <h3 class="h5 mb-0"><i class="fas fa-chalkboard-teacher mr-2 text-muted"></i>Conference Reviewer</h3>
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for entry in site.data.cv_reviewed_for %}
+              {% if entry.type == "Conference Reviewer" %}
+                <li class="list-group-item py-2">
+                  <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-6 mb-3">
-      <div class="card h-100">
-        <div class="card-header">
-          <h5 class="mb-0"><i class="fas fa-chalkboard-teacher mr-2 text-info"></i>Conference Reviewer</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          {% for entry in site.data.cv_reviewed_for %}
-            {% if entry.type == "Conference Reviewer" %}
-              <li class="list-group-item py-2">
-                <i class="fas fa-check-circle text-success mr-2" style="font-size: 0.8rem;"></i>{{ entry.venue }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
   </div>
-
 </div>

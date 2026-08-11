@@ -2,61 +2,41 @@
 layout: default
 ---
 
-<div class="container">
+<!-- Same Bootstrap .container as navbar/footer — site-wide horizontal grid. -->
+<div class="container page-body">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="row justify-content-center">
-    <div class="col-md-10 col-sm">
-
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-        {% if page.cover_image %}
-        <div class="row mb-3">
-          <div class="col px-0">
-            <img src="{{ page.cover_image | relative_url }}" class="img-fluid rounded" alt="{{ page.title }}" style="width:100%; max-height:420px; object-fit:cover;">
-          </div>
-        </div>
-        {% endif %}
-
-        <div class="row">
-          <div class="col px-3 px-md-0">
-            <header class="post-header pt-4">
-              <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-              {% if page.subtitle %}
-                <h3 class="text-secondary">{{ page.subtitle }}</h3>
-              {% endif %}
-              <p class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-                {% if page.last-updated %} <i>(updated: {{ page.last-updated | date: "%b %-d, %Y" }})</i> {% endif %}
-                {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
-              </p>
-            </header>
-          </div>
-        </div>
-
-        {% unless page.no_toc %}
-          <div class="row pb-1">
-            <div class="col px-3 px-md-0">
-              <div class="card border-left-0 border-right-0 rounded-0">
-                <div class="card-body">
-                  <h4 class = "card-title">
-                    contents
-                  </h4>
-                  {% include toc.html h_min=2 h_max=2 threshold=9 santize=true  html=content %}
-                </div>
-              </div>
-            </div>
-          </div>
-        {% endunless %}
-
-        <div class="row pt-4">
-          <div class="col px-3 px-md-0">
-            <div class="post-content" itemprop="articleBody">
-              {% include anchor_headings.html html=content anchorBody="<i class='far fa-link' style='color:slategrey;'></i>" anchorClass="toc-anchor" beforeHeading=true%}
-            </div>
-          </div>
-        </div>
-
-      </article>
+    {% if page.cover_image %}
+    <div class="post-cover mb-3">
+      <img src="{{ page.cover_image | relative_url }}"
+           class="img-fluid rounded"
+           alt="{{ page.title }}"
+           style="width:100%; max-height:420px; object-fit:cover;">
     </div>
-  </div>
+    {% endif %}
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <p class="post-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+        {% if page.last-updated %} <i>(updated: {{ page.last-updated | date: "%b %-d, %Y" }})</i> {% endif %}
+        {% if page.author %} · <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      </p>
+    </header>
+
+    {% unless page.no_toc %}
+    <nav class="post-toc-block" aria-label="Table of contents">
+      <h2 class="post-toc-heading">Contents</h2>
+      {% include toc.html h_min=2 h_max=2 threshold=9 santize=true html=content class="post-toc" %}
+    </nav>
+    {% endunless %}
+
+    <div class="post-content page-prose" itemprop="articleBody">
+      {% include anchor_headings.html html=content anchorBody="<i class='fas fa-link' style='color:slategrey;font-size:0.85em;'></i>" anchorClass="toc-anchor" beforeHeading=true%}
+    </div>
+
+  </article>
 </div>
