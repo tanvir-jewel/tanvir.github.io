@@ -37,7 +37,7 @@ exclude:
   - WEBSITE_IMPROVEMENT_SUGGESTIONS.md
   - run_page_offline.md
   - walkthrough.md
-  - blog_files/
+  - blog_files/*.md
   - CVs/
 
 sass:
