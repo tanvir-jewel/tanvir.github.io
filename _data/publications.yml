@@ -27,14 +27,80 @@ publications:
 
   # Under Review Publications
   - citation: |
-      Ashutosh Ghimire, **Tanvir Hossain**, Fathi Amsaad, Tamzidul Hoque.
-      "ML-Assisted Approach for Hardware Trojan Detection without Golden Chip Signature"
-    year: 2024
+      **Tanvir Hossain**, Sudipta Paria, Swarup Bhunia, Tamzidul Hoque.
+      "REFORGE: LLM-Assisted RTL Bug Repair with Structured Context and Verification Feedback"
+      Design, Automation and Test in Europe (DATE) Conference 2027. Under review.
+    year: 2027
+    type: under-review
+    venue: conference
+    venue_short: DATE
+
+  - citation: |
+      Rajesh Velegalati, Jasper Van Woudenberg, **Tanvir Hossain**, Abhinav Mahadevan, Arindam Bhattacharyya.
+      "From Structured Search to LLM Operators: Automating Physical Fault-Injection Campaigns"
+      GOMACTech (Government Microcircuit Applications & Critical Technology) Conference, 2027. Under review.
+    year: 2027
+    type: under-review
+    venue: conference
+    venue_short: GOMACTech
+
+  - citation: |
+      Ertewaa Saud Alsahayan, **Tanvir Hossain**, Tamzidul Hoque.
+      "REMODEL-V: Reliable LLM-Guided Design Space Exploration for Soft-Error-Aware Microarchitectures"
+      GOMACTech (Government Microcircuit Applications & Critical Technology) Conference, 2027. Under review.
+    year: 2027
+    type: under-review
+    venue: conference
+    venue_short: GOMACTech
+
+  - citation: |
+      **Tanvir Hossain**, Abhinav Mahadevan, Jasper Van Woudenberg, Rajesh Velegalati, Arindam Bhattacharyya.
+      "GlitchLab: A Hardware-in-the-Loop Optimizer for Physical Fault Injection"
+      arXiv preprint, arXiv:2609.00502 [cs.CR], 2026.
+    year: 2026
+    type: under-review
+    venue: preprint
+    venue_short: arXiv
+    link: https://doi.org/10.48550/arXiv.2609.00502
+
+  - citation: |
+      Ertewaa Alsahayan, Alex Manley, **Tanvir Hossain**, Mohammad Alian, Tamzidul Hoque.
+      "Toward Reliable LLM-Assisted Design Space Exploration Under Multi-Performance and Multi-Cost Constraints"
+      Microprocessors and Microsystems: Embedded Hardware Design (MICPRO). In major revision.
+    year: 2026
     type: under-review
     venue: journal
-    venue_short: Under Review
+    venue_short: MICPRO
+
+  - citation: |
+      S M Mojahidul Ahsan, Mohammad Sakib Shahriar, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
+      "SPICECiM-X: An Accurate Circuit-Level Design and Optimization Framework for Analog In-Memory Transformer Inference"
+      IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2026. Under review.
+    year: 2026
+    type: under-review
+    venue: journal
+    venue_short: TCAD
+
+  - citation: |
+      **Tanvir Hossain**, Mahmudul Hasan, Jackie Ho, Garrett Rose, Tamzidul Hoque, Md Sakib Hasan.
+      "PURL: Physically Unclonable and Reconfigurable Logic Locking"
+      Journal of Hardware and Systems Security, 2026. Under review.
+    year: 2026
+    type: under-review
+    venue: journal
+    venue_short: JHSS
 
   # Journal Articles
+  - citation: |
+      **Tanvir Hossain**, Andrea Ramirez-Salgado, Ertewaa Alsahayan, Swarup Bhunia, Pavlo Antonenko, Tamzidul Hoque.
+      "Game On: Gamifying Computer Hardware Fundamentals Learning Using a Configurable Platform"
+      IEEE Transactions on Education, Accepted, forthcoming online, 2026.
+    year: 2026
+    type: journal
+    venue: journal
+    venue_short: IEEE TE
+    link: https://doi.org/10.1109/TE.2026.3728763
+
   - citation: |
       **Tanvir Hossain**, S M Mojahidul Ahsan, Prabuddha Chakraborty, Swarup Bhunia, Tamzidul Hoque.
       "Attacking the Protections of Hardware using Trojan-Assisted Meta Attacks"
