@@ -38,6 +38,7 @@ exclude:
   - run_page_offline.md
   - walkthrough.md
   - blog_files/
+  - CVs/
 
 sass:
   sass_dir: _sass

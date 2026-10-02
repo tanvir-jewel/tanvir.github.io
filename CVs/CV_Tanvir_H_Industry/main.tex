@@ -1,0 +1,37 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry} % Document margins
+\name{Tanvir Hossain} % Your name
+\address{+1(785) 424-0647 \\ Lawrence, KS (open to relocation)}
+\address{\href{mailto:tanvir@ku.edu}{tanvir@ku.edu} \\ \href{https://www.linkedin.com/in/tanvir-hossain71/}{linkedin.com/in/tanvir-hossain71} \\ \href{https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en}{Google Scholar} \\ %
+\href{https://www.tanvirhossain.net/}{tanvirhossain.net}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Summary}
+
+Offensive hardware security researcher (Ph.D.\ expected 2027) with 4+ years of hands-on experience attacking silicon-level defenses: power/EM side-channel analysis, fault injection, hardware Trojan design, and gate-level netlist reverse engineering. Track record of published attacks and security tooling at IACR TCHES, ACM TODAES, and GLSVLSI; Champion of the IEEE HOST 2023 Microelectronics Security Challenge (IP security). Combines RTL/ASIC design-flow fluency (Verilog, Cadence and Xilinx flows) with low-level C, LLVM-based instrumentation, and machine-learning-driven attack automation. Currently building ML-guided fault-injection workflows at Keysight Technologies.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\input{skills}
+%----------------------------------------------------------------------------------------
+\input{experience}
+%----------------------------------------------------------------------------------------
+\Needspace*{10\baselineskip} % keep the Education heading with its entries (no orphaned title)
+\input{education}
+%----------------------------------------------------------------------------------------
+\input{publications}
+%----------------------------------------------------------------------------------------
+\input{awards}
+%----------------------------------------------------------------------------------------
+
+\end{document}

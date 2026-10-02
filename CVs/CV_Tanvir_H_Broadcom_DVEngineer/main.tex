@@ -1,0 +1,48 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{tabularx} % Include this in your preamble
+\usepackage{enumitem} % Add this line to the preamble
+\usepackage{needspace} % Keep section headings with their content (avoid orphaned titles)
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Tanvir Hossain} % Your name
+\address{+1(785) 424-0647 \\ Lawrence, KS}
+\address{\href{mailto:tanvir@ku.edu}{tanvir@ku.edu} \\ \href{https://www.linkedin.com/in/tanvir-hossain71/}{linkedin.com/in/tanvir-hossain71/} \\ \href{https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en}{Google Scholar} \\  %
+\href{https://www.tanvirhossain.net/}{tanvirhossain.net}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Summary}
+
+Electrical Engineering Ph.D. candidate with hands-on digital design and simulation-based functional verification experience across the RTL-to-GDSII flow: RTL design in Verilog/VHDL, Verilog testbench development and functional verification (ModelSim), and synthesis and back-end with Cadence (Genus, Encounter). Research program centers on rigorous, specification-driven evaluation of integrated circuits at both block and system level, with strong scripting (Tcl, Bash, Python), C, and independent debug of complex digital designs. Seeking a Design Verification Engineer role to apply RTL verification, scripting, and debug skills to SoC and IP subsystem development.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{skills}
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{experience}
+%----------------------------------------------------------------------------------------
+\Needspace*{5\baselineskip}
+\input{education}
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{projects}
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{publication}
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{awards}
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

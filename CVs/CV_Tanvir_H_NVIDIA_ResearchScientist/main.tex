@@ -1,0 +1,41 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry} % Document margins
+\name{Tanvir Hossain} % Your name
+\address{+1(785) 424-0647 \\ Lawrence, KS (open to relocation)}
+\address{\href{mailto:tanvir@ku.edu}{tanvir@ku.edu} \\ \href{https://www.linkedin.com/in/tanvir-hossain71/}{linkedin.com/in/tanvir-hossain71} \\ \href{https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en}{Google Scholar} \\ %
+\href{https://www.tanvirhossain.net/}{tanvirhossain.net}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Summary}
+
+Security and privacy researcher (Ph.D.\ expected 2027) working across the full hardware/software stack, with depth in hardware and computer-architecture security and in applied-cryptographic side-channel analysis. Author of 17 peer-reviewed publications --- including IACR TCHES, ACM TODAES, IEEE/ACM ICCAD, and the Journal of Hardware and Systems Security --- spanning hardware Trojan attacks and defenses, side-channel and fault analysis of cryptographic primitives, ML-assisted security, and compiler-based (LLVM) software protections. Champion of the IEEE HOST 2023 Microelectronics Security Challenge. Experienced experimental researcher, collaborator across institutions, and presenter; proficient in C/C++, Python, and Verilog. Motivated to co-design trustworthy AI systems with strong, verifiable security and privacy guarantees.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\Needspace*{6\baselineskip}
+\input{education}
+%----------------------------------------------------------------------------------------
+\input{skills}
+%----------------------------------------------------------------------------------------
+\input{experience}
+%----------------------------------------------------------------------------------------
+\input{publications}
+%----------------------------------------------------------------------------------------
+\Needspace*{8\baselineskip}
+\input{talks_service}
+%----------------------------------------------------------------------------------------
+\Needspace*{8\baselineskip}
+\input{awards}
+%----------------------------------------------------------------------------------------
+
+\end{document}

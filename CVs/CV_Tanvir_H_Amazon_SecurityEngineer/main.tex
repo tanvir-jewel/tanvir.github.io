@@ -1,0 +1,48 @@
+\documentclass{resume} % Restyled local resume.cls (see comments in the class file)
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\usepackage[left=0.42in,top=0.4in,right=0.42in,bottom=0.4in]{geometry} % Document margins
+\name{Tanvir Hossain} % Your name
+\address{\faPhone*\ +1 (785) 424-0647 \\ \faMapMarker*\ Lawrence, KS (open to relocation)}
+\address{\faEnvelope\ \href{mailto:tanvir@ku.edu}{tanvir@ku.edu} \\ \faLinkedin\ \href{https://www.linkedin.com/in/tanvir-hossain71/}{linkedin.com/in/tanvir-hossain71} \\ \faGraduationCap\ \href{https://scholar.google.com/citations?user=lPEOU2wAAAAJ&hl=en}{Google Scholar} \\ %
+\faGlobe\ \href{https://www.tanvirhossain.net/}{tanvirhossain.net}}
+
+% Accent-colored separator for the keyword strip under the summary
+\newcommand{\kw}{\;{\color{accent}$\diamond$}\;}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Summary}
+
+Hardware security engineer (Ph.D.\ candidate, expected 2027) with 4+ years of hands-on fault injection and power/EM side-channel analysis against cryptographic and embedded targets. Finds and helps close chip-level security gaps through design review, hardware reverse engineering, and lab-based security testing, and builds ML-guided fault-injection tooling that scales vulnerability discovery across devices. Pairs low-level C, LLVM, and RTL/FPGA fluency with a published record of hardware attacks and mitigations; Champion of the IEEE HOST 2023 Microelectronics Security Challenge.
+
+\smallskip
+{\small\textbf{Core:} Fault Injection\kw Power/EM Side-Channel Analysis\kw Hardware Reverse Engineering\kw Threat Modeling\kw Hardware Trojans\kw Applied Cryptography\kw Secure Coding (C, LLVM)\kw RTL/FPGA\kw Python, Bash}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\input{skills}
+%----------------------------------------------------------------------------------------
+\input{experience}
+%----------------------------------------------------------------------------------------
+\Needspace*{8\baselineskip} % keep the Education heading with its entries
+\input{education}
+%----------------------------------------------------------------------------------------
+\Needspace*{8\baselineskip}
+\input{publications}
+%----------------------------------------------------------------------------------------
+\Needspace*{11\baselineskip} % awards table is one unbreakable tabularx
+\input{awards}
+%----------------------------------------------------------------------------------------
+\Needspace*{13\baselineskip} % talks/service table is one unbreakable tabularx
+\input{talks_service}
+%----------------------------------------------------------------------------------------
+
+\end{document}

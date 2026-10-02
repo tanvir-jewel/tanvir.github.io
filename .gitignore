@@ -9,3 +9,11 @@ _site/
 .bundle
 vendor/
 Gemfile.lock_site/
+
+# LaTeX build artifacts under CVs/ — keep sources and compiled PDFs, drop scratch files
+CVs/**/*.aux
+CVs/**/*.log
+CVs/**/*.out
+CVs/**/*.bbl
+CVs/**/*.blg
+CVs/**/*.synctex.gz
