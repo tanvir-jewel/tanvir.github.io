@@ -1,5 +1,13 @@
 # cv_awards gives entries to the awards/fellowships/honors section of my CV
 
+- award: National Science Foundation (NSF) Travel Grant
+  date: May 2026
+  description: |
+    IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2026 Symposium)
+  year: 2026
+  icon: fas fa-plane-departure
+  icon_color: text-info
+
 - award: First Place (Poster Presentation)
   date: January 2024
   description: |

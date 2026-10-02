@@ -5,6 +5,13 @@
   dates: Jan 2022 - Aug 2024; Jan 2025 - Present
   description: Conducted research on hardware security, focusing on detecting and mitigating hardware Trojans in microelectronic ICs. Developed a novel Trojan detection and data protection method using side-channel analysis, leading to publications in top-tier conferences and journals.
 
+- institution: Keysight Technologies
+  location: Santa Rosa, CA
+  position: Research Intern, Machine Learning Security
+  department: Applied ML & Fault Injection
+  dates: May 2026 - Dec 2026
+  description: Developing model-guided optimization and adaptive-learning workflows for fault-injection parameter tuning, including experiment design, telemetry instrumentation, scalable hyperparameter search, and reliability metrics. Delivering a prototype demonstration targeting improved vulnerability-detection coverage over baseline flows.
+
 - institution: The University of Kansas
   location: Lawrence, KS
   position: Graduate Teaching Assistant
