@@ -182,6 +182,16 @@ publications:
     venue_short: GLSVLSI
 
   - citation: |
+      Andrea Ramirez-Salgado, Swarup Bhunia, Pavlo Antonenko, Woorin Hwang, Christine Wusylko, Yessy Ambarwati, **Tanvir Hossain**, Tamzidul Hoque, Rohan Kalavakonda.
+      "BOARD# 278: NSF IUSE: Empowering Future Engineers. An Inclusive Curriculum for AIoT and Intelligent Embedded Systems"
+      2025 ASEE Annual Conference & Exposition, 2025.
+    year: 2025
+    type: conference
+    venue: conference
+    venue_short: ASEE
+    link: https://doi.org/10.18260/1-2--55641
+
+  - citation: |
       S M Mojahidul Ahsan, Muhammad Sakib Shahriar, Mrittika Chowdhury, **Tanvir Hossain**, Md Sakib Hasan, Tamzidul Hoque.
       "Accurate, Yet Scalable: A SPICE-based Design and Optimization Framework for eNVM-based Analog In-memory Computing"
       Accepted to 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, USA
