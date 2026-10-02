@@ -16,6 +16,13 @@ $accent:            #1b4f72;
 $accent-hover:      #163f5c;
 $accent-soft:       #e8f0f6;
 
+// Chart/mark colors for the publication-stats bar — distinct from $accent
+// (which is tuned for text/links, not data marks) but validated as a
+// CVD-safe categorical pair; see dataviz skill, references/palette.md.
+$stat-journal:      #2e6da4;
+$stat-conference:   #c0652f;
+$stat-review:       $muted;
+
 $primary:           $accent;
 $link-color:        $accent;
 $link-hover-color:  $accent-hover;
@@ -509,6 +516,89 @@ blockquote {
   &:hover {
     color: $accent-hover;
     text-decoration: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ *  Publication counter — tiles + proportion bar
+ * -------------------------------------------------------------------------- */
+
+.pub-stats {
+  margin: 0 0 1.75rem;
+  padding: 1.1rem 1.25rem 1.25rem;
+  border: 1px solid $surface-border;
+  border-radius: 6px;
+  background: $surface;
+}
+
+.pub-stats__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem 1.75rem;
+}
+
+.pub-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+.pub-stat--total {
+  margin-left: auto;
+  padding-left: 1.1rem;
+  border-left: 1px solid $surface-border;
+  color: $muted;
+}
+
+.pub-stat__icon {
+  align-self: center;
+  font-size: 0.95rem;
+
+  &.pub-stat__icon--journal { color: $stat-journal; }
+  &.pub-stat__icon--conference { color: $stat-conference; }
+  &.pub-stat__icon--review { color: $stat-review; }
+}
+
+.pub-stat__count {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: $ink;
+  line-height: 1;
+}
+
+.pub-stat__label {
+  font-size: 0.85rem;
+  color: $muted;
+}
+
+.pub-stats__bar {
+  display: flex;
+  gap: 2px;
+  height: 8px;
+  margin-top: 0.95rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $surface-border;
+}
+
+.pub-stats__segment {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  transition: width 0.2s ease;
+
+  &.pub-stats__segment--journal { background: $stat-journal; }
+  &.pub-stats__segment--conference { background: $stat-conference; }
+  &.pub-stats__segment--review { background: $stat-review; }
+}
+
+@media (max-width: 575.98px) {
+  .pub-stat--total {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 }
 

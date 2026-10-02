@@ -1,0 +1,51 @@
+{% comment %}
+  Publication counter: tiles + a proportion bar, computed from
+  site.data.publications.publications so it never drifts from the list below.
+{% endcomment %}
+{% assign journal_pubs = site.data.publications.publications | where: "type", "journal" %}
+{% assign conference_pubs = site.data.publications.publications | where: "type", "conference" %}
+{% assign under_review_pubs = site.data.publications.publications | where: "type", "under-review" %}
+{% assign journal_count = journal_pubs | size %}
+{% assign conference_count = conference_pubs | size %}
+{% assign under_review_count = under_review_pubs | size %}
+{% assign total_count = journal_count | plus: conference_count | plus: under_review_count %}
+
+{% if total_count > 0 %}
+  {% assign journal_pct = journal_count | times: 100.0 | divided_by: total_count %}
+  {% assign conference_pct = conference_count | times: 100.0 | divided_by: total_count %}
+  {% assign under_review_pct = under_review_count | times: 100.0 | divided_by: total_count %}
+
+  <div class="pub-stats">
+    <div class="pub-stats__tiles">
+      <div class="pub-stat">
+        <span class="pub-stat__icon pub-stat__icon--journal">{{ site.data.icons.venue_journal_icon }}</span>
+        <span class="pub-stat__count">{{ journal_count }}</span>
+        <span class="pub-stat__label">Journal{% if journal_count != 1 %}s{% endif %}</span>
+      </div>
+      <div class="pub-stat">
+        <span class="pub-stat__icon pub-stat__icon--conference">{{ site.data.icons.venue_conference_icon }}</span>
+        <span class="pub-stat__count">{{ conference_count }}</span>
+        <span class="pub-stat__label">Conference{% if conference_count != 1 %}s{% endif %}</span>
+      </div>
+      {% if under_review_count > 0 %}
+        <div class="pub-stat">
+          <span class="pub-stat__icon pub-stat__icon--review">{{ site.data.icons.stat_review_icon }}</span>
+          <span class="pub-stat__count">{{ under_review_count }}</span>
+          <span class="pub-stat__label">Under Review</span>
+        </div>
+      {% endif %}
+      <div class="pub-stat pub-stat--total">
+        <span class="pub-stat__count">{{ total_count }}</span>
+        <span class="pub-stat__label">Total</span>
+      </div>
+    </div>
+
+    <div class="pub-stats__bar" aria-hidden="true">
+      <span class="pub-stats__segment pub-stats__segment--journal" style="width: {{ journal_pct }}%;" title="Journal articles: {{ journal_count }}"></span>
+      <span class="pub-stats__segment pub-stats__segment--conference" style="width: {{ conference_pct }}%;" title="Conference papers: {{ conference_count }}"></span>
+      {% if under_review_count > 0 %}
+        <span class="pub-stats__segment pub-stats__segment--review" style="width: {{ under_review_pct }}%;" title="Under review: {{ under_review_count }}"></span>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
