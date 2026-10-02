@@ -16,7 +16,7 @@
   icon: fas fa-trophy
   icon_color: text-warning
 
-- award: Champion — Microelectronics Security Challenge (IP security)
+- award: "Champion: Microelectronics Security Challenge (IP security)"
   date: May 2023
   description: |
     IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2023 Symposium)

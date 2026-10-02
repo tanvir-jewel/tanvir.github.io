@@ -52,7 +52,7 @@ jumbo_txt: |
       </ul>
     {% else %}
       <div class="alert alert-light border" role="alert">
-        <i class="fas fa-pen-nib mr-2 text-muted"></i>No technical posts yet — check back soon.
+        <i class="fas fa-pen-nib mr-2 text-muted"></i>No technical posts yet. Check back soon.
       </div>
     {% endif %}
   </div>
@@ -76,7 +76,7 @@ jumbo_txt: |
       </ul>
     {% else %}
       <div class="alert alert-light border" role="alert">
-        <i class="fas fa-feather-alt mr-2 text-muted"></i>No reflections yet — coming soon.
+        <i class="fas fa-feather-alt mr-2 text-muted"></i>No reflections yet. Coming soon.
       </div>
     {% endif %}
   </div>

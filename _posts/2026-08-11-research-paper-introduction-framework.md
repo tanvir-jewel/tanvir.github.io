@@ -7,7 +7,7 @@ author: Tanvir Hossain
 type: technical
 categories: [academic-writing, research]
 tags: [research-writing, introduction, paper-writing, academic-writing]
-excerpt: "A practical four-part framework for research paper introductions: Context → Define Variables → Gaps and Aims → Contributions — with worked examples from Attention Is All You Need and fault-injection research."
+excerpt: "A practical four-part framework for research paper introductions: Context → Define Variables → Gaps and Aims → Contributions, with worked examples from Attention Is All You Need and fault-injection research."
 ---
 
 Writing the Introduction is often one of the most difficult parts of a research paper. The problem is usually not that we do not know enough about our research. In fact, the opposite is often true. After spending months or years working on a problem, we know *too much*. We know the literature, the technical details, the experimental challenges, the failed attempts, the competing methods, and every small design decision. Then we open a blank document and have to answer a deceptively simple question:
@@ -77,7 +77,7 @@ I organize these questions using a simple four-part framework:
   </div>
 </div>
 
-I call it a **four-paragraph framework**, but the word *paragraph* should not be interpreted too literally. In a short conference paper, each stage might occupy approximately one paragraph. In a longer journal article, Context or Gap may require several paragraphs. What matters is not having exactly four paragraphs—what matters is that the Introduction performs these **four intellectual jobs in the correct order**.
+I call it a **four-paragraph framework**, but the word *paragraph* should not be interpreted too literally. In a short conference paper, each stage might occupy approximately one paragraph. In a longer journal article, Context or Gap may require several paragraphs. What matters is not having exactly four paragraphs. What matters is that the Introduction performs these **four intellectual jobs in the correct order**.
 
 ---
 
@@ -427,7 +427,7 @@ Existing approaches improve A and B, but they still rely on assumption C. Conseq
 
 We introduce E, demonstrate F, and evaluate it under G. The results establish H and provide a new approach to addressing D.
 
-If you can write these four statements clearly **before writing the full Introduction**, you probably understand the research story of your paper. If you cannot, the problem may not yet be your writing—the research narrative itself may still need clarification.
+If you can write these four statements clearly **before writing the full Introduction**, you probably understand the research story of your paper. If you cannot, the problem may not yet be your writing: the research narrative itself may still need clarification.
 
 ---
 

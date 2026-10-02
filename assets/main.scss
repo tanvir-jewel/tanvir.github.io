@@ -2,7 +2,7 @@
 ---
 
 /*
- *  Theme tokens — must come before the Bootstrap import so !default
+ *  Theme tokens: must come before the Bootstrap import so !default
  *  variables pick up these values.
  */
 
@@ -16,7 +16,7 @@ $accent:            #1b4f72;
 $accent-hover:      #163f5c;
 $accent-soft:       #e8f0f6;
 
-// Publication-stats bar — one tonal ramp off $accent, not a multi-hue
+// Publication-stats bar: one tonal ramp off $accent, not a multi-hue
 // categorical palette; keeps the strip quiet rather than infographic-colorful.
 $stat-journal:      $accent;
 $stat-conference:   mix($accent, #fff, 58%);
@@ -114,7 +114,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
- *  Site shell — navbar .container is the single horizontal grid
+ *  Site shell: navbar .container is the single horizontal grid
  *
  *  Navbar:  <nav> > .container
  *  Pages:   .container.page-body  (or .container.site-container)
@@ -124,9 +124,9 @@ a {
  *  margins, and 15px side padding. Left edge = brand; right edge = Contact.
  *
  *  CRITICAL: never put max-width:none / margin:0 / padding-x:0 on an element
- *  that also has .container — that expands content to the viewport edge.
+ *  that also has .container: that expands content to the viewport edge.
  *
- *  Inner tracks (.content-column) fill 100% of the container only — they are
+ *  Inner tracks (.content-column) fill 100% of the container only; they are
  *  NOT a second, wider shell.
  * -------------------------------------------------------------------------- */
 
@@ -137,7 +137,7 @@ a {
   text-align: left;
 }
 
-// Optional alias — same as Bootstrap .container (use when a non-Bootstrap
+// Optional alias: same as Bootstrap .container (use when a non-Bootstrap
 // name helps readability). Prefer class="container" or both classes together.
 .site-container {
   @extend .container;
@@ -215,7 +215,7 @@ a {
   white-space: nowrap;
 }
 
-/* Legacy jumbotron — same type scale if anything still uses it */
+/* Legacy jumbotron: same type scale if anything still uses it */
 .jumbotron {
   background: transparent;
   border-bottom: 1px solid $surface-border;
@@ -439,7 +439,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Publication list — fixed year rail
+ *  Publication list: fixed year rail
  * -------------------------------------------------------------------------- */
 
 .pub-list {
@@ -519,7 +519,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Publication counter — tiles + proportion bar
+ *  Publication counter: tiles + proportion bar
  * -------------------------------------------------------------------------- */
 
 .pub-stats {
@@ -602,7 +602,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Honors — grouped by year
+ *  Honors: grouped by year
  * -------------------------------------------------------------------------- */
 
 .award-year {
@@ -669,7 +669,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  News — fixed date column
+ *  News: fixed date column
  * -------------------------------------------------------------------------- */
 
 .news-list {
@@ -718,7 +718,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Research — full width of site .container
+ *  Research: full width of site .container
  * -------------------------------------------------------------------------- */
 
 .research-overview {
@@ -767,7 +767,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  CV layout — structured items, no default list indent chaos
+ *  CV layout: structured items, no default list indent chaos
  * -------------------------------------------------------------------------- */
 
 .cv-section {
@@ -850,7 +850,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Contact — full width of site .container
+ *  Contact: full width of site .container
  * -------------------------------------------------------------------------- */
 
 .contact-intro {
@@ -976,7 +976,7 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
- *  Blog posts — full width of site .container (navbar grid)
+ *  Blog posts: full width of site .container (navbar grid)
  * -------------------------------------------------------------------------- */
 
 .post {
@@ -1142,7 +1142,7 @@ blockquote {
   margin-right: auto;
 }
 
-// Numbered mistake list — left-aligned with body prose
+// Numbered mistake list: left-aligned with body prose
 .post-content .post-mistake {
   margin: 0 0 1.35rem;
   padding: 0 0 1.15rem;

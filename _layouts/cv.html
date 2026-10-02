@@ -47,7 +47,7 @@ layout: default
             </div>
             {% if exp.institution %}
               <p class="cv-item-org">
-                {{ exp.institution }}{% if exp.location %} — {{ exp.location }}{% endif %}
+                {{ exp.institution }}{% if exp.location %}, {{ exp.location }}{% endif %}
               </p>
             {% endif %}
             {% if exp.advisors %}<p class="cv-item-meta">Advisor(s): {{ exp.advisors }}</p>{% endif %}
